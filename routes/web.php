@@ -11,6 +11,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\PrivacyController;
 
+// Index Pages
 Route::get('/', [IndexController::class, "index"])->name("index");
 Route::get("/login", [AuthController::class, "login"])->name("login");
 Route::get("/register", [AuthController::class, "register"])->name("register");
