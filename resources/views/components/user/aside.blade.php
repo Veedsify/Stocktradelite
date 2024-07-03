@@ -4,7 +4,7 @@
         <!-- ---------------------------------- -->
             <div class="brand-logo d-flex align-items-center justify-content-between">
             <a href="{{route('user')}}" class="text-nowrap logo-img">
-             <img src="../user-assets/images/logos/dark-logo.svg" alt="Logo-Dark">
+             <img src="{{asset('assets/images/logo/log-footer.png')}}" alt="Logo-Dark" width="180px">
              </a>
               <a href="javascript:void(0)" class="sidebartoggler ms-auto text-decoration-none fs-5 d-block d-xl-none">
                <i class="ti ti-x"></i>
