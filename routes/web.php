@@ -11,6 +11,9 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\PrivacyController;
 
+
+//Admin Routes
+require_once  __DIR__ . '/user/user.php';
 // Index Pages
 Route::get('/', [IndexController::class, "index"])->name("index");
 Route::get("/login", [AuthController::class, "login"])->name("login");
