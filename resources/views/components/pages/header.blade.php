@@ -133,7 +133,7 @@
                         <div class="mobile-button"><span></span></div>
                         <div class="wallet">
                             @auth
-                            <a href=""> Dashboard </a>
+                            <a href="{{route('user')}}"> Dashboard </a>
                             @endauth
                             @guest
                             <a href="{{route('login')}}"> Login </a>
