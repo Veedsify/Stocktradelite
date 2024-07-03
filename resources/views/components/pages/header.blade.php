@@ -7,13 +7,13 @@
                     <div class="header__left">
                         <div class="logo">
                             <a class="light" href="{{route('index')}}">
-                                <img src="{{asset('assets/images/logo/logo.png')}}" alt="" width="118" height="32"
+                                <img src="{{asset('assets/images/logo/logo.png')}}" alt="" width="75" height="75"
                                     data-retina="assets/images/logo/logo@2x.png')}}" data-width="118" data-height="32">
                             </a>
                             <a class="dark" href="{{route('index')}}">
-                                <img src="{{asset('assets/images/logo/logo-dark.png')}}" alt="" width="118" height="32"
-                                    data-retina="assets/images/logo/logo-dark@2x.png')}}" data-width="118"
-                                    data-height="32">
+                                <img src="{{asset('assets/images/logo/logo-dark.png')}}" alt="" width="75" height="75"
+                                    data-retina="assets/images/logo/logo-dark@2x.png')}}" data-width="75"
+                                    data-height="75">
                             </a>
                         </div>
                         <div class="left__main">
