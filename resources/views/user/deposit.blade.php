@@ -18,258 +18,166 @@
         <div class="body-wrapper">
           <div class="container-fluid">
             <!--  Owl carousel -->
-            <div class="row">
-                <div class="col-sm-6 col-xl-4">
-                  <div class="card bg-primary-subtle shadow-none">
-                    <div class="card-body p-4">
-                      <div class="d-flex align-items-center">
-
-                        <h6 class="mb-0 ">Available Balance</h6>
-                        <div class="ms-auto text-primary d-flex align-items-center">
-                          <i class="ti ti-trending-up text-primary fs-6 me-1"></i>
-                          <span class="fs-2 fw-bold">+ 2.30%</span>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between mt-4">
-                        <h3 class="mb-0 fw-semibold fs-7">0.00 </h3>
-                        <span class="fw-bold"> USD</span>
-                      </div>
+            <div class="card bg-info-subtle shadow-none position-relative overflow-hidden mb-4">
+                <div class="card-body px-4 py-3">
+                  <div class="row align-items-center">
+                    <div class="col-9">
+                      <h4 class="fw-semibold mb-8">Fund Account</h4>
+                      <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item">
+                            <a class="text-muted text-decoration-none" href="index.html">Home</a>
+                          </li>
+                          <li class="breadcrumb-item" aria-current="page">deposit</li>
+                        </ol>
+                      </nav>
                     </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-6 col-xl-4">
-                  <div class="card bg-success-subtle shadow-none">
-                    <div class="card-body p-4">
-                      <div class="d-flex align-items-center">
-
-                        <h6 class="mb-0">BTC Equivalent</h6>
-                        <div class="ms-auto text-info d-flex align-items-center">
-                          <i class="ti ti-trending-down text-success fs-6 me-1"></i>
-                          <span class="fs-2 fw-bold text-success">+ 3.20%</span>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between mt-4">
-                        <h3 class="mb-0 fw-semibold fs-7">0.00</h3>
-                        <span class="fw-bold">BTC</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-xl-4">
-                  <div class="card bg-warning-subtle shadow-none">
-                    <div class="card-body p-4">
-                      <div class="d-flex align-items-center">
-
-                        <h6 class="mb-0 ">Account Level</h6>
-
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between mt-4">
-                        <h3 class="mb-0 fw-semibold fs-7">BEGINNER</h3>
-
+                    <div class="col-3">
+                      <div class="text-center mb-n5">
+                        <img src="../assets/images/breadcrumb/ChatBc.png" alt="" class="img-fluid mb-n4">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            <!--  Row 1 -->
+
+          <p class="px-2">Make your first deposit with any of the following methods immediately your deposit has been confirmed.</p>
+
             <div class="row">
-              <div class="col-lg-8 d-flex align-items-strech">
-
-
-                
-
-
-
-
-              </div>
-              <div class="col-lg-4">
-                <div class="row">
-                  <div class="col-lg-12 col-md-6">
-                    <!-- Yearly Breakup -->
+                <div class="col-md-6">
                     <div class="card">
-                        <div class="card-body p-4">
-                          <!-- Nav tabs -->
-                          <ul class="nav nav-tabs nav-fill" role="tablist">
-                            <li class="nav-item">
-                              <a class="nav-link rounded active" data-bs-toggle="tab" href="#home" role="tab">
-                                <span>Buy</span>
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link rounded" data-bs-toggle="tab" href="#profile" role="tab">
-                                <span>Sell</span>
-                              </a>
-                            </li>
-                          </ul>
-                          <!-- Tab panes -->
-                          <div class="tab-content mt-4">
-                            <div class="tab-pane active" id="home" role="tabpanel">
-                              <form>
-                                <span class="d-block mb-1">Amount</span>
-                                <div class="input-group mb-3">
-                                  <input type="text" class="form-control  border-end-0" aria-label="Text input with dropdown button" value="0.20125">
-                                  <button class="btn btn-sm arrow-none p-0 border-top border-bottom border-end border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span class="bg-danger-subtle text-danger p-6 rounded">
-                                      <span> USD </span>
-                                      <i class="ti ti-chevron-down ms-1 fs-4"></i>
-                                    </span>
-                                  </button>
-                                  <ul class="dropdown-menu dropdown-menu-end">
-                                    <li>
-                                      <a class="dropdown-item" href="#">INR</a>
-                                    </li>
-                                    <li>
-                                      <a class="dropdown-item" href="#">CLP</a>
-                                    </li>
-                                    <li>
-                                      <a class="dropdown-item" href="#">AMD</a>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <span class="d-block mb-1">Amount</span>
-                                <div class="input-group mb-3">
-                                  <input type="text" class="form-control  border-end-0" aria-label="Text input with dropdown button" value="0.20125">
-                                  <button class="btn btn-sm arrow-none p-0 border-top border-bottom border-end border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span class="bg-primary-subtle text-primary p-6 rounded">
-                                      <span> BTC </span>
-                                      <i class="ti ti-chevron-down ms-1 fs-4"></i>
-                                    </span>
-                                  </button>
-                                  <ul class="dropdown-menu dropdown-menu-end">
-                                    <li>
-                                      <a class="dropdown-item" href="#">LTC</a>
-                                    </li>
-                                    <li>
-                                      <a class="dropdown-item" href="#">XRP</a>
-                                    </li>
-                                    <li>
-                                      <a class="dropdown-item" href="#">ETH</a>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <button class="btn btn-primary w-100">Buy BTC</button>
-                              </form>
-                            </div>
-                            <div class="tab-pane" id="profile" role="tabpanel">
-                              <form>
-                                <span class="d-block mb-1">Amount</span>
-                                <div class="input-group mb-3">
-                                  <input type="text" class="form-control  border-end-0" aria-label="Text input with dropdown button" value="0.20125">
-                                  <button class="btn btn-sm arrow-none p-0 border-top border-bottom border-end border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span class="bg-danger-subtle text-danger p-6 rounded">
-                                      <span> USD </span>
-                                      <i class="ti ti-chevron-down ms-1 fs-4"></i>
-                                    </span>
-                                  </button>
-                                  <ul class="dropdown-menu dropdown-menu-end">
-                                    <li>
-                                      <a class="dropdown-item" href="#">INR</a>
-                                    </li>
-                                    <li>
-                                      <a class="dropdown-item" href="#">CLP</a>
-                                    </li>
-                                    <li>
-                                      <a class="dropdown-item" href="#">AMD</a>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <span class="d-block mb-1">Amount</span>
-                                <div class="input-group mb-3">
-                                  <input type="text" class="form-control  border-end-0" aria-label="Text input with dropdown button" value="0.20125">
-                                  <button class="btn btn-sm arrow-none p-0 border-top border-bottom border-end border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span class="bg-primary-subtle text-primary p-6 rounded">
-                                      <span> BTC </span>
-                                      <i class="ti ti-chevron-down ms-1 fs-4"></i>
-                                    </span>
-                                  </button>
-                                  <ul class="dropdown-menu dropdown-menu-end">
-                                    <li>
-                                      <a class="dropdown-item" href="#">LTC</a>
-                                    </li>
-                                    <li>
-                                      <a class="dropdown-item" href="#">XRP</a>
-                                    </li>
-                                    <li>
-                                      <a class="dropdown-item" href="#">ETH</a>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <button class="btn btn-danger w-100">Sell BTC</button>
-                              </form>
-                            </div>
-                          </div>
+                        <div class="card-body">
+                            <h4 class="card-title" style="font: 700 !important">BITCOIN</h4>
+                            <img src="{{asset ('/user-assets/images/png/bitcoin.jpg')}}" alt="" class="w-100">
+                             <div id="bitcoin-model" class="modal fade" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-scrollable modal-md">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <div class="text-center mt-2 mb-4">
+
+                                                <h4>BITCOIN DEPOSIT</h4>
+                                                </div>
+                                                <p>Please send the specified bitcoin amount to the Bitcoin address below</p>
+                                                <p>Please note that there is a minimum deposit amount of 500 USD. Forward the amount paid via the input box provided</p>
+
+                                                <small>Send BITCOIN To</small>
+                                                <div class="input-group mb-3">
+                                                    <input type="text" id="inputText1" class="form-control" value=" 27wml"
+                                                    style="border-bottom-right-radius: 0px !important; border-top-right-radius: 0px !important;"
+                                                    disabled>
+                                                    <div class="input-group-append">
+                                                      <button class="btn btn-primary " type="button"
+                                                      style="border-bottom-left-radius: 0px !important; border-top-left-radius: 0px !important;"
+                                                      onclick="copyText('inputText1')">Copy</button>
+
+                                                    </div>
+                                                  </div>
+
+                                                  <p class="text-center">
+
+                                                      <a href="#" class="btn  btn-primary d-inline-block mx-auto">Pay Using BTC Wallet App</a>
+                                                    </p>
+
+                                                      <form class="ps-3 pr-3" action="#">
+
+                                                    <div class="mb-3">
+                                                        <label for="amount">Amount Paid ($)</label>
+                                                        <input class="form-control" type="number" id="amount" required="" placeholder="0.00">
+                                                    </div>
+
+
+                                                        <div class="mb-3 text-center">
+                                                            <button class="btn btn-primary w-100" type="submit">
+                                                                Confirm Deposit
+                                                            </button>
+                                                         </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                          <!-- /.modal-content -->
                         </div>
+                        <!-- /.modal-dialog -->
                       </div>
-                  </div>
-                  <div class="col-lg-12 col-md-6">
-                    <!-- Monthly Earnings -->
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="row align-items-start">
-                          <div class="col-8">
-                            <h5 class="card-title mb-9 fw-semibold">
-                              Monthly Earnings
-                            </h5>
-                            <h4 class="fw-semibold mb-3">$6,820</h4>
-                            <div class="d-flex align-items-center pb-1">
-                              <span class="me-2 rounded-circle bg-danger-subtle round-20 d-flex align-items-center justify-content-center">
-                                <i class="ti ti-arrow-down-right text-danger"></i>
-                              </span>
-                              <p class="text-dark me-1 fs-3 mb-0">+9%</p>
-                              <p class="fs-3 mb-0">last year</p>
-                            </div>
-                          </div>
-                          <div class="col-4">
-                            <div class="d-flex justify-content-end">
-                              <div class="text-white text-bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
-                                <i class="ti ti-currency-dollar fs-6"></i>
+                      <!-- /.modal -->
+                      <!-- Custom width modal -->
+                      <button type="button" class="btn mb-1 mt-3 bg-primary-subtle w-100 text-primary px-4 fs-4  text-black" data-bs-toggle="modal" data-bs-target="#bitcoin-model">
+                        <i class="ti ti-chevrons-right fs-5 "></i>
+                        Choose this one
+                      </button>
+                        </div>
+                        </div>
+                        </div>
+{{-- Etherem --}}
+
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title" style="font: 700 !important">Ethereum</h4>
+                                    <img src="{{asset ('/user-assets/images/png/ethereum.png')}}" alt="" class="w-100">
+
+
+
+                                        <!-- ethereum-model content -->
+                            <div id="ethereum-model" class="modal fade" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-scrollable modal-md">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <div class="text-center mt-2 mb-4">
+                                                <h4>Ethereum DEPOSIT</h4>
+                                                </div>
+                                                <p>PPlease send the specified ethereum amount to the Ethereum address below</p>
+                                                <p>Please note that there is a minimum deposit amount of 500 USD. Forward the amount paid via the input box provided</p>
+
+                                                <small>Send ETHEREUM To</small>
+                                                <div class="input-group mb-3">
+                                                    <input type="text" id="inputText2" class="form-control" value="bc1qy0cyjuhk3hxjj4lt4fgkhp2vaega0dnpw27wml"
+                                                    style="border-bottom-right-radius: 0px !important; border-top-right-radius: 0px !important;"
+                                                    disabled>
+                                                    <div class="input-group-append">
+                                                      <button class="btn btn-primary " type="button"
+                                                      style="border-bottom-left-radius: 0px !important; border-top-left-radius: 0px !important;"
+                                                      onclick="copyText('inputText2')">Copy</button>
+
+                                                    </div>
+                                                  </div>
+
+                                                  <p class="text-center">
+
+                                                      <a href="#" class="btn  btn-primary d-inline-block mx-auto">Pay Using BTC Wallet App</a>
+                                                    </p>
+
+                                                      <form class="ps-3 pr-3" action="#">
+
+                                                    <div class="mb-3">
+                                                        <label for="amount">Amount Paid ($)</label>
+                                                        <input class="form-control" type="number" id="amount" required="" placeholder="0.00">
+                                                    </div>
+
+
+                                                        <div class="mb-3 text-center">
+                                                            <button class="btn btn-primary w-100" type="submit">
+                                                                Confirm Deposit
+                                                            </button>
+                                                         </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                </div>
+                                <!-- /.modal-dialog -->
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="earning"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                              <!-- /.modal -->
+                              <!-- Custom width modal -->
+                              <button type="button" class="btn mb-1 mt-3 bg-primary-subtle w-100 text-primary px-4 fs-4  text-black " data-bs-toggle="modal" data-bs-target="#ethereum-model">
+                                <i class="ti ti-chevrons-right fs-5 "></i>
+                                Choose this one
+                              </button>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
 
-            <div class="row">
-                <div class="card w-100">
-                    <div class="card-header anime py-2" style="border-bottom: 1px solid #eee;">
-                        Live Trade Session
-                    </div>
-                    <div class="card-body p-0">
-                        <!-- TradingView Widget BEGIN -->
-                        <div class="tradingview-widget-container">
-                          <div id="tradingview_19631"><div id="tradingview_bffd7-wrapper" style="position: relative; box-sizing: content-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Trebuchet MS&quot;, Roboto, Ubuntu, sans-serif; margin: 0px auto !important; padding: 0px !important; width: auto; height: calc(568px);"><iframe title="advanced chart TradingView widget" lang="en" id="tradingview_bffd7" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen="true" src="https://s.tradingview.com/widgetembed/?hideideas=1&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en#%7B%22symbol%22%3A%22COINBASE%3ABTCUSD%22%2C%22frameElementId%22%3A%22tradingview_bffd7%22%2C%22interval%22%3A%22D%22%2C%22allow_symbol_change%22%3A%221%22%2C%22save_image%22%3A%221%22%2C%22hotlist%22%3A%221%22%2C%22studies%22%3A%22%5B%5D%22%2C%22theme%22%3A%22Dark%22%2C%22style%22%3A%220%22%2C%22timezone%22%3A%22Etc%2FUTC%22%2C%22studies_overrides%22%3A%22%7B%7D%22%2C%22utm_source%22%3A%22www.elitestacksmarkets.com%22%2C%22utm_medium%22%3A%22widget_new%22%2C%22utm_campaign%22%3A%22chart%22%2C%22utm_term%22%3A%22COINBASE%3ABTCUSD%22%2C%22page-uri%22%3A%22www.elitestacksmarkets.com%2Faccount%2Findex.php%22%7D" style="width: 100%; height: 100%; margin: 0px !important; padding: 0px !important;"></iframe></div></div>
-                          <div class="tradingview-widget-copyright" style="width: 100%;"></div>
-                          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-                          <script type="text/javascript">
-                          new TradingView.widget(
-                          {
-                          "width": "auto",
-                          "height": 600,
-                          "symbol": "COINBASE:BTCUSD",
-                          "interval": "D",
-                          "timezone": "Etc/UTC",
-                          "theme": "Light",
-                          "style": "0",
-                          "locale": "en",
-                          "toolbar_bg": "#ffffff",
-                          "enable_publishing": false,
-                          "allow_symbol_change": true,
-                          "hotlist": true,
-                          "container_id": "tradingview_19631"
-                        }
-                          );
-                          </script>
-                      </div>
-                      <!-- TradingView Widget END -->
-                    </div>
-                </div>
+
+
             </div>
           </div>
         </div>
@@ -283,5 +191,37 @@
 
 
     </div>
+
+
+    <script>
+          function copyText(inputId) {
+      var input = document.getElementById(inputId);
+
+      if (input && input.value) {
+        // Create a temporary input element
+        var tempInput = document.createElement('input');
+        tempInput.setAttribute('type', 'text');
+        tempInput.setAttribute('value', input.value);
+        document.body.appendChild(tempInput);
+
+        // Select the text in the temporary input
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the selected text
+        document.execCommand('copy');
+
+        // Clean up - remove the temporary input element
+        document.body.removeChild(tempInput);
+
+        // Visual feedback - change button text to 'Copied!' temporarily
+        var copyButton = input.nextElementSibling.querySelector('.btn-primary');
+        copyButton.innerText = 'Copied!';
+        setTimeout(function() {
+          copyButton.innerText = 'Copy';
+        }, 1500); // Reset button text after 1.5 seconds
+      }
+    }
+      </script>
 
     @endsection

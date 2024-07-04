@@ -34,7 +34,7 @@
   </a>
 </li>
 <li class="sidebar-item">
-  <a class="sidebar-link" href="index2.html" aria-expanded="false">
+  <a class="sidebar-link" href="{{route('deposit')}}" aria-expanded="false">
     <span>
       <i class="ti ti-receipt"></i>
     </span>
@@ -42,7 +42,7 @@
   </a>
 </li>
 <li class="sidebar-item">
-  <a class="sidebar-link" href="index3.html" aria-expanded="false">
+  <a class="sidebar-link" href="{{route('withdrawal')}}" aria-expanded="false">
     <span>
       <i class="ti ti-currency-dollar"></i>
     </span>

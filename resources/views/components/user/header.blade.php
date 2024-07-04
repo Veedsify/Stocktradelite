@@ -31,8 +31,8 @@
 </ul>
 
 <div class="d-block d-lg-none">
-<a href="index.html" class="text-nowrap logo-img">
-<img src="../user-assets/images/logos/dark-logo.svg"  alt="Logo-Dark">
+<a href="{{route('user')}}" class="text-nowrap logo-img">
+<img src="{{asset('assets/images/logo/log-footer.png')}}"  alt="Logo-Dark" width="200px">
 </a>
 </div>
 <a class="navbar-toggler nav-icon-hover p-0 border-0" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
