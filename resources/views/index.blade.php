@@ -84,6 +84,19 @@
     </div>
   </div>
 </section>
+<style>
+  .coinPriceBlock-container {
+    overflow-x: auto !important;
+  }
+
+  .coinPriceBlock-footer {
+    display: none;
+  }
+
+  .coinPriceBlock {
+    aspect-ratio: 16/9;
+  }
+</style>
 <!-- End Banner Top -->
 
 <section class="crypto" data-aos="fade-up" data-aos-duration="1000">
@@ -123,7 +136,11 @@
             </ul>
             <div class="content-tab">
               <div class="content-inner">
-                <div class="crypto-box">
+                <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinPriceBlock.js">
+                </script>
+                <div id="coinmarketcap-widget-coin-price-block" coins="1,1027,825" currency="USD" theme="light"
+                  transparent="true" show-symbol-logo="true"></div>
+                {{-- <div class="crypto-box">
                   <div class="top">
                     <a href="#"><span class="icon-btc"><span class="path1"></span><span class="path2"></span></span>
                       <span>Bitcoin</span>
@@ -170,7 +187,7 @@
                     <p>36,641.20</p>
                     <div class="sale critical">-1.24%</div>
                   </div>
-                </div>
+                </div> --}}
               </div>
               <div class="content-inner">
                 <div class="crypto-box">
