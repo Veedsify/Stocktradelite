@@ -20,7 +20,6 @@
 
   <!-- Core Css -->
   <link rel="stylesheet" href="{{ asset('user-assets/css/styles.css') }}">
-
   <title>Admins</title>
   <!-- Owl Carousel  -->
   <link rel="stylesheet" href="{{ asset('user-assets/libs/owl.carousel/dist/assets/owl.carousel.min.css') }}">
