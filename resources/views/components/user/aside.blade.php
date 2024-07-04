@@ -50,7 +50,7 @@
   </a>
 </li>
 <li class="sidebar-item">
-  <a class="sidebar-link" href="index4.html" aria-expanded="false">
+  <a class="sidebar-link" href="{{route('tradehistory')}}" aria-expanded="false">
     <span>
       <i class="ti ti-activity-heartbeat"></i>
     </span>
@@ -58,7 +58,7 @@
   </a>
 </li>
 <li class="sidebar-item">
-  <a class="sidebar-link" href="index5.html" aria-expanded="false">
+  <a class="sidebar-link" href="{{route('upgradeaccount')}}" aria-expanded="false">
     <span>
       <i class="ti ti-arrow-up"></i>
     </span>

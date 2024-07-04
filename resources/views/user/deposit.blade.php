@@ -110,6 +110,7 @@
 {{-- Etherem --}}
 
                         <div class="col-md-6">
+
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title" style="font: 700 !important">Ethereum</h4>
@@ -178,7 +179,35 @@
 
 
 
-            </div>
+                                <div class="row text-truncate ">
+                                    <div class="col-lg-12">
+                                        <div class="card">
+
+                                            <div class="card-body truncate">
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped mb-0">
+                                                        <thead>
+                                                            <tr >
+                                                                <th>Amount</th>
+                                                                <th class="">Transcation Date</th>
+                                                                <th>Status</th>
+                                                                <th>Actions</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>0.00</td>
+                                                                        <td>2022-02-02</td>
+                                                                        <td><span class="badge bg-success">Success</span></td>
+                                                                        <td>
+                                                                            <a href="javascript:void(0);" class="btn btn-sm btn-primary">View</a>
+                                                                            </td>
+                                                                            </tr>
+                                                                </tbody>
+                                                                </table>
+
+                                  </div>
+                            </div>
           </div>
         </div>
 
