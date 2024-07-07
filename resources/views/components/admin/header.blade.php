@@ -16,19 +16,7 @@
 </li>
 </ul>
 
-<ul class="navbar-nav quick-links d-none d-lg-flex">
-<!-- ------------------------------- -->
 
-<li class="nav-item dropdown-hover d-none d-lg-block">
-<a class="nav-link" href="app-chat.html">Chat</a>
-</li>
-<li class="nav-item dropdown-hover d-none d-lg-block">
-<a class="nav-link" href="app-calendar.html">Calendar</a>
-</li>
-<li class="nav-item dropdown-hover d-none d-lg-block">
-<a class="nav-link" href="app-email.html">Email</a>
-</li>
-</ul>
 
 <div class="d-block d-lg-none">
 <a href="{{route('user')}}" class="text-nowrap logo-img">
@@ -49,14 +37,7 @@
   <!-- ------------------------------- -->
   <!-- start language Dropdown -->
   <!-- ------------------------------- -->
-  <li class="nav-item">
-    <a class="nav-link moon dark-layout" href="javascript:void(0)">
-      <iconify-icon icon="solar:moon-line-duotone" class="moon fs-7"></iconify-icon>
-    </a>
-    <a class="nav-link sun light-layout" href="javascript:void(0)">
-      <iconify-icon icon="solar:sun-2-line-duotone" class="sun fs-7"></iconify-icon>
-    </a>
-  </li>
+
 
 
 

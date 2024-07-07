@@ -25,77 +25,86 @@
 <!-- Dashboard -->
 <!-- ---------------------------------- -->
 <li class="sidebar-item">
-  <a class="sidebar-link" href="{{route('user')}}" aria-expanded="false">
+  <a class="sidebar-link" href="{{route('admin')}}" aria-expanded="false">
     <span>
-      <i class="ti ti-dashboard"></i>
+      <i class="ti ti-home"></i>
     </span>
     <span class="hide-menu">
-        Trade Center</span>
+        Dashboard</span>
   </a>
 </li>
 <li class="sidebar-item">
-  <a class="sidebar-link" href="{{route('deposit')}}" aria-expanded="false">
+  <a class="sidebar-link" href="{{route('mail')}}" aria-expanded="false">
     <span>
-      <i class="ti ti-receipt"></i>
+      <i class="ti ti-mail"></i>
     </span>
-    <span class="hide-menu">Deposit</span>
+    <span class="hide-menu">Send a mail</span>
   </a>
 </li>
 <li class="sidebar-item">
-  <a class="sidebar-link" href="{{route('withdrawal')}}" aria-expanded="false">
+  <a class="sidebar-link" href="{{route('users')}}" aria-expanded="false">
     <span>
-      <i class="ti ti-currency-dollar"></i>
+      <i class="ti ti-users"></i>
     </span>
-    <span class="hide-menu">Withdrawal</span>
+    <span class="hide-menu">Users</span>
   </a>
+</li>
+
+<li class="sidebar-item">
+    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+      <span class="d-flex">
+        <i class="ti ti-user"></i>
+      </span>
+      <span class="hide-menu">My Account</span>
+    </a>
+    <ul aria-expanded="false" class="collapse first-level">
+      <li class="sidebar-item">
+        <a href="../main/form-editor-quill.html" class="sidebar-link">
+          <div class="round-16 d-flex align-items-center justify-content-center">
+            <i class="ti ti-circle"></i>
+          </div>
+          <span class="hide-menu">Security</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="../main/form-editor-tinymce.html" class="sidebar-link">
+          <div class="round-16 d-flex align-items-center justify-content-center">
+            <i class="ti ti-circle"></i>
+          </div>
+          <span class="hide-menu">Settings</span>
+        </a>
+      </li>
+    </ul>
 </li>
 <li class="sidebar-item">
-  <a class="sidebar-link" href="{{route('tradehistory')}}" aria-expanded="false">
-    <span>
-      <i class="ti ti-activity-heartbeat"></i>
-    </span>
-    <span class="hide-menu">Trade History</span>
-  </a>
+    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+      <span class="d-flex">
+        <i class="ti ti-wallet"></i>
+      </span>
+      <span class="hide-menu">Wallets</span>
+    </a>
+    <ul aria-expanded="false" class="collapse first-level">
+      <li class="sidebar-item">
+        <a href="../main/form-editor-quill.html" class="sidebar-link">
+          <div class="round-16 d-flex align-items-center justify-content-center">
+            <i class="ti ti-circle"></i>
+          </div>
+          <span class="hide-menu">Security</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="../main/form-editor-tinymce.html" class="sidebar-link">
+          <div class="round-16 d-flex align-items-center justify-content-center">
+            <i class="ti ti-circle"></i>
+          </div>
+          <span class="hide-menu">Settings</span>
+        </a>
+      </li>
+    </ul>
 </li>
-<li class="sidebar-item">
-  <a class="sidebar-link" href="{{route('upgradeaccount')}}" aria-expanded="false">
-    <span>
-      <i class="ti ti-arrow-up"></i>
-    </span>
-    <span class="hide-menu">Upgrade Account</span>
-  </a>
-</li>
-<li class="sidebar-item">
-  <a class="sidebar-link" href="index6.html" aria-expanded="false">
-    <span>
-      <i class="ti ti-shield"></i>
-    </span>
-    <span class="hide-menu">KYC Verification</span>
-  </a>
-</li>
-<!-- ---------------------------------- -->
-<!-- Apps -->
-<!-- ---------------------------------- -->
-<li class="nav-small-cap">
-  <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-  <span class="hide-menu">User Account Functions</span>
-</li>
-<li class="sidebar-item">
-  <a class="sidebar-link" href="{{route('profile')}}" aria-expanded="false">
-    <span>
-      <i class="ti ti-user"></i>
-    </span>
-    <span class="hide-menu">Profile</span>
-  </a>
-</li>
-<li class="sidebar-item">
-  <a class="sidebar-link" href="{{route('changepassword')}}" aria-expanded="false">
-    <span>
-      <i class="ti ti-key"></i>
-    </span>
-    <span class="hide-menu">Change Password</span>
-  </a>
-</li>
+
+
+
 <li class="sidebar-item">
   <a class="sidebar-link" href="app-chat.html" aria-expanded="false">
     <span>
