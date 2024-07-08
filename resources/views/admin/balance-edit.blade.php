@@ -17,9 +17,9 @@
 
     <div class="body-wrapper">
       <div class="container-fluid">
-  
+
         <!--  Owl carousel -->
-        <div class="row">
+        <form class="row">
 
 
           <div class="col-sm-6 col-xl-4">
@@ -27,54 +27,94 @@
               <div class="card-body p-4">
                 <div class="d-flex align-items-center">
 
-                  <h6 class="mb-0">Users</h6>
+                  <h6 class="mb-0">Total Balances <span>$</span></h6>
 
                 </div>
-                <div class="d-flex align-items-center justify-content-between mt-3">
-                  <h3 class="mb-0 fw-semibold fs-7">0</h3>
+                <div class="d-flex align-items-center justify-content-between mt-3 fs-7">
+                  <input type="number" name="" id="" class="form-control fs-7">
                 </div>
                 <div class="ms-auto text-info d-flex align-items-center mt-3">
-                   <a href="#" style="text-decoration:underline; ">View User</a>
+                   <a href="#" style="text-decoration:underline; ">Edit</a>
                   </div>
               </div>
             </div>
           </div>
           <div class="col-sm-6 col-xl-4">
-            <div class="card bg-success-subtle shadow-none">
+            <div class="card bg-primary-subtle shadow-none">
               <div class="card-body p-4">
                 <div class="d-flex align-items-center">
 
-                  <h6 class="mb-0">Pending Transactions</h6>
+                  <h6 class="mb-0">Total Deposit <span>$</span></h6>
 
                 </div>
-                <div class="d-flex align-items-center justify-content-between mt-3">
-                  <h3 class="mb-0 fw-semibold fs-7">0</h3>
+                <div class="d-flex align-items-center justify-content-between mt-3 fs-7">
+                  <input type="number" name="" id="" class="form-control fs-7">
                 </div>
                 <div class="ms-auto text-info d-flex align-items-center mt-3">
-                   <a href="#" style="text-decoration:underline; ">View Transaction</a>
+                   <a href="#" style="text-decoration:underline; ">Edit</a>
                   </div>
               </div>
             </div>
           </div>
           <div class="col-sm-6 col-xl-4">
-            <div class="card bg-danger-subtle shadow-none">
+            <div class="card bg-primary-subtle shadow-none">
               <div class="card-body p-4">
                 <div class="d-flex align-items-center">
 
-                  <h6 class="mb-0">Contact Requests</h6>
+                  <h6 class="mb-0">Total Trade <span>$</span></h6>
 
                 </div>
-                <div class="d-flex align-items-center justify-content-between mt-3">
-                  <h3 class="mb-0 fw-semibold fs-7">0</h3>
+                <div class="d-flex align-items-center justify-content-between mt-3 fs-7">
+                  <input type="number" name="" id="" class="form-control fs-7">
                 </div>
                 <div class="ms-auto text-info d-flex align-items-center mt-3">
-                   <a href="#" style="text-decoration:underline; ">View Requests</a>
+                   <a href="#" style="text-decoration:underline; ">Edit</a>
                   </div>
               </div>
             </div>
           </div>
+          <div class="col-sm-6 col-xl-4">
+            <div class="card bg-primary-subtle shadow-none">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center">
 
-        </div>
+                  <h6 class="mb-0">Profits <span>$</span></h6>
+
+                </div>
+                <div class="d-flex align-items-center justify-content-between mt-3 fs-7">
+                  <input type="number" name="" id="" class="form-control fs-7">
+                </div>
+                <div class="ms-auto text-info d-flex align-items-center mt-3">
+                   <a href="#" style="text-decoration:underline; ">Edit</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-4">
+            <div class="card bg-primary-subtle shadow-none">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center">
+
+                  <h6 class="mb-0">Order's <span>$</span></h6>
+
+                </div>
+                <div class="d-flex align-items-center justify-content-between mt-3 fs-7">
+                  <input type="number" name="" id="" class="form-control fs-7">
+                </div>
+                <div class="ms-auto text-info d-flex align-items-center mt-3">
+                   <a href="#" style="text-decoration:underline; ">Edit</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-4">
+
+              <button class="col-6 fs-6  btn btn-primary">Save</button>
+            </div>
+
+
+
+        </form>
         <!--  Row 1 -->
 
 

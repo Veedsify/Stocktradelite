@@ -73,7 +73,29 @@
                              Crytp Emmanuel
 
                             </td>
-                            <td>Amatur</td>
+                            <td>
+                                <form class="d-flex gap-1">
+                                <input type="hidden" name="_token" autocomplete="off"> <input type="hidden" name="_method" value="PUT"> <select name="role" id="role" class="px-1 py-1 border-1 border-muted btn-outline-info rounded-2">
+                                <option value="BEGINNER" selected="">BEGINNER
+                                </option>
+                                <option value="STANDARD">STANDARD
+                                </option>
+                                <option value="GOLD">
+                                    GOLD
+                                </option>
+                                <option value="GOLD-PLUS">
+                                    GOLD PLUS
+                                </option>
+                                <option value="DIAMOND">
+                                    DIAMOND
+                                </option>
+                                <option value="DIAMOND-PLUS">
+                                    DIAMOND PLUS
+                                </option>
+                                </select>
+                                <button type="submit" class="btn btn-primary btn-sm">Update</button>
+                                </form>
+                                </td>
                             <td>Emmanuel@gmail.com</td>
                             <td>0983738449</td>
                             <td>$80,0000</td>
@@ -81,20 +103,7 @@
                             <td><a href="{{ route('admin.balance.editbalance',"[id]") }}" style="text-decoration: underline;">Edit Balance</a></td>
                           </tr>
                           <!-- end row -->
-                          <!-- start row -->
-                          <tr>
-                            <td>
-                             Crytp Emmanuel
-
-                            </td>
-                            <td>Amatur</td>
-                            <td>Emmanuel@gmail.com</td>
-                            <td>0983738449</td>
-                            <td>$80,0000</td>
-                            <td><a href="#" style="text-decoration: underline;">edit</a></td>
-                            <td><a href="#" style="text-decoration: underline;">Edit Balance</a></td>
-                          </tr>
-                          <!-- end row -->
+                          
 
                       </table>
                     </div>

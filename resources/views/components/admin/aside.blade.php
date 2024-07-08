@@ -59,7 +59,7 @@
     </a>
     <ul aria-expanded="false" class="collapse first-level">
       <li class="sidebar-item">
-        <a href="../main/form-editor-quill.html" class="sidebar-link">
+        <a href="{{route('admin.security')}}" class="sidebar-link">
           <div class="round-16 d-flex align-items-center justify-content-center">
             <i class="ti ti-circle"></i>
           </div>
@@ -67,7 +67,7 @@
         </a>
       </li>
       <li class="sidebar-item">
-        <a href="../main/form-editor-tinymce.html" class="sidebar-link">
+        <a href="{{route('admin.profile')}}" class="sidebar-link">
           <div class="round-16 d-flex align-items-center justify-content-center">
             <i class="ti ti-circle"></i>
           </div>
@@ -85,19 +85,19 @@
     </a>
     <ul aria-expanded="false" class="collapse first-level">
       <li class="sidebar-item">
-        <a href="../main/form-editor-quill.html" class="sidebar-link">
+        <a href="{{route('admin.btc')}}" class="sidebar-link">
           <div class="round-16 d-flex align-items-center justify-content-center">
             <i class="ti ti-circle"></i>
           </div>
-          <span class="hide-menu">Security</span>
+          <span class="hide-menu">Bitcon Address</span>
         </a>
       </li>
       <li class="sidebar-item">
-        <a href="../main/form-editor-tinymce.html" class="sidebar-link">
+        <a href="{{route('admin.eth')}}" class="sidebar-link">
           <div class="round-16 d-flex align-items-center justify-content-center">
             <i class="ti ti-circle"></i>
           </div>
-          <span class="hide-menu">Settings</span>
+          <span class="hide-menu">Etheriun Address</span>
         </a>
       </li>
     </ul>
