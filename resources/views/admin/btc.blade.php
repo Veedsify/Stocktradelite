@@ -31,25 +31,18 @@
 
                   </div>
                 </div>
-                <div class="table-responsive">
-                  <table class="table align-middle text-nowrap mb-0">
-                    <thead>
-                      <tr class="text-muted fw-semibold">
-                          <th scope="col">Date</th>
-                        <th scope="col">Amount</th>
-                        <th scope="col">Status</th>
-                      </tr>
-                    </thead>
-                    <tbody class="border-top">
+                    <form action="">
 
-                        <tr></tr>
+                        <div class="mb-4">
 
-                    </tbody>
-                  </table>
+                        <Label class="form-label">Edit Bitcoin Address</Label>
+                            <input type="text" class="form-control" placeholder="Edit Address">
+                        </div>
+                        <buttonv class="btn btn-primary">Save</button>
+                    </form>
                 </div>
               </div>
 
-          </div>
 
 
 

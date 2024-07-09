@@ -3,11 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\MailController;
 use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\admin\TermsController;
 use App\Http\Controllers\admin\UsersController;
 use App\Http\Controllers\admin\WalletController;
 use App\Http\Controllers\admin\BalanceController;
+use App\Http\Controllers\admin\PrivacyController;
 use App\Http\Controllers\admin\ProfileController;
 use App\Http\Controllers\admin\SecurityController;
+use App\Http\Controllers\user\NotificationController;
 
 
 
@@ -20,6 +23,10 @@ Route::get('/admin/security', [SecurityController::class, "security"])->name("ad
 Route::get('/admin/profile', [ProfileController::class, "profile"])->name("admin.profile");
 Route::get('/admin/wallet-btc', [WalletController::class, "btc"])->name("admin.btc");
 Route::get('/admin/wallet-eth', [WalletController::class, "eth"])->name("admin.eth");
+Route::get('/admin/privacy', [PrivacyController::class, "privacy"])->name("admin.privacy");
+Route::get('/admin/terms-condition', [TermsController::class, "termsCondition"])->name("admin.terms");
+Route::get('/admin/notification', [NotificationController::class, "notificationAdmin"])->name("admin.notification");
+
 
 
 

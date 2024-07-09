@@ -12,6 +12,6 @@ class WalletController extends Controller
         return view('admin.btc');
     }
     public function eth(){
-        return view('admin.btc');
+        return view('admin.eth');
     }
 }

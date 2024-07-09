@@ -32,11 +32,7 @@
                         </ol>
                       </nav>
                     </div>
-                    <div class="col-3">
-                      <div class="text-center mb-n5">
-                        <img src="{{asset('user-assets/images/breadcrumb/ChatBc.png')}}" alt="" class="img-fluid mb-n4">
-                      </div>
-                    </div>
+
                   </div>
                 </div>
               </div>

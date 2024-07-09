@@ -41,6 +41,8 @@
   <script src="{{ asset('user-assets/libs/owl.carousel/dist/owl.carousel.min.js') }}"></script>
   <script src="{{ asset('user-assets/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
   <script src="{{ asset('user-assets/js/dashboards/dashboard.js') }}"></script>
+  <script src="{{asset('user-assets/js/apps/contact.js')}}"></script>
+
 </body>
 
 </html>

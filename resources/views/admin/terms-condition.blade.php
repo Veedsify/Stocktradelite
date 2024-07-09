@@ -21,13 +21,13 @@
           <div class="card-body px-4 py-3">
             <div class="row align-items-center">
               <div class="col-9">
-                <h4 class="fw-semibold mb-8">Send Mail</h4>
+                <h4 class="fw-semibold mb-8">eDIT </h4>
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item">
                       <a class="text-muted text-decoration-none" href="index.html">Home</a>
                     </li>
-                    <li class="breadcrumb-item" aria-current="page">mail</li>
+                    <li class="breadcrumb-item" aria-current="page">Terms/Condition</li>
                   </ol>
                 </nav>
               </div>
@@ -41,17 +41,11 @@
 
             <form action="" class="form-horizontal">
               <div class="mb-4">
-                <label class="form-label">To:<span class="text-danger">*</span>
-                </label>
-                <input type="text" class="form-control">
+
+                <input type="text" class="form-control" value="Virtual Land In The Metaverse Is Selling For Millions Of Dollars">
               </div>
-              <div class="mb-4">
-                <label class="form-label">Subject: <span class="text-danger">*</span>
-                </label>
-                <input type="text" class="form-control">
-              </div>
+
               <div>
-                <label class="form-label">Message:</label>
                 <div id="editor" style="min-height: 30vh">
                 </div>
               </div>

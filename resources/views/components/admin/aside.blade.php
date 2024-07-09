@@ -3,7 +3,7 @@
         <!-- Start Vertical Layout Sidebar -->
         <!-- ---------------------------------- -->
             <div class="brand-logo d-flex align-items-center justify-content-between">
-            <a href="{{route('user')}}" class="text-nowrap logo-img">
+            <a href="{{route('admin')}}" class="text-nowrap logo-img">
              <img src="{{asset('assets/images/logo/log-footer.png')}}" alt="Logo-Dark" width="180px">
              </a>
               <a href="javascript:void(0)" class="sidebartoggler ms-auto text-decoration-none fs-5 d-block d-xl-none">
@@ -49,6 +49,7 @@
     <span class="hide-menu">Users</span>
   </a>
 </li>
+
 
 <li class="sidebar-item">
     <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
@@ -98,6 +99,32 @@
             <i class="ti ti-circle"></i>
           </div>
           <span class="hide-menu">Etheriun Address</span>
+        </a>
+      </li>
+    </ul>
+</li>
+<li class="sidebar-item">
+    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+      <span class="d-flex">
+        <i class="ti ti-edit"></i>
+      </span>
+      <span class="hide-menu">Edit</span>
+    </a>
+    <ul aria-expanded="false" class="collapse first-level">
+      <li class="sidebar-item">
+        <a href="{{route('admin.privacy')}}" class="sidebar-link">
+          <div class="round-16 d-flex align-items-center justify-content-center">
+            <i class="ti ti-circle"></i>
+          </div>
+          <span class="hide-menu">Privacy policy</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="{{route('admin.terms')}}" class="sidebar-link">
+          <div class="round-16 d-flex align-items-center justify-content-center">
+            <i class="ti ti-circle"></i>
+          </div>
+          <span class="hide-menu">Terms and Condition</span>
         </a>
       </li>
     </ul>
