@@ -17,8 +17,17 @@ require_once  __DIR__ . '/user/user.php';
 require_once  __DIR__ . '/admin/admin.php';
 // Index Pages
 Route::get('/', [IndexController::class, "index"])->name("index");
+
+Route::prefix("/login")->group(function () {
+    Route::get("/", [AuthController::class, "login"])->name("login");
+    Route::post("/login", [AuthController::class, "loginUser"])->name("login.user");
+});
+
 Route::get("/login", [AuthController::class, "login"])->name("login");
-Route::get("/register", [AuthController::class, "register"])->name("register");
+Route::prefix("register")->group(function () {
+    Route::get("/", [AuthController::class, "register"])->name("register");
+    Route::post("/new", [AuthController::class, "registerNew"])->name("register.new");
+});
 Route::get("/logout", [AuthController::class, "logout"])->name("logout");
 
 

@@ -1,4 +1,6 @@
-﻿@extends('../layouts/user/userlayout')
+﻿@extends('../layouts/user/userlayout',[
+'title' => ucwords(auth()->user()->name) . ' | Dashboard - Stocktradelite',
+])
 @section('content')
 
 
@@ -101,7 +103,9 @@
 
                 </div>
                 <div class="d-flex align-items-center justify-content-between mt-4">
-                  <h3 class="mb-0 fw-semibold fs-7">BEGINNER</h3>
+                  <h3 class="mb-0 fw-semibold fs-7">
+                    {{ strtoupper(auth()->user()->tier) }}
+                  </h3>
 
                 </div>
               </div>

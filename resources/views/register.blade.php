@@ -38,117 +38,76 @@
       </div>
       <div class="col-md-12">
         <div class="flat-tabs">
-          <ul class="menu-tab">
-            <li class="active">
-              <h6 class="fs-16">Email</h6>
-            </li>
-            <li>
-              <h6 class="fs-16">Mobile</h6>
-            </li>
-          </ul>
-
           <div class="content-tab">
             <div class="content-inner">
-              <form>
+              <form action="{{route('register.new')}}" method="post">
+                @csrf
+                @if($errors->any())
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <ul>
+                    @foreach($errors->all() as $error)
+                    <li class="text-center">{{$error}}</li>
+                    @endforeach
+                  </ul>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                @endif
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email/ID</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1"
-                    placeholder="Please fill in the email form.">
+                  <label for="exampleInputEmail1">Full Name
+                    <span class="fs-14">
+                      {{ $errors->first('fullanme') }}
+                    </span>
+                  </label>
+                  <input required type="text" name="fullanme" class="form-control"
+                    placeholder="Please fill in the full name." value="{{old('fullanme')}}">
                 </div>
                 <div class="form-group">
-                  <label>Password
-                    <span>(8 or more characters, including numbers and special
-                      characters)</span></label>
-                  <input type="password" class="form-control" placeholder="Please enter a password.">
-                  <input type="password" class="form-control" placeholder="Please re-enter your password.">
+                  <label for="exampleInputEmail1">Email Address
+                    <span class="fs-14">
+                      {{ $errors->first('email') }}
+                    </span>
+                  </label>
+                  <input required type="email" name="email" class="form-control" placeholder="Please fill in the email."
+                    value="{{old('email')}}">
                 </div>
                 <div class="form-group">
-                  <label>NickName
-                    <span class="fs-14">(Excluding special characters)</span></label>
-                  <input type="text" class="form-control" placeholder="Enter Email">
-                </div>
-                <div class="form-group">
-                  <label>Country </label>
-                  <select class="form-control">
-                    <option>South Korea (+82)</option>
-                    <option>Vietnamese (+84)</option>
-                    <option>South Korea (+82)</option>
-                    <option>South Korea (+82)</option>
+                  <label>Country
+                    <span class="fs-14">
+                      {{ $errors->first('country') }}
+                    </span>
+                  </label>
+                  <select name="country" class="form-control countriesSelect">
+                    <option label="Select a country" disabled selected></option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label>Phone
-                    <span class="fs-14">(Enter numbers only)</span></label>
-                  <input type="text" class="form-control" placeholder="ex) 01012345678 (without '-')">
+                    <span class="fs-14">
+                      {{ $errors->first('phone') }}
+                    </span></label>
+                  <input required name="phone" type="text" class="form-control" placeholder="+1 234 456 7890"
+                    value="{{old('phone')}}">
                 </div>
-
                 <div class="form-group">
-                  <label>UID Code </label>
-                  <input type="text" class="form-control" placeholder="Please enter your invitation code.">
+                  <label>Password
+                    <span class="fs-14">
+                      {{ $errors->first('password') }}
+                      {{ $errors->first('confirm_password') }}
+                    </span>
+                  </label>
+                  <input required type="password" name="password" class="form-control mb-3"
+                    placeholder="Please enter a password." value="{{old('password')}}">
+                  <input required type="password" name="confirm_password" class="form-control"
+                    placeholder="Please re-enter your password.">
                 </div>
-
                 <button type="submit" class="btn-action">
-                  Pre-Registration
+                  Register
                 </button>
                 <div class="bottom">
                   <p>Already have an account?</p>
                   <a href="{{route('login') }}">Login</a>
-                </div>
-              </form>
-            </div>
-            <div class="content-inner">
-              <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Mobile Phone</label>
-                  <div>
-                    <select class="form-control">
-                      <option>+1</option>
-                      <option>+84</option>
-                      <option>+82</option>
-                      <option>+32</option>
-                    </select>
-                    <input type="text" class="form-control" placeholder="Your Phone number">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Password
-                    <span>(8 or more characters, including numbers and special
-                      characters)</span></label>
-                  <input type="password" class="form-control" placeholder="Please enter a password.">
-                  <input type="password" class="form-control" id="exampleInputPassword2"
-                    placeholder="Please re-enter your password.">
-                </div>
-                <div class="form-group">
-                  <label>NickName
-                    <span class="fs-14">(Excluding special characters)</span></label>
-                  <input type="text" class="form-control" placeholder="Enter Email">
-                </div>
-                <div class="form-group">
-                  <label>Country </label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option>South Korea (+82)</option>
-                    <option>Vietnamese (+84)</option>
-                    <option>South Korea (+82)</option>
-                    <option>South Korea (+82)</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Phone
-                    <span class="fs-14">(Enter numbers only)</span></label>
-                  <input type="text" class="form-control" placeholder="ex) 01012345678 (without '-')">
-                </div>
-
-                <div class="form-group">
-                  <label>UID Code </label>
-                  <input type="text" class="form-control" placeholder="Please enter your invitation code.">
-                </div>
-
-                <button type="submit" class="btn-action">
-                  Pre-Registration
-                </button>
-                <div class="bottom">
-                  <p>Already have an account?</p>
-                  <a href="login.html">Login</a>
                 </div>
               </form>
             </div>
@@ -181,6 +140,22 @@
 </section>
 
 <script>
+  let selectCountries = document.querySelectorAll('.countriesSelect');
+  async function GetCountries (){
+    let response = await fetch('https://restcountries.com/v3.1/all');
+    let data = await response.json();
+
+    selectCountries.forEach(select => {
+    data.forEach(country => {
+      let option = document.createElement('option');
+      option.innerText = country.name.common;
+      option.value = country.name.common;
+      select.appendChild(option);
+    });
+  })
+}
+GetCountries();
+
   function Convert() {
         let dollarInput = document.getElementByClass("dollar").value;
         let bitcoinInput = document.getElementByClass("bitcoin").value;

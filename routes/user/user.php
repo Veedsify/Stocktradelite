@@ -12,12 +12,14 @@ use App\Http\Controllers\user\UpgradeAccountController;
 
 
 // Index Pages
-Route::get('/user', [UserController::class, "user"])->name("user");
-Route::get('/user/deposit', [DepositController::class, "deposit"])->name("deposit");
-Route::get('/user/withdrawal', [WithdrawalController::class, "withdrawal"])->name("withdrawal");
-Route::get('/user/trade-history', [TradeHistoryController::class, "tradeHistory"])->name("tradehistory");
-Route::get('/user/upgrade-account', [UpgradeAccountController::class, "upgradeAccount"])->name("upgradeaccount");
-Route::get('/user/profile', [ProfileController::class, "profile"])->name("profile");
-Route::get('/user/change-password', [ChangePasswordController::class, "changePassword"])->name("changepassword");
-Route::get('/user/notification', [NotificationController::class, "notification"])->name("notification");
 
+Route::prefix("user")->middleware(['auth'])->group(function () {
+    Route::get('/', [UserController::class, "user"])->name("user");
+    Route::get('/deposit', [DepositController::class, "deposit"])->name("deposit");
+    Route::get('/withdrawal', [WithdrawalController::class, "withdrawal"])->name("withdrawal");
+    Route::get('/trade-history', [TradeHistoryController::class, "tradeHistory"])->name("tradehistory");
+    Route::get('/upgrade-account', [UpgradeAccountController::class, "upgradeAccount"])->name("upgradeaccount");
+    Route::get('/profile', [ProfileController::class, "profile"])->name("profile");
+    Route::get('/change-password', [ChangePasswordController::class, "changePassword"])->name("changepassword");
+    Route::get('/notification', [NotificationController::class, "notification"])->name("notification");
+});

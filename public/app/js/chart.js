@@ -7,101 +7,101 @@
 
     var chartBar1 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-1"),
           options1
         );
-      chart1.render();
+      chart1?.render();
     };
 
     var chartBar2 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-2"),
           options2
@@ -110,44 +110,44 @@
     };
     var chartBar3 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-3"),
           options2
@@ -156,54 +156,54 @@
     };
     var chartBar4 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-4"),
           options1
@@ -212,54 +212,54 @@
     };
     var chartBar5 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-5"),
           options1
@@ -268,44 +268,44 @@
     };
     var chartBar6 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-6"),
           options2
@@ -314,54 +314,54 @@
     };
     var chartBar7 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-7"),
           options1
@@ -370,54 +370,54 @@
     };
     var chartBar8 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-8"),
           options1
@@ -426,54 +426,54 @@
     };
     var chartBar9 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-9"),
           options1
@@ -483,44 +483,44 @@
 
     var chartBar10 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-10"),
           options2
@@ -529,44 +529,44 @@
     };
     var chartBar11 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-11"),
           options2
@@ -575,54 +575,54 @@
     };
     var chartBar12 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-12"),
           options1
@@ -631,54 +631,54 @@
     };
     var chartBar13 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-13"),
           options1
@@ -687,44 +687,44 @@
     };
     var chartBar14 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-14"),
           options2
@@ -733,54 +733,54 @@
     };
     var chartBar15 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-15"),
           options1
@@ -789,54 +789,54 @@
     };
     var chartBar16 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-16"),
           options1
@@ -845,44 +845,44 @@
     };
     var chartBar17 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-17"),
           options2
@@ -891,44 +891,44 @@
     };
     var chartBar18 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-18"),
           options2
@@ -937,54 +937,54 @@
     };
     var chartBar19 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-19"),
           options1
@@ -993,54 +993,54 @@
     };
     var chartBar20 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-20"),
           options1
@@ -1049,44 +1049,44 @@
     };
     var chartBar21 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-21"),
           options2
@@ -1095,54 +1095,54 @@
     };
     var chartBar22 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-22"),
           options1
@@ -1151,54 +1151,54 @@
     };
     var chartBar23 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-23"),
           options1
@@ -1207,54 +1207,54 @@
     };
     var chartBar24 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-24"),
           options1
@@ -1263,54 +1263,54 @@
     };
     var chartBar25 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-25"),
           options1
@@ -1319,54 +1319,54 @@
     };
     var chartBar26 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-26"),
           options1
@@ -1375,54 +1375,54 @@
     };
     var chartBar27 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-27"),
           options1
@@ -1431,54 +1431,54 @@
     };
     var chartBar28 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-28"),
           options1
@@ -1487,54 +1487,54 @@
     };
     var chartBar29 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-29"),
           options1
@@ -1543,54 +1543,54 @@
     };
     var chartBar30 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-30"),
           options1
@@ -1599,54 +1599,54 @@
     };
     var chartBar31 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-31"),
           options1
@@ -1655,54 +1655,54 @@
     };
     var chartBar32 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-32"),
           options1
@@ -1711,54 +1711,54 @@
     };
     var chartBar33 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-33"),
           options1
@@ -1767,54 +1767,54 @@
     };
     var chartBar34 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-34"),
           options1
@@ -1823,44 +1823,44 @@
     };
     var chartBar35 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-35"),
           options2
@@ -1869,44 +1869,44 @@
     };
     var chartBar36 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-36"),
           options2
@@ -1915,54 +1915,54 @@
     };
     var chartBar37 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-37"),
           options1
@@ -1971,54 +1971,54 @@
     };
     var chartBar38 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-38"),
           options1
@@ -2027,54 +2027,54 @@
     };
     var chartBar39 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-39"),
           options1
@@ -2083,44 +2083,44 @@
     };
     var chartBar40 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-40"),
           options2
@@ -2129,44 +2129,44 @@
     };
     var chartBar41 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-41"),
           options2
@@ -2175,54 +2175,54 @@
     };
     var chartBar42 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-42"),
           options1
@@ -2231,54 +2231,54 @@
     };
     var chartBar43 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-43"),
           options1
@@ -2287,54 +2287,54 @@
     };
     var chartBar44 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-44"),
           options1
@@ -2343,44 +2343,44 @@
     };
     var chartBar45 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-45"),
           options2
@@ -2389,44 +2389,44 @@
     };
     var chartBar46 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-46"),
           options2
@@ -2435,54 +2435,54 @@
     };
     var chartBar47 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-47"),
           options1
@@ -2491,54 +2491,54 @@
     };
     var chartBar48 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-48"),
           options1
@@ -2547,54 +2547,54 @@
     };
     var chartBar49 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-49"),
           options1
@@ -2603,54 +2603,54 @@
     };
     var chartBar50 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-50"),
           options1
@@ -2659,44 +2659,44 @@
     };
     var chartBar51 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-51"),
           options2
@@ -2705,44 +2705,44 @@
     };
     var chartBar52 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-52"),
           options2
@@ -2751,54 +2751,54 @@
     };
     var chartBar53 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-53"),
           options1
@@ -2807,54 +2807,54 @@
     };
     var chartBar54 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-54"),
           options1
@@ -2863,44 +2863,44 @@
     };
     var chartBar55 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-55"),
           options2
@@ -2909,44 +2909,44 @@
     };
     var chartBar56 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-56"),
           options2
@@ -2955,54 +2955,54 @@
     };
     var chartBar57 = function () {
       var options1 = {
-          series: [
-            {
-              data: [
-                25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
-              ],
-            },
-          ],
-          colors: ["#58BD7D"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              25, 66, 41, 89, 63, 25, 44, 20, 36, 40, 54, 89, 63, 25, 80,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
+        ],
+        colors: ["#58BD7D"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        // labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
 
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
 
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
-          states: {
-            hover: {
-              filter: {
-                type: "none",
-                value: 0,
-              },
+          marker: { show: !1 },
+        },
+        states: {
+          hover: {
+            filter: {
+              type: "none",
+              value: 0,
             },
           },
         },
+      },
         chart1 = new ApexCharts(
           document.querySelector("#total-revenue-chart-57"),
           options1
@@ -3011,44 +3011,44 @@
     };
     var chartBar58 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 100,
-            height: 40,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              55, 56, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63, 35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 100,
+          height: 40,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-58"),
           options2
@@ -3058,45 +3058,45 @@
 
     var chartBar59 = function () {
       var options2 = {
-          series: [
-            {
-              data: [
-                6, 12, 30, 55, 20, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63,
-                35, 44, 3,
-              ],
-            },
-          ],
-          colors: ["#D33535"],
-          chart: {
-            type: "area",
-            width: 506,
-            height: 100,
-            sparkline: { enabled: !0 },
+        series: [
+          {
+            data: [
+              6, 12, 30, 55, 20, 51, 49, 63, 35, 44, 40, 36, 40, 54, 49, 63,
+              35, 44, 3,
+            ],
           },
-          plotOptions: { bar: { columnWidth: "50%" } },
-          labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-          xaxis: { crosshairs: { width: 1 } },
-          stroke: {
-            show: true,
-            curve: "smooth",
-            lineCap: "butt",
-            colors: undefined,
-            width: 2,
-            dashArray: 0,
-          },
-          tooltip: {
-            fixed: { enabled: !1 },
-            x: { show: !1 },
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "";
-                },
+        ],
+        colors: ["#D33535"],
+        chart: {
+          type: "area",
+          width: 506,
+          height: 100,
+          sparkline: { enabled: !0 },
+        },
+        plotOptions: { bar: { columnWidth: "50%" } },
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        xaxis: { crosshairs: { width: 1 } },
+        stroke: {
+          show: true,
+          curve: "smooth",
+          lineCap: "butt",
+          colors: undefined,
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          fixed: { enabled: !1 },
+          x: { show: !1 },
+          y: {
+            title: {
+              formatter: function (e) {
+                return "";
               },
             },
-            marker: { show: !1 },
           },
+          marker: { show: !1 },
         },
+      },
         chart2 = new ApexCharts(
           document.querySelector("#total-revenue-chart-59"),
           options2
@@ -3106,7 +3106,7 @@
 
     /* Function ============ */
     return {
-      init: function () {},
+      init: function () { },
 
       load: function () {
         chartBar1();
@@ -3170,11 +3170,11 @@
         chartBar59();
       },
 
-      resize: function () {},
+      resize: function () { },
     };
   })();
 
-  jQuery(document).ready(function () {});
+  jQuery(document).ready(function () { });
 
   jQuery(window).on("load", function () {
     setTimeout(function () {
@@ -3182,5 +3182,5 @@
     }, 1000);
   });
 
-  jQuery(window).on("resize", function () {});
+  jQuery(window).on("resize", function () { });
 })(jQuery);

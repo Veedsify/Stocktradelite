@@ -36,7 +36,7 @@
     <script src="{{ asset('app/js/apexcharts.js') }}"></script>
     <script src="{{ asset('app/js/switchmode.js') }}"></script>
 
-    <script src="{{ asset('app/js/chart.js') }}"></script>
+    {{-- <script src="{{ asset('app/js/chart.js') }}"></script> --}}
     <script src=" https://cdn.jsdelivr.net/npm/boxicons@2.1.4/dist/boxicons.min.js "></script>
 
     <!-- Swiper JS -->

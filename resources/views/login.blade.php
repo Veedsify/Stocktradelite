@@ -53,28 +53,42 @@
       </div>
       <div class="col-md-12">
         <div class="flat-tabs">
-          <ul class="menu-tab">
-            <li class="active">
-              <h6 class="fs-16">Email</h6>
-            </li>
-            <li>
-              <h6 class="fs-16">Mobile</h6>
-            </li>
-          </ul>
-
           <div class="content-tab">
             <div class="content-inner">
-              <form>
+              <form action="{{route('login.user')}}" method="post">
+                @csrf
+                @if(session('error'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <ul>
+                    <li class="text-center">{{session('error')}}</li>
+                  </ul>
+                </div>
+                @endif
+                @if(session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <ul>
+                    <li class="text-center">{{session('success')}}</li>
+                  </ul>
+                </div>
+                @endif
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email/ID</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1"
-                    placeholder="Please fill in the email form.">
+                  <label for="exampleInputEmail1">Email Address
+                    <span class="fs-14">
+                      {{ $errors->first('email') }}
+                    </span>
+                  </label>
+                  <input type="email" class="form-control" name="email" placeholder="Please fill in the email form."
+                    value="{{old('email')}}">
                 </div>
                 <div class="form-group s1">
-                  <label>Password </label>
-                  <input type="password" class="form-control" placeholder="Please enter a password.">
+                  <label>Password
+                    <span class="fs-14">
+                      {{ $errors->first('password') }}
+                    </span>
+                  </label>
+                  <input type="password" class="form-control" placeholder="Please enter a password." name="password"
+                    value="{{old('password')}}">
                 </div>
-
                 <div class="form-group form-check">
                   <div>
                     <input type="checkbox" class="form-check-input">
@@ -82,45 +96,10 @@
                   </div>
                   <p>Forgot Password?</p>
                 </div>
-
                 <button type="submit" class="btn-action">Login</button>
                 <div class="bottom">
                   <p>Not a member?</p>
                   <a href="{{route('register') }}">Register</a>
-                </div>
-              </form>
-            </div>
-            <div class="content-inner">
-              <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Mobile Phone</label>
-                  <div>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                      <option>+1</option>
-                      <option>+84</option>
-                      <option>+82</option>
-                      <option>+32</option>
-                    </select>
-                    <input type="text" class="form-control" placeholder="Your Phone number">
-                  </div>
-                </div>
-                <div class="form-group s1">
-                  <label>Password </label>
-                  <input type="password" class="form-control" placeholder="Please enter a password.">
-                </div>
-
-                <div class="form-group form-check">
-                  <div>
-                    <input type="checkbox" class="form-check-input">
-                    <label class="form-check-label">Remember Me</label>
-                  </div>
-                  <p>Forgot Password?</p>
-                </div>
-
-                <button type="submit" class="btn-action">Login</button>
-                <div class="bottom">
-                  <p>Not a member?</p>
-                  <a href="register.html">Register</a>
                 </div>
               </form>
             </div>
