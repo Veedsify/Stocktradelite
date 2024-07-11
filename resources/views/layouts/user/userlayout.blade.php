@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Orange_Theme" data-layout="vertical"
+  data-boxed-layout="boxed" data-card="shadow">
 
 <head>
   <!-- Required meta tags -->
@@ -17,14 +18,13 @@
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
     rel="stylesheet">
 
-
-  <!-- Core Css -->
   <link rel="stylesheet" href="{{ asset('user-assets/css/styles.css') }}">
   <title>
     {{ $title ?? 'Stocktradelite' }}
   </title>
   <!-- Owl Carousel  -->
   <link rel="stylesheet" href="{{ asset('user-assets/libs/owl.carousel/dist/assets/owl.carousel.min.css') }}">
+  @vite("resources/js/app.js")
 </head>
 
 <body>

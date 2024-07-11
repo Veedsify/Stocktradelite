@@ -2,17 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Exception;
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\User;
+use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
     public function login()
     {
-        if (Auth::check()) return redirect(route("index"));
+        if (Auth::check()) {
+            return redirect(route("index"));
+        }
+
         return view("login");
     }
 
@@ -39,7 +42,7 @@ class AuthController extends Controller
             "country" => "required",
             "phone" => "required",
             "password" => "required|min:6",
-            "confirm_password" => "required|same:password"
+            "confirm_password" => "required|same:password",
         ]);
 
         try {
@@ -60,6 +63,7 @@ class AuthController extends Controller
             $user->password = password_hash($request->password, PASSWORD_DEFAULT);
             $user->role = "user";
             $user->verified = false;
+            $user->tier = 1;
             $user->avatar = "user-assets/images/profile/user-" . rand(1, 10) . ".jpg";
             $user->verification_token = $verification_token;
             $user->save();

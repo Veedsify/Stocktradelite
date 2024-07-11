@@ -69,7 +69,9 @@
                   </div>
                 </div>
                 <div class="d-flex align-items-center justify-content-between mt-4">
-                  <h3 class="mb-0 fw-semibold fs-7">0.00 </h3>
+                  <h3 class="mb-0 fw-semibold fs-7" id="user-balance" data-balance="{{(auth()->user()->balance)}}">
+                    {{ number_format(auth()->user()->balance, 2) }}
+                  </h3>
                   <span class="fw-bold"> USD</span>
                 </div>
               </div>
@@ -88,7 +90,9 @@
                   </div>
                 </div>
                 <div class="d-flex align-items-center justify-content-between mt-4">
-                  <h3 class="mb-0 fw-semibold fs-7">0.00</h3>
+                  <h3 class="mb-0 fw-semibold fs-7" id="btc-equivalent">
+                    Loading....
+                  </h3>
                   <span class="fw-bold">BTC</span>
                 </div>
               </div>
@@ -104,7 +108,9 @@
                 </div>
                 <div class="d-flex align-items-center justify-content-between mt-4">
                   <h3 class="mb-0 fw-semibold fs-7">
-                    {{ strtoupper(auth()->user()->tier) }}
+                    {{ strtoupper(
+                    \App\Models\Tier::where('id', auth()->user()->tier)->first()->name
+                    ) }}
                   </h3>
 
                 </div>
@@ -336,10 +342,6 @@
 
   </div>
   <x-user.search />
-
-
-
-
 </div>
 
 @endsection

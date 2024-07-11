@@ -3,12 +3,16 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\Tier;
 
 class UpgradeAccountController extends Controller
 {
     //
-    public function upgradeAccount(){
-        return view('user.upgrade-account');
+    public function upgradeAccount()
+    {
+        $tiers = Tier::all();
+        return view('user.upgrade-account', [
+            'tiers' => $tiers,
+        ]);
     }
 }

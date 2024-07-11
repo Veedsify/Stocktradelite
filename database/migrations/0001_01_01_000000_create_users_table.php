@@ -22,9 +22,10 @@ return new class extends Migration
             $table->string("zip")->nullable();
             $table->string("country")->nullable();
             $table->string("role")->default("user");
+            $table->string("balance")->default(0);
             $table->string("status")->default("active");
             $table->string("avatar")->nullable();
-            $table->string("tier")->default("beginner");
+            $table->integer("tier")->default(1);
             $table->string("tier_expires_at")->nullable();
             $table->boolean("verified")->default(false);
             $table->string("verification_token")->nullable();
