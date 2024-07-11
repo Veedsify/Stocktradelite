@@ -66,7 +66,7 @@
   </a>
 </li>
 <li class="sidebar-item">
-  <a class="sidebar-link" href="index6.html" aria-expanded="false">
+  <a class="sidebar-link" href="{{route('kyc')}}" aria-expanded="false">
     <span>
       <i class="ti ti-shield"></i>
     </span>
