@@ -30,6 +30,7 @@ class User extends Authenticatable
         'role',
         'status',
         'avatar',
+        'balance',
         'tier',
         'tier_expires_at',
         'verified',

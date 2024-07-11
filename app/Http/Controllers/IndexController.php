@@ -9,7 +9,6 @@ class IndexController extends Controller
 {
     public function index()
     {
-        auth()->login(User::find(1)->first());
         return view("index");
     }
 }

@@ -1,16 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\user\KycController;
 use App\Http\Controllers\user\UserController;
 use App\Http\Controllers\user\DepositController;
-use App\Http\Controllers\user\ProfileController;
-use App\Http\Controllers\user\WithdrawalController;
 use App\Http\Controllers\user\NotificationController;
+use App\Http\Controllers\user\ProfileController;
 use App\Http\Controllers\user\TradeHistoryController;
-use App\Http\Controllers\user\ChangePasswordController;
 use App\Http\Controllers\user\UpgradeAccountController;
-
+use App\Http\Controllers\user\UserController;
+use App\Http\Controllers\user\WithdrawalController;
+use Illuminate\Support\Facades\Route;
 
 // Index Pages
 Route::get('/user', [UserController::class, "user"])->name("user");
@@ -21,5 +20,4 @@ Route::get('/user/upgrade-account', [UpgradeAccountController::class, "upgradeAc
 Route::get('/user/profile', [ProfileController::class, "profile"])->name("profile");
 Route::get('/user/change-password', [ChangePasswordController::class, "changePassword"])->name("changepassword");
 Route::get('/user/notification', [NotificationController::class, "notification"])->name("notification");
-Route::get('/user/kyc', [KycController::class, "kyc"])->name("kyc");
 
