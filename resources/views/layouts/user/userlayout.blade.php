@@ -24,6 +24,10 @@
   </title>
   <!-- Owl Carousel  -->
   <link rel="stylesheet" href="{{ asset('user-assets/libs/owl.carousel/dist/assets/owl.carousel.min.css') }}">
+
+  <link rel="stylesheet" href="{{asset('user-assets/libs/dropzone/dist/min/dropzone.min.css')}}">
+  <link rel="stylesheet" href="{{asset('user-assets/libs/select2/dist/css/select2.min.css')}}">
+  @vite("resources/js/app.js")
 </head>
 
 <body>
