@@ -6,7 +6,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h3 class="heading">Login</h3>
+        <h3 class="heading">Recover Account</h3>
       </div>
       <div class="col-md-6">
         <ul class="breadcrumb">
@@ -15,7 +15,7 @@
             <p class="fs-18">/</p>
           </li>
           <li>
-            <p class="fs-18">Login</p>
+            <p class="fs-18">Recovery</p>
           </li>
         </ul>
       </div>
@@ -29,9 +29,9 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block-text center">
-          <h3 class="heading">Login To Stocktradelite</h3>
+          <h3 class="heading">Reover Account</h3>
           <p class="desc fs-20">
-            Welcome back! Log In now to start trading
+           Please, insert your email to recover your account!
           </p>
           <div class="lock">
             <div class="icon">
@@ -47,7 +47,7 @@
                   fill="white"></path>
               </svg>
             </div>
-            <p>{{route("login")}}</p>
+            <p>{{route("recovery")}}</p>
           </div>
         </div>
       </div>
@@ -80,26 +80,12 @@
                   <input type="email" class="form-control" name="email" placeholder="Please fill in the email form."
                     value="{{old('email')}}">
                 </div>
-                <div class="form-group s1">
-                  <label>Password
-                    <span class="fs-14">
-                      {{ $errors->first('password') }}
-                    </span>
-                  </label>
-                  <input type="password" class="form-control" placeholder="Please enter a password." name="password"
-                    value="{{old('password')}}">
-                </div>
-                <div class="form-group form-check">
-                  <div>
-                    <input type="checkbox" class="form-check-input">
-                    <label class="form-check-label">Remember Me</label>
-                  </div>
-                  <p> <a href="{{route('recovery')}}"> Forgot Password?</a></p>
-                </div>
+
+
                 <button type="submit" class="btn-action">Login</button>
                 <div class="bottom">
-                  <p>Not a member?</p>
-                  <a href="{{route('register') }}">Register</a>
+                  <p>Remebered Password?</p>
+                  <a href="{{route('login') }}">Login</a>
                 </div>
               </form>
             </div>

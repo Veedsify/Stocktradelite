@@ -1,15 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FAQController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\TermsController;
 use App\Http\Controllers\MarketController;
+use App\Http\Controllers\VerifyController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\FAQController;
 use App\Http\Controllers\PrivacyController;
+use App\Http\Controllers\RecoveryController;
 
 
 //Admin Routes
@@ -51,3 +53,12 @@ Route::get("/privacy-policy", [PrivacyController::class, "privacy"])->name("priv
 
 // FAQ
 Route::get("/faq", [FAQController::class, "faq"])->name("faq");
+
+
+//Recovery Account
+Route::get("/recovery", [RecoveryController::class, "recovery"])->name("recovery");
+
+//Verify Account
+Route::get("/verify", [VerifyController::class, "verify"])->name("verify");
+
+
