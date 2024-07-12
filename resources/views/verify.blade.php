@@ -50,12 +50,12 @@
                           <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label fw-semibold">Type your 6 digits security code</label>
                             <div class="d-flex align-items-center gap-2 gap-sm-3">
-                              <input type="text" class="form-control" placeholder="">
-                              <input type="text" class="form-control" placeholder="">
-                              <input type="text" class="form-control" placeholder="">
-                              <input type="text" class="form-control" placeholder="">
-                              <input type="text" class="form-control" placeholder="">
-                              <input type="text" class="form-control" placeholder="">
+                              <input type="text" class="form-control" placeholder="" maxlength="1">
+                              <input type="text" class="form-control" placeholder="" maxlength="1">
+                              <input type="text" class="form-control" placeholder="" maxlength="1">
+                              <input type="text" class="form-control" placeholder="" maxlength="1">
+                              <input type="text" class="form-control" placeholder="" maxlength="1">
+                              <input type="text" class="form-control" placeholder="" maxlength="1">
                             </div>
                           </div>
                           <button class="btn-action w-100"  type="submit">Verify My Account</button>
