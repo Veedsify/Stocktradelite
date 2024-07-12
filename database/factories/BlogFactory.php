@@ -26,7 +26,7 @@ class BlogFactory extends Factory
             'tags' => $this->faker->words(3, true),
             'status' => $this->faker->randomElement(['draft', 'published']),
             'meta_title' => $this->faker->sentence,
-            'meta_description' => $this->faker->paragraph(3),
+            'meta_description' => $this->faker->paragraph,
             'meta_keywords' => $this->faker->words(3, true),
             'meta_image' => $this->faker->imageUrl(),
             'meta_url' => $this->faker->url,
