@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Orange_Theme" data-layout="vertical"
+  data-boxed-layout="boxed" data-card="shadow">
 
 <head>
   <!-- Required meta tags -->
@@ -24,7 +25,7 @@
   <!-- Owl Carousel  -->
   <link rel="stylesheet" href="{{ asset('user-assets/libs/owl.carousel/dist/assets/owl.carousel.min.css') }}">
 
-  {{--quill  --}}
+  {{--quill --}}
   <link rel="stylesheet" href="{{asset('user-assets/libs/quill/dist/quill.snow.css')}}">
   <link rel="stylesheet" href="{{asset('user-assets/libs/dropzone/dist/min/dropzone.min.css')}}">
   <link rel="stylesheet" href="{{asset('user-assets/libs/select2/dist/css/select2.min.css')}}">
@@ -50,26 +51,26 @@
   <script src="{{ asset('user-assets/libs/owl.carousel/dist/owl.carousel.min.js') }}"></script>
   <script src="{{ asset('user-assets/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
   <script src="{{ asset('user-assets/js/dashboards/dashboard.js') }}"></script>
-    <!-- solar quil icons -->
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
-    <script src="{{asset('user-assets/libs/quill/dist/quill.min.js')}}"></script>
-    <script src="{{asset('user-assets/js/forms/quill-init.js')}}"></script>
-    <script src="{{asset('user-assets/libs/dropzone/dist/min/dropzone.min.js')}}"></script>
-    <script src="{{asset('user-assets/libs/select2/dist/js/select2.full.min.js')}}"></script>
-    <script src="{{asset('user-assets/libs/select2/dist/js/select2.min.js')}}"></script>
-    <script src="{{asset('user-assets/js/forms/select2.init.js')}}"></script>
-    <script src="{{asset('user-assets/libs/jquery.repeater/jquery.repeater.min.js')}}"></script>
-    <script src="{{asset('user-assets/libs/jquery-validation/dist/jquery.validate.min.js')}}"></script>
-    <script src="{{asset('user-assets/js/forms/repeater-init.js')}}"></script>
-    <script src="{{asset('user-assets/libs/apexcharts/dist/apexcharts.min.js')}}"></script>
-    <script src="{{asset('user-assets/js/apps/edit-product.js')}}"></script>
+  <!-- solar quil icons -->
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+  <script src="{{asset('user-assets/libs/quill/dist/quill.min.js')}}"></script>
+  <script src="{{asset('user-assets/js/forms/quill-init.js')}}"></script>
+  <script src="{{asset('user-assets/libs/dropzone/dist/min/dropzone.min.js')}}"></script>
+  <script src="{{asset('user-assets/libs/select2/dist/js/select2.full.min.js')}}"></script>
+  <script src="{{asset('user-assets/libs/select2/dist/js/select2.min.js')}}"></script>
+  <script src="{{asset('user-assets/js/forms/select2.init.js')}}"></script>
+  <script src="{{asset('user-assets/libs/jquery.repeater/jquery.repeater.min.js')}}"></script>
+  <script src="{{asset('user-assets/libs/jquery-validation/dist/jquery.validate.min.js')}}"></script>
+  <script src="{{asset('user-assets/js/forms/repeater-init.js')}}"></script>
+  <script src="{{asset('user-assets/libs/apexcharts/dist/apexcharts.min.js')}}"></script>
+  <script src="{{asset('user-assets/js/apps/edit-product.js')}}"></script>
   <script src="{{asset('user-assets/js/apps/edit-product.js')}}"></script>
 
-   <!-- solar icons -->
-   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
-   <script src="{{asset('user-assets/libs/datatables.net/js/jquery.dataTables.min.js')}}"></script>
-   <script src="{{asset('user-assets/js/datatable/datatable-basic.init.js')}}"></script>
-   <script src="{{asset('user-assets/js/apps/contact.js')}}"></script>
+  <!-- solar icons -->
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+  <script src="{{asset('user-assets/libs/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+  <script src="{{asset('user-assets/js/datatable/datatable-basic.init.js')}}"></script>
+  <script src="{{asset('user-assets/js/apps/contact.js')}}"></script>
 </body>
 
 </html>
