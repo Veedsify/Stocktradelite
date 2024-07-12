@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kyc', function (Blueprint $table) {
+        Schema::create('kycs', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('first_name');
@@ -20,7 +20,8 @@ return new class extends Migration
             $table->string('verification_type');
             $table->string('status')->default('pending');
             $table->string('file_path');
-            $table->string('file_name');
+            $table->string('file_path2');
+            $table->string('reason')->nullable();
             $table->timestamps();
         });
     }

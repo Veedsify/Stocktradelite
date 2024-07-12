@@ -9135,6 +9135,7 @@ fieldset:disabled .btn {
 }
 
 .ratio-16x9 {
+  aspect-ratio: 16 / 9;
   --bs-aspect-ratio: 56.25%;
 }
 
@@ -31380,4 +31381,8 @@ body .dp-nav.dp-nav-right::before {
   font-size: x-small;
   padding: 4px 10px;
   border-radius: 2px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

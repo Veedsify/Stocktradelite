@@ -21,6 +21,7 @@
 
     <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('assets/images/logo/favicon.png') }}">
+    @vite('resources/css/app.css')
 </head>
 
 <body class="body header-fixed">

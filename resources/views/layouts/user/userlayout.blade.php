@@ -24,12 +24,36 @@
   </title>
   <!-- Owl Carousel  -->
   <link rel="stylesheet" href="{{ asset('user-assets/libs/owl.carousel/dist/assets/owl.carousel.min.css') }}">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
+
+  @if(session('success'))
+  <script>
+    swal({
+        title: "Success!",
+        text: "{{ session('success') }}",
+        icon: "success",
+        button: "OK",
+      })
+  </script>
+  @endif
+  @if(session('error'))
+  <script>
+    swal({
+        title: "Error!",
+        text: "{{ session('error') }}",
+        icon: "error",
+        button: "OK",
+      })
+  </script>
+  @endif
+
   @yield('content')
 
-  <script src="{{ asset('user-assets/js/vendor.min.js') }}"></script>
+  <script src="{{ asset('user-assets/js/vendor.min.js') }}">
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
   <!-- Import Js Files -->
   <script src="{{ asset('user-assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>

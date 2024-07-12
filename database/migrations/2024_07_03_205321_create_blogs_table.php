@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('meta_image');
             $table->string('meta_url');
             $table->bigInteger('views')->default(0);
-            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

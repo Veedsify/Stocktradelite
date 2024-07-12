@@ -17,6 +17,6 @@ class Kyc extends Model
         'verification_type',
         'status',
         'file_path',
-        'file_name',
+        'file_path2',
     ];
 }

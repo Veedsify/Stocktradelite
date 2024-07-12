@@ -42,23 +42,31 @@
             <h6 class="heading">Category</h6>
 
             <ul>
-              <li><a href="blog-grid-v1.html">Blockchain</a></li>
-              <li><a href="blog-grid-v1.html">Technology</a></li>
+              @foreach ($categories as $category)
+              @if ($loop->iteration < 10) <li><a href="#">{{ $category->category }}</a></li>
+                @endif
+                @endforeach
             </ul>
           </div>
           <div class="widget recent">
             <h6 class="heading">Recent Post</h6>
-
             <ul>
-              <li>
+              @foreach ($blogs as $blog)
+              @if($loop->iteration < 3) <li>
                 <div class="image">
-                  <img src="assets/images/blog/blog-01.jpg" alt="">
+                  <img src="{{asset($blog->image)}}" alt="{{$blog->title}}">
                 </div>
                 <div class="content">
-                  <a href="#" class="category">LEARN & EARN</a>
-                  <a href="" class="title">Learn about UI8 coin and earn an All-Access Pass</a>
+                  <a href="{{route('blog.single',[$blog->slug])}}" class="category">
+                    {{$blog->category}}
+                  </a>
+                  <a href="{{route('blog.single',[$blog->slug])}}" class="title">
+                    {{$blog->title}}
+                  </a>
                 </div>
-              </li>
+                </li>
+                @endif
+                @endforeach
             </ul>
           </div>
 
@@ -76,60 +84,47 @@
         </div>
       </div>
       <div class="col-xl-8 col-md-12">
+        <div>
+          @if(count($blogs) == 0)
+          <h3>
+            No Blogs Found !
+          </h3>
+          @endif
+        </div>
         <div class="blog-main row">
+          @foreach ($blogs as $blog)
           <div class="blog-box col-md-6">
             <div class="box-image">
-              <img src="assets/images/blog/blog-01.jpg" alt="" class="ratio-1x1">
+              <img src="{{ asset($blog->image) }}" alt="" class="ratio-1x1">
             </div>
 
             <div class="box-content">
-              <a href="#" class="category btn-action">learn & earn</a>
-              <a href="" class="title">Learn about UI8 coin and earn an All-Access Pass</a>
+              <a href="#" class="category btn-action">
+                {{ $blog->category }}
+              </a>
+              <a href="{{ route('blog.single', [$blog->slug]) }}" class="title">
+                {{ $blog->title }}
+              </a>
 
               <div class="meta">
-                <a href="#" class="name"><span></span>Floyd Buckridge</a>
-                <a href="#" class="time">Feb 03, 2021</a>
-              </div>
-              <p class="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Consectetur nibh curabitur sit in adipiscing purus ut sem.
-                Donec nulla sem rhoncus dolor aliquam.
-              </p>
-              <a href="blog-details.html">Read More</a>
-            </div>
-          </div>
-          <div class="blog-box col-md-6">
-            <div class="box-image">
-              <img src="assets/images/blog/blog-01.jpg" alt="">
-              <div class="wrap-video">
-                <a href="https://www.youtube.com/watch?v=i7EMACWuErA" class="popup-youtube">
-                  <svg width="13" height="16" viewbox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M0.466675 2.92407C0.466675 1.35705 2.187 0.398733 3.51938 1.22354L11.7197 6.2999C12.9827 7.0818 12.9827 8.91907 11.7197 9.70096L3.51938 14.7773C2.187 15.6021 0.466675 14.6438 0.466675 13.0768V2.92407Z"
-                      fill="#777E90"></path>
-                  </svg>
+                <a href="#" class="name"><span></span>
+                  {{ $blog->user->name }}
+                </a>
+                <a href="#" class="time">
+                  {{ $blog->created_at->diffForHumans() }}
                 </a>
               </div>
-            </div>
-
-            <div class="box-content">
-              <a href="#" class="category btn-action">learn & earn</a>
-              <a href="" class="title">Learn about UI8 coin and earn an All-Access Pass</a>
-
-              <div class="meta">
-                <a href="#" class="name"><span></span>Floyd Buckridge</a>
-                <a href="#" class="time">Feb 03, 2021</a>
-              </div>
               <p class="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Consectetur nibh curabitur sit in adipiscing purus ut sem.
-                Donec nulla sem rhoncus dolor aliquam.
+                {{ Str::limit($blog->meta_description, 200) }}
               </p>
-              <a href="blog-details.html">Read More</a>
+              <a href="{{ route('blog.single', [$blog->slug]) }}">Read More</a>
             </div>
           </div>
-
+          @endforeach
           {{-- PAGINATION HERE --}}
+          {{
+          $blogs->links('vendor.pagination.bootstrap-5')
+          }}
         </div>
       </div>
     </div>
