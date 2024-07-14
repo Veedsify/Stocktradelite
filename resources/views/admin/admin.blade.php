@@ -66,11 +66,13 @@
 
                 </div>
                 <div class="d-flex align-items-center justify-content-between mt-3">
-                  <h3 class="mb-0 fw-semibold fs-7">0</h3>
+                  <h3 class="mb-0 fw-semibold fs-7">
+                    {{number_format($usersCount)}}
+                  </h3>
                 </div>
                 <div class="ms-auto text-info d-flex align-items-center mt-3">
-                   <a href="#" style="text-decoration:underline; ">View User</a>
-                  </div>
+                  <a href="#" style="text-decoration:underline; ">View User</a>
+                </div>
               </div>
             </div>
           </div>
@@ -78,16 +80,16 @@
             <div class="card bg-success-subtle shadow-none">
               <div class="card-body p-4">
                 <div class="d-flex align-items-center">
-
-                  <h6 class="mb-0">Pending Transactions</h6>
-
+                  <h6 class="mb-0">Pending Kyc Requests</h6>
                 </div>
                 <div class="d-flex align-items-center justify-content-between mt-3">
-                  <h3 class="mb-0 fw-semibold fs-7">0</h3>
+                  <h3 class="mb-0 fw-semibold fs-7">
+                    {{number_format($pendingKyc)}}
+                  </h3>
                 </div>
                 <div class="ms-auto text-info d-flex align-items-center mt-3">
-                   <a href="#" style="text-decoration:underline; ">View Transaction</a>
-                  </div>
+                  <a href="#" style="text-decoration:underline; ">View Transaction</a>
+                </div>
               </div>
             </div>
           </div>
@@ -103,8 +105,8 @@
                   <h3 class="mb-0 fw-semibold fs-7">0</h3>
                 </div>
                 <div class="ms-auto text-info d-flex align-items-center mt-3">
-                   <a href="#" style="text-decoration:underline; ">View Requests</a>
-                  </div>
+                  <a href="#" style="text-decoration:underline; ">View Requests</a>
+                </div>
               </div>
             </div>
           </div>
