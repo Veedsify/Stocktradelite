@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\BlogController;
 use App\Http\Controllers\admin\MailController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\BalanceController;
-use App\Http\Controllers\admin\MailController;
 use App\Http\Controllers\admin\PrivacyController;
 use App\Http\Controllers\admin\ProfileController;
 use App\Http\Controllers\admin\SecurityController;
@@ -15,7 +15,8 @@ use App\Http\Controllers\user\KycController;
 use App\Http\Controllers\user\NotificationController;
 use App\Http\Middleware\CheckUserIsAdmin;
 use App\Http\Middleware\CheckUserKyc;
-use Illuminate\Support\Facades\Route;
+
+
 
 // Index Pages
 Route::prefix("admin")->middleware(["auth", CheckUserKyc::class, CheckUserIsAdmin::class])->group(function () {
