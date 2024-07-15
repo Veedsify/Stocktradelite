@@ -42,6 +42,32 @@
   </a>
 </li>
 <li class="sidebar-item">
+    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+      <span class="d-flex">
+        <i class="ti ti-chart-donut-3"></i>
+      </span>
+      <span class="hide-menu">Blog</span>
+    </a>
+    <ul aria-expanded="false" class="collapse first-level">
+      <li class="sidebar-item">
+        <a href="{{route('admin.privacy')}}" class="sidebar-link">
+          <div class="round-16 d-flex align-items-center justify-content-center">
+            <i class="ti ti-circle"></i>
+          </div>
+          <span class="hide-menu">All Blogs</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="{{route('admin.terms')}}" class="sidebar-link">
+          <div class="round-16 d-flex align-items-center justify-content-center">
+            <i class="ti ti-circle"></i>
+          </div>
+          <span class="hide-menu">Post Blog</span>
+        </a>
+      </li>
+    </ul>
+</li>
+<li class="sidebar-item">
   <a class="sidebar-link" href="{{route('users')}}" aria-expanded="false">
     <span>
       <i class="ti ti-users"></i>

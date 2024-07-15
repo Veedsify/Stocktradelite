@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\BlogController;
 use App\Http\Controllers\admin\MailController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\TermsController;
@@ -26,6 +27,7 @@ Route::get('/admin/wallet-eth', [WalletController::class, "eth"])->name("admin.e
 Route::get('/admin/privacy', [PrivacyController::class, "privacy"])->name("admin.privacy");
 Route::get('/admin/terms-condition', [TermsController::class, "termsCondition"])->name("admin.terms");
 Route::get('/admin/notification', [NotificationController::class, "notificationAdmin"])->name("admin.notification");
+Route::get('/admin/blog/all', [BlogController::class, "all-blog"])->name("admin.blog");
 
 
 

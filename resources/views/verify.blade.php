@@ -43,8 +43,8 @@
                       <div class="content-inner ">
 
                         <div class="mb-5 text-center">
-                          <p>We sent a verification code to your mobile. Enter the code from the mobile in the field below.</p>
-                          <h6 class="fw-bolder">******1234</h6>
+                          <p>We sent a verification code to your email. Enter the code from the email in the field below.</p>
+                          <h6 class="fw-bolder">s******@gmail.com</h6>
                         </div>
                         <form>
                           <div class="mb-3">
