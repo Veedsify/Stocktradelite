@@ -51,7 +51,7 @@
     </a>
     <ul aria-expanded="false" class="collapse first-level">
       <li class="sidebar-item">
-        <a href="{{route('admin.privacy')}}" class="sidebar-link">
+        <a href="{{route('admin.all.blog')}}" class="sidebar-link">
           <div class="round-16 d-flex align-items-center justify-content-center">
             <i class="ti ti-circle"></i>
           </div>
@@ -59,11 +59,11 @@
         </a>
       </li>
       <li class="sidebar-item">
-        <a href="{{route('admin.terms')}}" class="sidebar-link">
+        <a href="{{route('admin.new.blog')}}" class="sidebar-link">
           <div class="round-16 d-flex align-items-center justify-content-center">
             <i class="ti ti-circle"></i>
           </div>
-          <span class="hide-menu">Post Blog</span>
+          <span class="hide-menu">New Blog</span>
         </a>
       </li>
     </ul>

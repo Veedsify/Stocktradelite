@@ -31,6 +31,10 @@ Route::prefix("admin")->middleware(["auth", CheckUserKyc::class, CheckUserIsAdmi
     Route::get("/privacy", [PrivacyController::class, "privacy"])->name("admin.privacy");
     Route::get("/terms-condition", [TermsController::class, "termsCondition"])->name("admin.terms");
     Route::get("/notification", [NotificationController::class, "notificationAdmin"])->name("admin.notification");
-Route::get('/admin/blog/all', [BlogController::class, "all-blog"])->name("admin.blog");
+
+    // blog
+    Route::get('/blog/all', [BlogController::class, "allBlog"])->name("admin.all.blog");
+    Route::get('/blog/create', [BlogController::class, "newBlog"])->name("admin.new.blog");
+
     Route::get('/kyc-center', [KycController::class, 'kycCenter'])->name('admin.kyc');
 });
