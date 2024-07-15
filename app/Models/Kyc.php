@@ -19,4 +19,9 @@ class Kyc extends Model
         'file_path',
         'file_path2',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

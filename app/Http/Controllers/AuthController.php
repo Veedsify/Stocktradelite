@@ -64,6 +64,7 @@ class AuthController extends Controller
             $user->role = "user";
             $user->verified = false;
             $user->tier = 1;
+            $user->userid = "user_" . Str::random(10);
             $user->avatar = "user-assets/images/profile/user-" . rand(1, 10) . ".jpg";
             $user->verification_token = $verification_token;
             $user->save();

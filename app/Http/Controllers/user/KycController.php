@@ -55,4 +55,11 @@ class KycController extends Controller
             return redirect()->back()->with('error', 'An error occurred while submitting KYC');
         }
     }
+    public function kycCenter()
+    {
+        $verifications = Kyc::where('status', 'pending')->orderBy('created_at', 'desc')->get();
+        return view('admin.kyc-center', [
+            'verifications' => $verifications,
+        ]);
+    }
 }

@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class CheckUserKyc
+class CheckUserIsAdmin
 {
     /**
      * Handle an incoming request.
@@ -15,8 +15,13 @@ class CheckUserKyc
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (auth()->user()->verified == false) {
-            return redirect()->route('kyc');
+        $user = auth()->user();
+        if ($user->role !== "admin") {
+            if ($user->role === "user") {
+                return redirect()->route("user");
+            } else {
+                return redirect()->route("login");
+            }
         }
         return $next($request);
     }
