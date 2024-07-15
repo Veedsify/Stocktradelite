@@ -75,3 +75,12 @@ Route::get('/withdraw-request', function () {
 Route::get('/withdrawal-approved', function () {
     return view("email-templates.withdrawal-approved");
 });
+Route::get('/deposit', function () {
+    return view("email-templates.deposit");
+});
+Route::get('/confirmation-code', function () {
+    return view("email-templates.confirmation-code");
+});
+Route::get('/custom-mail', function () {
+    return view("email-templates.custom-mail");
+});

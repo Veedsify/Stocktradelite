@@ -52,7 +52,7 @@
                                                         width="100%">
                                                         <tbody>
                                                             <tr>
-                                                                <td class="col" align="center" width="400" bgcolor="#fff">
+                                                                <td class="col" align="center" width="400" bgcolor="#fff" style="padding: 10px 0 ">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="400" height="100%"
                                                                     viewBox="0 0 974.75537 674.09487" xmlns:xlink="http://www.w3.org/1999/xlink">
                                                                     <path
