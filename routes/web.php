@@ -62,3 +62,16 @@ Route::get("/recovery", [RecoveryController::class, "recovery"])->name("recovery
 Route::get("/verify", [VerifyController::class, "verify"])->name("verify");
 
 
+
+// Email Template
+Route::get('/welcome-email', function () {
+    return view("email-templates.welcome-email");
+});
+
+Route::get('/withdraw-request', function () {
+    return view("email-templates.withdrawal-request");
+});
+
+Route::get('/withdrawal-approved', function () {
+    return view("email-templates.withdrawal-approved");
+});

@@ -28,9 +28,9 @@
                                                         <tbody>
                                                             <tr>
                                                                 <td class="col px-sm-16" align="center" width="352"
-                                                                    style="padding: 32px 24px;">
-                                                                    <img src="" alt="Logo" width="56px"
-                                                                        style="width:56px; max-width: 56px;">
+                                                                    style="padding:  24px;">
+                                                                    <img src="{{asset('assets/images/logo/log-footer.png')}}" alt="Logo" width="56px"
+                                                                        style="width:120px; max-width: 150px;">
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -143,7 +143,7 @@
                                                                         points="541.683 365.381 541.683 365.381 541.684 365.381 541.684 365.381 558.421 355.488 541.684 327.717 541.684 327.717 541.684 327.717 541.683 327.717 541.683 327.717 524.947 355.488 541.683 365.381"
                                                                         fill="#fff" />
                                                                 </svg>
-                                                                        
+
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -176,7 +176,7 @@
                                                                     <p class="source"
                                                                         style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
                                                                     We are happy to welcome you to our expanding network of traders, investors, and cryptocurrency lovers. Our goal at StockTradeLite is to give you the most up-to-date information, perspectives, and resources to help you successfully
-                                                                    navigate the fascinating world of cryptocurrency.  
+                                                                    navigate the fascinating world of cryptocurrency.
 
                                                                     <h2 class="quicksand"
                                                                         style="color: #455D78;font-size: 16px; font-weight: 600; line-height: 18px; margin-bottom: 5px;">
@@ -202,7 +202,7 @@
                                                                         </ul>
                                                                     <p class="source" style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
                                                                         Completing your KYC verification will enable you to fully access all our features and start trading with confidence.</p>
-                                                                 
+
 
                                                                     <h2 class="quicksand"
                                                                         style="color: #455D78;font-size: 16px; font-weight: 600; line-height: 18px;margin-bottom: 5px;">
@@ -227,7 +227,7 @@
 
 
                                     <!-- section : Bottom Section -->
-                                  
+
 
 
 
@@ -242,14 +242,14 @@
                                                             <tr>
                                                                 <td class="col" align="center" width="352"
                                                                     style="padding: 24px 24px;">
-                                                                  
+
                                                                     <p class="source"
                                                                         style="color: #A0AEC0;font-size: 12px; font-weight: 400; line-height: 12px;margin-bottom: 5px;">
                                                                         You are receiving this email because you signed
                                                                         up for a StockTradeLite.com account.</p>
                                                                         <p class="source" style="color: #A0AEC0;font-size: 12px; font-weight: 400; line-height: 12px;margin-bottom: 5px;">
                                                                             © 2024 StockTradeLite</p>
-                                                                    
+
                                                                 </td>
                                                             </tr>
                                                         </tbody>
