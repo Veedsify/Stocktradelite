@@ -73,12 +73,12 @@ class AuthController extends Controller
             $user->verification_token = $verification_token;
             $user->save();
 
-            session("veridication_code", $verification_code);
+            session("verification_code", $verification_code);
 
             // Mail::to($user->email)->send(new WelcomeEmail($user, $verification_code));
             Mail::to($user->email)->send(new ConfirmEmail($user, $verification_code));
 
-            return redirect(route("verify", [$verification_token]))->with("success", "Account created successfully. Please login to continue");
+            return redirect(route("verify", [$verification_token]))->with("success", "Account created successfully. Please verify your account");
         } catch (Exception $e) {
             dd($e->getMessage());
             return back()->with("error", $e->getMessage());
@@ -97,6 +97,9 @@ class AuthController extends Controller
         if ($user) {
             if (password_verify($request->password, $user->password)) {
                 Auth::login($user);
+                if ($user->role === "admin") {
+                    return redirect(route("admin"));
+                }
                 return redirect(route("user"));
             } else {
                 return back()->with("error", "Invalid login credentials");

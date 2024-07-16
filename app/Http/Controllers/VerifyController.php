@@ -40,6 +40,6 @@ class VerifyController extends Controller
             'verification_token' => null,
         ]);
 
-        return redirect(route('login'))->with('success', 'Account verified successfully');
+        return redirect(route('user'))->with('success', 'Account verified successfully');
     }
 }

@@ -2,8 +2,11 @@
 
 namespace App\Http\Middleware;
 
+use App\Mail\ConfirmEmail;
+use App\Models\User;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Symfony\Component\HttpFoundation\Response;
 
 class CheckUsersVerified
@@ -16,7 +19,13 @@ class CheckUsersVerified
     public function handle(Request $request, Closure $next): Response
     {
         if (auth()->user()->email_verified_at == null) {
-            return redirect(route('verify', ['token' => auth()->user()->verification_token]));
+            $verification_code = rand(100000, 999999);
+            session("verification_code", $verification_code);
+            $user = User::find(auth()->user()->id);
+            $user->verification_code = $verification_code;
+            $user->save();
+            Mail::to($user->email)->send(new ConfirmEmail($user, $verification_code));
+            return redirect(route('verify', ['token' => $user->verification_token]));
         }
         return $next($request);
     }

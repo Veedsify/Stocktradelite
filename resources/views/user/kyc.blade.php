@@ -125,6 +125,32 @@
                     You can't submit another verification until this is complete.
                   </p>
                 </div>
+                @elseif($verification->status == "rejected")
+                <div class="alert alert-danger" role="alert">
+                  <h4 class="alert-heading">
+                    Rejected
+                  </h4>
+                  <p>Your KYC verification has been rejected,
+                    you cannot submit another verification.
+                  </p>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="card bg-transparent">
+                        <div class="card-body">
+                          <h4 class="card-title">
+                            <span class="fw-semibold">ID Type:</span> {{$verification->verification_type}}
+                          </h4>
+                          <h4 class="card-title">
+                            <span class="fw-semibold">Status:</span> {{$verification->status}}
+                          </h4>
+                          <h4 class="card-title">
+                            <span class="fw-semibold">Date:</span> {{$verification->updated_at->format('d M Y h:i A')}}
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 @else
                 <div class="alert alert-success" role="alert">
                   <h4 class="alert-heading">Verified</h4>

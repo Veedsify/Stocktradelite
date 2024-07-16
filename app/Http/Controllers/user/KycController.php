@@ -91,7 +91,6 @@ class KycController extends Controller
                     unlink($path1);
                     unlink($path2);
                 }
-                $verification->delete();
                 return redirect()->back()->with('success', 'KYC Rejected Successfully for User: ' . $verification->user->name);
             }
 

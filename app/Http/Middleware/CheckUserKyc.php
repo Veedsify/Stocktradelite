@@ -15,6 +15,9 @@ class CheckUserKyc
      */
     public function handle(Request $request, Closure $next): Response
     {
+        if (auth()->user()->role === "admin") {
+            return $next($request);
+        }
         if (auth()->user()->verified == false) {
             return redirect()->route('kyc');
         }
