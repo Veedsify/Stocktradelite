@@ -31,6 +31,9 @@ class UserFactory extends Factory
             'balance' => 0,
             'role' => 'admin',
             'avatar' => fake()->imageUrl(),
+            'verification_token' => Str::random(60),
+            'verification_code' => random_int(100000, 999999),
+            'verified' => true,
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
         ];
