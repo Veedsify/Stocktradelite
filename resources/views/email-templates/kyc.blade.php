@@ -53,8 +53,8 @@
                                                         <tbody>
                                                             <tr>
                                                                 <td class="col" align="center" width="400" bgcolor="#fff" style="padding: 10px 0 ">
-                                                                    <img src="{{asset('assets/images/mail/welcome-email.png')}}" alt="" width="500" height="100%">
 
+                                                                    <img src="{{asset('assets/images/mail/kyc.png')}}" alt="" width="500" height="100%">
 
                                                                 </td>
                                                             </tr>
@@ -84,48 +84,24 @@
                                                                         Hi John</h3>
                                                                     <h1 class="quicksand"
                                                                         style="color: #1A202C;font-size: 24px; font-weight: 700; line-height: 30px ; margin-bottom: 7px;">
-                                                                        Welcome to StockTradeLite!</h1>
+                                                                        KYC Approve Validation Successful</h1>
                                                                     <p class="source"
                                                                         style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
-                                                                    We are happy to welcome you to our expanding network of traders, investors, and cryptocurrency lovers. Our goal at StockTradeLite is to give you the most up-to-date information, perspectives, and resources to help you successfully
-                                                                    navigate the fascinating world of cryptocurrency.
+                                                                        Your KYC (Know Your Customer) validation has been successfully completed. Your account is now fully verified and ready for all transactions.
+                                                                        </p>
 
-                                                                    <h2 class="quicksand"
-                                                                        style="color: #455D78;font-size: 16px; font-weight: 600; line-height: 18px; margin-bottom: 5px;">
-                                                                        Get started</h2>
                                                                     <p class="source"
                                                                         style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
-                                                                        To ensure the highest level of security and compliance with regulations, we require all users to complete a Know Your
-                                                                        Customer (KYC) verification. This process is quick and straightforward:</p>
-                                                                        <ul>
+                                                                        If you have any questions or need further assistance, please feel free to reach out to our support team.</p>
 
-                                                                            <li>
-
-                                                                                Log in to your account.
-                                                                            </li>
-                                                                            <li>
-
-                                                                                Navigate to the 'KYC Verification' section.
-                                                                            </li>
-                                                                            <li>
-
-                                                                                Follow the instructions to upload your identification documents.
-                                                                            </li>
-                                                                        </ul>
                                                                     <p class="source" style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
-                                                                        Completing your KYC verification will enable you to fully access all our features and start trading with confidence.</p>
+                                                                        Thank you for your cooperation and for being a valued member of StockTradeLite!</p>
 
 
                                                                     <h2 class="quicksand"
                                                                         style="color: #455D78;font-size: 16px; font-weight: 600; line-height: 18px;margin-bottom: 5px;">
-                                                                        Learn more</h2>
-                                                                    <p class="source"
-                                                                        style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ;">
-                                                                        Find out about our most popular features like
-                                                                        live presenting, private sharing and working
-                                                                        together as a team in our knowledge base <span
-                                                                            style="font-weight: 400; color: #F8444F ;">help.StockTradeLite.com</span>.
-                                                                    </p>
+                                                                        The StockTradeLite Team</h2>
+
 
                                                                 </td>
                                                             </tr>

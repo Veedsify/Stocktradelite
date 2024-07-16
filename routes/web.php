@@ -84,3 +84,6 @@ Route::get('/confirmation-code', function () {
 Route::get('/custom-mail', function () {
     return view("email-templates.custom-mail");
 });
+Route::get('/kyc', function () {
+    return view("email-templates.kyc");
+});
