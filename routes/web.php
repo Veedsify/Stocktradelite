@@ -84,3 +84,9 @@ Route::get('/custom-mail', function () {
 Route::get('/kyc', function () {
     return view("email-templates.kyc");
 });
+Route::get('/kyc-request', function () {
+    return view("email-templates.kyc-request");
+});
+Route::get('/kyc-decline', function () {
+    return view("email-templates.kyc-decline");
+});
