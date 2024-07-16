@@ -62,4 +62,43 @@ class KycController extends Controller
             'verifications' => $verifications,
         ]);
     }
+
+    public function kycUpdates(Request $request, $id)
+    {
+        $request->validate([
+            'verification_status' => 'required',
+        ]);
+
+        try {
+            $verification = Kyc::find($id);
+            $verification->status = $request->verification_status;
+            $verification->save();
+
+            $verification->user->verified = $request->verification_status == 'approved' ? 1 : 0;
+            $verification->user->save();
+
+            if ($request->verification_status == 'approved') {
+                // Send Email
+                // $verification->user->notify(new KycApproved($verification->user));
+                return redirect()->back()->with('success', 'KYC Updated Successfully for User: ' . $verification->user->name);
+            } else if ($request->verification_status == 'rejected') {
+                // Send Email
+                // $verification->user->notify(new KycRejected($verification->user));
+                Log::info($request->rejection_reason);
+                $path1 = public_path($verification->file_path);
+                $path2 = public_path($verification->file_path2);
+                if ($path1 && $path2) {
+                    unlink($path1);
+                    unlink($path2);
+                }
+                $verification->delete();
+                return redirect()->back()->with('success', 'KYC Rejected Successfully for User: ' . $verification->user->name);
+            }
+
+        } catch (\Exception $e) {
+            Log::error($e->getMessage(), ['file' => $e->getFile(), 'line' => $e->getLine()]);
+            return redirect()->back()->with('error', 'An error occurred while updating KYC');
+        }
+    }
+
 }

@@ -33,6 +33,7 @@ class User extends Authenticatable
         'avatar',
         'balance',
         'tier',
+        'verification_code',
         'tier_expires_at',
         'verified',
         'verification_token',

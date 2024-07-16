@@ -9,13 +9,12 @@ use App\Http\Controllers\user\TradeHistoryController;
 use App\Http\Controllers\user\UpgradeAccountController;
 use App\Http\Controllers\user\UserController;
 use App\Http\Controllers\user\WithdrawalController;
-use App\Http\Middleware\CheckUserKyc;
 use Illuminate\Support\Facades\Route;
 
 // Index Pages
 
 Route::prefix("user")->middleware(["auth"])->group(function () {
-    Route::middleware([CheckUserKyc::class])->group(function () {
+    Route::middleware(["users"])->group(function () {
         Route::get('/', [UserController::class, "user"])->name("user");
         Route::get('/deposit', [DepositController::class, "deposit"])->name("deposit");
         Route::get('/withdrawal', [WithdrawalController::class, "withdrawal"])->name("withdrawal");

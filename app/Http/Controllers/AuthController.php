@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ConfirmEmail;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class AuthController extends Controller
@@ -54,6 +56,7 @@ class AuthController extends Controller
             }
 
             $verification_token = Str::random(120);
+            $verification_code = rand(100000, 999999);
 
             $user = new User();
             $user->name = $request->fullanme;
@@ -64,12 +67,18 @@ class AuthController extends Controller
             $user->role = "user";
             $user->verified = false;
             $user->tier = 1;
+            $user->verification_code = $verification_code;
             $user->userid = "user_" . Str::random(10);
             $user->avatar = "user-assets/images/profile/user-" . rand(1, 10) . ".jpg";
             $user->verification_token = $verification_token;
             $user->save();
 
-            return redirect(route("login"))->with("success", "Account created successfully. Please login to continue");
+            session("veridication_code", $verification_code);
+
+            // Mail::to($user->email)->send(new WelcomeEmail($user, $verification_code));
+            Mail::to($user->email)->send(new ConfirmEmail($user, $verification_code));
+
+            return redirect(route("verify", [$verification_token]))->with("success", "Account created successfully. Please login to continue");
         } catch (Exception $e) {
             dd($e->getMessage());
             return back()->with("error", $e->getMessage());

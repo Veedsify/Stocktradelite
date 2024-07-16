@@ -29,6 +29,7 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'tier' => 1,
             'balance' => 0,
+            'role' => 'admin',
             'avatar' => fake()->imageUrl(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
