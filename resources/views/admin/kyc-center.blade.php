@@ -74,10 +74,13 @@
                             {{$verification->user->name}}
                           </td>
                           <td>
-                            <form class="d-flex gap-1" data-verificarion="{{$verification->id}}">
-                              <select name="role" id="role"
+                            <form class="d-flex gap-1 kyc-verification-form" data-verificarion="{{$verification->id}}"
+                              action="{{route('admin.kyc-center.update', $verification->id)}}" method="POST">
+                              @csrf
+                              <input type="hidden" name="rejection_reason" id="rejection_reason">
+                              <select name="verification_status" id="verification_status"
                                 class="px-1 py-1 border-1 border-muted btn-outline-info rounded-2">
-                                <option value="approve" {{$verification->status === 'approved' ? 'selected=true' : ''}}
+                                <option value="approved" {{$verification->status === 'approved' ? 'selected=true' : ''}}
                                   >APPROVE
                                 </option>
                                 <option value="pending" {{$verification->status === 'pending' ? 'selected=true' : ''}}

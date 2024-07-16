@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
 
-    <table class="wrapper" cellpadding="15" cellspacing="0" role="presentation" width="100%" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+    <table class="wrapper" cellpadding="15" cellspacing="0" role="presentation" width="100%"
+        style="font-family: Calibri, Verdana, Geneva, Tahoma, sans-serif;">
         <tbody>
             <tr>
                 <td align="center" bgcolor="#F7FAFC">
@@ -29,7 +32,8 @@
                                                             <tr>
                                                                 <td class="col px-sm-16" align="center" width="352"
                                                                     style="padding:  24px;">
-                                                                    <img src="{{asset('assets/images/logo/log-footer.png')}}" alt="Logo" width="56px"
+                                                                    <img src="{{asset('assets/images/logo/log-footer.png')}}"
+                                                                        alt="Logo" width="56px"
                                                                         style="width:120px; max-width: 150px;">
                                                                 </td>
                                                             </tr>
@@ -40,9 +44,6 @@
                                         </tbody>
                                     </table>
                                     <!-- End Section -->
-
-
-
                                     <!-- section : Banner -->
                                     <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                                         <tbody>
@@ -87,33 +88,53 @@
                                                                         Welcome to StockTradeLite!</h1>
                                                                     <p class="source"
                                                                         style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
-                                                                    We are happy to welcome you to our expanding network of traders, investors, and cryptocurrency lovers. Our goal at StockTradeLite is to give you the most up-to-date information, perspectives, and resources to help you successfully
-                                                                    navigate the fascinating world of cryptocurrency.
+                                                                        We are happy to welcome you to our expanding
+                                                                        network of traders, investors, and
+                                                                        cryptocurrency lovers. Our goal at
+                                                                        StockTradeLite is to give you the most
+                                                                        up-to-date information, perspectives, and
+                                                                        resources to help you successfully
+                                                                        navigate the fascinating world of
+                                                                        cryptocurrency.
+                                                                    </p>
+
+                                                                    <a href="#"
+                                                                        style="background-color: #F8444F; color: #FFFFFF; font-size: 16px; font-weight: 600; line-height: 20px; text-align: center; text-decoration: none; display: inline-block; padding: 10px 20px; border-radius: 4px; margin-bottom: 25px;">
+                                                                        Verify Account
+                                                                    </a>
+
 
                                                                     <h2 class="quicksand"
                                                                         style="color: #455D78;font-size: 16px; font-weight: 600; line-height: 18px; margin-bottom: 5px;">
                                                                         Get started</h2>
                                                                     <p class="source"
                                                                         style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
-                                                                        To ensure the highest level of security and compliance with regulations, we require all users to complete a Know Your
-                                                                        Customer (KYC) verification. This process is quick and straightforward:</p>
-                                                                        <ul>
+                                                                        To ensure the highest level of security and
+                                                                        compliance with regulations, we require all
+                                                                        users to complete a Know Your
+                                                                        Customer (KYC) verification. This process is
+                                                                        quick and straightforward:</p>
+                                                                    <ul>
 
-                                                                            <li>
+                                                                        <li>
 
-                                                                                Log in to your account.
-                                                                            </li>
-                                                                            <li>
+                                                                            Log in to your account.
+                                                                        </li>
+                                                                        <li>
 
-                                                                                Navigate to the 'KYC Verification' section.
-                                                                            </li>
-                                                                            <li>
+                                                                            Navigate to the 'KYC Verification' section.
+                                                                        </li>
+                                                                        <li>
 
-                                                                                Follow the instructions to upload your identification documents.
-                                                                            </li>
-                                                                        </ul>
-                                                                    <p class="source" style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
-                                                                        Completing your KYC verification will enable you to fully access all our features and start trading with confidence.</p>
+                                                                            Follow the instructions to upload your
+                                                                            identification documents.
+                                                                        </li>
+                                                                    </ul>
+                                                                    <p class="source"
+                                                                        style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
+                                                                        Completing your KYC verification will enable you
+                                                                        to fully access all our features and start
+                                                                        trading with confidence.</p>
 
 
                                                                     <h2 class="quicksand"
@@ -159,8 +180,9 @@
                                                                         style="color: #A0AEC0;font-size: 12px; font-weight: 400; line-height: 12px;margin-bottom: 5px;">
                                                                         You are receiving this email because you signed
                                                                         up for a StockTradeLite.com account.</p>
-                                                                        <p class="source" style="color: #A0AEC0;font-size: 12px; font-weight: 400; line-height: 12px;margin-bottom: 5px;">
-                                                                            © 2024 StockTradeLite</p>
+                                                                    <p class="source"
+                                                                        style="color: #A0AEC0;font-size: 12px; font-weight: 400; line-height: 12px;margin-bottom: 5px;">
+                                                                        © 2024 StockTradeLite</p>
 
                                                                 </td>
                                                             </tr>

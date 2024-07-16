@@ -1,10 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\admin\BlogController;
-use App\Http\Controllers\admin\MailController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\BalanceController;
+use App\Http\Controllers\admin\BlogController;
+use App\Http\Controllers\admin\MailController;
 use App\Http\Controllers\admin\PrivacyController;
 use App\Http\Controllers\admin\ProfileController;
 use App\Http\Controllers\admin\SecurityController;
@@ -13,13 +12,10 @@ use App\Http\Controllers\admin\UsersController;
 use App\Http\Controllers\admin\WalletController;
 use App\Http\Controllers\user\KycController;
 use App\Http\Controllers\user\NotificationController;
-use App\Http\Middleware\CheckUserIsAdmin;
-use App\Http\Middleware\CheckUserKyc;
-
-
+use Illuminate\Support\Facades\Route;
 
 // Index Pages
-Route::prefix("admin")->middleware(["auth", CheckUserKyc::class, CheckUserIsAdmin::class])->group(function () {
+Route::prefix("admin")->middleware(["admin"])->group(function () {
     Route::get("/", [AdminController::class, "admin"])->name("admin");
     Route::get("/mail", [MailController::class, "mail"])->name("mail");
     Route::get("/users", [UsersController::class, "users"])->name("users");
@@ -37,4 +33,5 @@ Route::prefix("admin")->middleware(["auth", CheckUserKyc::class, CheckUserIsAdmi
     Route::get('/blog/create', [BlogController::class, "newBlog"])->name("admin.new.blog");
 
     Route::get('/kyc-center', [KycController::class, 'kycCenter'])->name('admin.kyc');
+    Route::post('/kyc-center-update/{id}', [KycController::class, 'kycUpdates'])->name('admin.kyc-center.update');
 });

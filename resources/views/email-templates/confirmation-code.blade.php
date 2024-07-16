@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
 
-    <table class="wrapper" cellpadding="15" cellspacing="0" role="presentation" width="100%" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+    <table class="wrapper" cellpadding="15" cellspacing="0" role="presentation" width="100%"
+        style="font-family: Calibri,Verdana, Geneva, Tahoma, sans-serif;">
         <tbody>
             <tr>
                 <td align="center" bgcolor="#F7FAFC">
@@ -29,7 +32,8 @@
                                                             <tr>
                                                                 <td class="col px-sm-16" align="center" width="352"
                                                                     style="padding:  24px;">
-                                                                    <img src="{{asset('assets/images/logo/log-footer.png')}}" alt="Logo" width="56px"
+                                                                    <img src="{{asset('assets/images/logo/log-footer.png')}}"
+                                                                        alt="Logo" width="56px"
                                                                         style="width:120px; max-width: 150px;">
                                                                 </td>
                                                             </tr>
@@ -82,27 +86,30 @@
                                                                     width="352" style="padding: 48px 24px 32px 24px;">
                                                                     <h3 class="quicksand"
                                                                         style="color: #718096;font-size: 16px; font-weight: 400; line-height: 20px ;">
-                                                                        Hi John</h3>
+                                                                        Hi
+                                                                        {{
+                                                                        explode(" ", $user->name)[0] ??
+                                                                        $user->name
+                                                                        }}
+                                                                    </h3>
                                                                     <h1 class="quicksand"
                                                                         style="color: #1A202C;font-size: 24px; font-weight: 700; line-height: 30px ; margin-bottom: 7px;">
                                                                         Confirm Registration</h1>
                                                                     <p class="source"
                                                                         style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
-                                                                        Thank you for joining our community. We are excited to have you on board.
-Before you proceed with your registration, please confirm your email address by entering the verification code.
-                                                                        </p>
-
-                                                                        <h1>[Insert Confirmation Code Here]</h1>
-
-
-
-
-
+                                                                        Thank you for joining our community. We are
+                                                                        excited to have you on board.
+                                                                        Before you proceed with your registration,
+                                                                        please confirm your email address by entering
+                                                                        the verification code.
+                                                                    </p>
+                                                                    <h1
+                                                                        style="color: #1A202C;font-size: 36px; font-weight: 700; line-height: 30px ; margin-bottom: 7px;">
+                                                                        {{$verification_code}}
+                                                                    </h1>
                                                                     <h2 class="quicksand"
                                                                         style="color: #455D78;font-size: 16px; font-weight: 600; line-height: 18px;margin-bottom: 5px;">
                                                                         DON'T SHARE THIS WITH ANYONE</h2>
-
-
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -135,8 +142,9 @@ Before you proceed with your registration, please confirm your email address by 
                                                                         style="color: #A0AEC0;font-size: 12px; font-weight: 400; line-height: 12px;margin-bottom: 5px;">
                                                                         You are receiving this email because you signed
                                                                         up for a StockTradeLite.com account.</p>
-                                                                        <p class="source" style="color: #A0AEC0;font-size: 12px; font-weight: 400; line-height: 12px;margin-bottom: 5px;">
-                                                                            © 2024 StockTradeLite</p>
+                                                                    <p class="source"
+                                                                        style="color: #A0AEC0;font-size: 12px; font-weight: 400; line-height: 12px;margin-bottom: 5px;">
+                                                                        © 2024 StockTradeLite</p>
 
                                                                 </td>
                                                             </tr>

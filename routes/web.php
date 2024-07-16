@@ -1,22 +1,21 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FAQController;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\IndexController;
-use App\Http\Controllers\TermsController;
-use App\Http\Controllers\MarketController;
-use App\Http\Controllers\VerifyController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FAQController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\MarketController;
 use App\Http\Controllers\PrivacyController;
 use App\Http\Controllers\RecoveryController;
-
+use App\Http\Controllers\TermsController;
+use App\Http\Controllers\VerifyController;
+use Illuminate\Support\Facades\Route;
 
 //Admin Routes
-require_once  __DIR__ . '/user/user.php';
-require_once  __DIR__ . '/admin/admin.php';
+require_once __DIR__ . '/user/user.php';
+require_once __DIR__ . '/admin/admin.php';
 // Index Pages
 Route::get('/', [IndexController::class, "index"])->name("index");
 
@@ -32,7 +31,6 @@ Route::prefix("register")->group(function () {
 });
 Route::get("/logout", [AuthController::class, "logout"])->name("logout");
 
-
 // Blogs
 Route::get("/blogs", [BlogController::class, "blogs"])->name("blogs");
 Route::get("/blog/{id}", [BlogController::class, "blog"])->name("blog.single");
@@ -44,7 +42,6 @@ Route::get("/about", [AboutController::class, "about"])->name("about");
 // Contact
 Route::get('get-in-touch', [ContactController::class, 'getInTouch'])->name('contact');
 
-
 // Terms Of Use
 Route::get("/terms-of-use", [TermsController::class, "terms"])->name("terms-of-use");
 
@@ -54,14 +51,13 @@ Route::get("/privacy-policy", [PrivacyController::class, "privacy"])->name("priv
 // FAQ
 Route::get("/faq", [FAQController::class, "faq"])->name("faq");
 
-
 //Recovery Account
 Route::get("/recovery", [RecoveryController::class, "recovery"])->name("recovery");
 
 //Verify Account
-Route::get("/verify", [VerifyController::class, "verify"])->name("verify");
+Route::get("/verify/{token}", [VerifyController::class, "verify"])->name("verify");
 
-
+Route::post("/verify", [VerifyController::class, "verifyAccount"])->name("verify.account");
 
 // Email Template
 Route::get('/welcome-email', function () {
@@ -75,6 +71,7 @@ Route::get('/withdraw-request', function () {
 Route::get('/withdrawal-approved', function () {
     return view("email-templates.withdrawal-approved");
 });
+
 Route::get('/deposit', function () {
     return view("email-templates.deposit");
 });
