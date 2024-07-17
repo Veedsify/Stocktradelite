@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\WalletController;
 use App\Http\Controllers\user\ChangePasswordController;
 use App\Http\Controllers\user\DepositController;
 use App\Http\Controllers\user\KycController;
@@ -9,6 +10,7 @@ use App\Http\Controllers\user\TradeHistoryController;
 use App\Http\Controllers\user\UpgradeAccountController;
 use App\Http\Controllers\user\UserController;
 use App\Http\Controllers\user\WithdrawalController;
+use App\Http\Controllers\WithdrawController as ProcessWithdrawalController;
 use Illuminate\Support\Facades\Route;
 
 // Index Pages
@@ -26,6 +28,16 @@ Route::prefix("user")->middleware(["auth"])->group(function () {
         // Change Password
         Route::get('/change-password', [ChangePasswordController::class, "changePassword"])->name("changepassword");
         Route::post('/change-password', [ChangePasswordController::class, "changePasswordSubmit"])->name("changepassword.submit");
+
+        // Withdrawal
+        Route::post('/withdrawal/bitcoin', [ProcessWithdrawalController::class, "processBitcoinWithdraw"])->name("withdrawal.bitcoin");
+        Route::post('/withdrawal/ethereum', [ProcessWithdrawalController::class, "processEthereumWithdraw"])->name("withdrawal.ethereum");
+        Route::post('/withdrawal/bank', [ProcessWithdrawalController::class, "processBankWithdraw"])->name("withdrawal.bank");
+        Route::post('/withdrawal/card', [ProcessWithdrawalController::class, "processCardWithdraw"])->name("withdrawal.card");
+
+        // Wallet Address
+        Route::post('/wallet-address/btc', [WalletController::class, "walletAddressBtc"])->name("walletaddress.submit.btc");
+        Route::post('/wallet-address/eth', [WalletController::class, "walletAddressEth"])->name("walletaddress.submit.eth");
     });
 
     // KYC Verification

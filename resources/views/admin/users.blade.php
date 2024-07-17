@@ -49,7 +49,6 @@
                   <div class="mb-2">
                     <h5 class="mb-0">User Datatable</h5>
                   </div>
-
                   <div class="table-responsive">
                     <table id="zero_config" class="table border table-striped table-bordered text-nowrap align-middle">
                       <thead>
@@ -60,49 +59,32 @@
                           <th>Email</th>
                           <th>Phone</th>
                           <th>Balance</th>
-                          <th>Order</th>
-                          <th>Edit Balance</th>
+                          <th>Edit Settings</th>
+                          <th>Edit Trades</th>
                         </tr>
                         <!-- end row -->
                       </thead>
                       <tbody>
                         <!-- start row -->
+                        @foreach ($users as $user)
                         <tr>
+                          <td>{{$user->name}}</td>
+                          <td>{{
+                            \App\Models\Tier::where('id', $user->tier)->first()->name
+                            }}</td>
+                          <td>{{$user->email}}</td>
+                          <td>{{$user->phone}}</td>
+                          <td>{{$user->balance}}</td>
                           <td>
-                            Crytp Emmanuel
+                            <a href="{{route('admin.balance.editbalance', $user->id)}}"
+                              class="btn-sm btn btn-secondary">Settings</a>
                           </td>
                           <td>
-                            <form class="d-flex gap-1">
-                              <input type="hidden" name="_token" autocomplete="off"> <input type="hidden" name="_method"
-                                value="PUT"> <select name="role" id="role"
-                                class="px-1 py-1 border-1 border-muted btn-outline-info rounded-2">
-                                <option value="BEGINNER" selected="">BEGINNER
-                                </option>
-                                <option value="STANDARD">STANDARD
-                                </option>
-                                <option value="GOLD">
-                                  GOLD
-                                </option>
-                                <option value="GOLD-PLUS">
-                                  GOLD PLUS
-                                </option>
-                                <option value="DIAMOND">
-                                  DIAMOND
-                                </option>
-                                <option value="DIAMOND-PLUS">
-                                  DIAMOND PLUS
-                                </option>
-                              </select>
-                              <button type="submit" class="btn btn-primary btn-sm">Update</button>
-                            </form>
+                            <a href="{{route('admin.balance.editbalance', $user->id)}}"
+                              class="btn-sm btn btn-primary">Edit</a>
                           </td>
-                          <td>Emmanuel@gmail.com</td>
-                          <td>0983738449</td>
-                          <td>$80,0000</td>
-                          <td><a href="#" style="text-decoration: underline;">edit</a></td>
-                          <td><a href="{{ route('admin.balance.editbalance'," [id]") }}"
-                              style="text-decoration: underline;">Edit Balance</a></td>
                         </tr>
+                        @endforeach
                         <!-- end row -->
 
 

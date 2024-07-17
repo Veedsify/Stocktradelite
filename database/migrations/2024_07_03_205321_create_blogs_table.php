@@ -15,14 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
-            $table->text('content');
+            $table->longText('content');
             $table->string('image');
             $table->string('author');
             $table->string('category');
             $table->string('tags');
             $table->string('status');
             $table->string('meta_title');
-            $table->string('meta_description');
+            $table->text('meta_description');
             $table->string('meta_keywords');
             $table->string('meta_image');
             $table->string('meta_url');

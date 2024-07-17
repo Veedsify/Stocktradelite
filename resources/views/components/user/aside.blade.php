@@ -25,6 +25,7 @@
         <!-- ---------------------------------- -->
         <!-- Dashboard -->
         <!-- ---------------------------------- -->
+        @if(auth()->user()->verified == true)
         <li class="sidebar-item">
           <a class="sidebar-link" href="{{route('user')}}" aria-expanded="false">
             <span>
@@ -66,6 +67,7 @@
             <span class="hide-menu">Upgrade Account</span>
           </a>
         </li>
+        @endif
         <li class="sidebar-item">
           <a class="sidebar-link" href="{{route('kyc')}}" aria-expanded="false">
             <span>

@@ -44,9 +44,6 @@
                                         </tbody>
                                     </table>
                                     <!-- End Section -->
-
-
-
                                     <!-- section : Banner -->
                                     <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
                                         <tbody>
@@ -56,12 +53,10 @@
                                                         width="100%">
                                                         <tbody>
                                                             <tr>
-                                                                <td class="col" align="center" width="400" bgcolor="#fff" style="padding: 10px 0 ">
-
-
-                                                                    <img src="{{asset('assets/images/mail/withdraw-request.png')}}" alt="" width="500" height="100%">
-
-
+                                                                <td class="col" align="center" width="400"
+                                                                    bgcolor="#fff" style="padding: 10px 0 ">
+                                                                    <img src="{{asset('assets/images/mail/withdraw-request.png')}}"
+                                                                        alt="" width="500" height="100%">
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -87,10 +82,15 @@
                                                                     width="352" style="padding: 48px 24px 32px 24px;">
                                                                     <h3 class="quicksand"
                                                                         style="color: #718096;font-size: 16px; font-weight: 400; line-height: 20px ;">
-                                                                        Hi John</h3>
+                                                                        Hi
+                                                                        {{
+                                                                        explode(' ', $withdrawal->user->name)[0] ??
+                                                                        $withdrawal->user->name
+                                                                        }}
+                                                                    </h3>
                                                                     <h1 class="quicksand"
                                                                         style="color: #1A202C;font-size: 24px; font-weight: 700; line-height: 30px ; margin-bottom: 7px;">
-                                                                        Withdrawal Request</h1>
+                                                                        Withdrawal Request Has Been Received</h1>
                                                                     <p class="source"
                                                                         style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
                                                                         We have received your withdrawal request and our
@@ -99,7 +99,29 @@
                                                                         to ensure it is completed as swiftly as
                                                                         possible.
                                                                     </p>
+                                                                    <div>
+                                                                        <span
+                                                                            style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
+                                                                            Withdrawal Amount: <strong
+                                                                                style="color: #1A202C;">${{number_format($withdrawal->amount,
+                                                                                2)}}</strong>
+                                                                        </span>
+                                                                        <br>
+                                                                        <br>
+                                                                        <span
+                                                                            style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
+                                                                            Withdrawal Method: <strong
+                                                                                style="color: #1A202C;">{{ucwords($withdrawal->method)}}</strong>
+                                                                        </span>
+                                                                        <br>
+                                                                        <br>
+                                                                        <span
+                                                                            style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
+                                                                            Withdrawal Method: <strong
+                                                                                style="color: #1A202C;">{{ucwords($withdrawal->status)}}</strong>
+                                                                        </span>
 
+                                                                    </div>
 
                                                                     <p class="source"
                                                                         style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
@@ -113,7 +135,6 @@
                                                                         style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
                                                                         Thank you for your patience and for being a
                                                                         valued member of our community.</p>
-
 
                                                                     <h2 class="quicksand"
                                                                         style="color: #455D78;font-size: 16px; font-weight: 600; line-height: 18px;margin-bottom: 5px;">

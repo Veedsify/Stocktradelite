@@ -33,7 +33,7 @@ class ConfirmEmail extends Mailable
     {
         return new Envelope(
             subject: 'Welcome to Stocklitetrade, Please confirm your email',
-            from: new Address('dikewwisdom778@gmail.com', 'Stocklitetrade'),
+            from: new Address(config('mail.from.address'), config('mail.from.name')),
         );
 
     }

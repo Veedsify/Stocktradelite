@@ -3,13 +3,15 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\Withdrawal;
 
 class WithdrawalController extends Controller
 {
-    //
     public function withdrawal()
     {
-        return view('user.withdrawal');
+        $withdrawals = Withdrawal::where('user_id', auth()->id())->orderBY('id', 'desc')->get();
+        return view('user.withdrawal', [
+            'withdrawals' => $withdrawals,
+        ]);
     }
 }

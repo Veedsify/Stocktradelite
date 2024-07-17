@@ -63,6 +63,15 @@
             <h4 class="card-title">Choose your Withdrawal Method</h4>
             <p>Request for withdrawal here</p>
           </div>
+          @if($errors->any())
+          <div class="alert alert-danger">
+            <ul>
+              @foreach($errors->all() as $error)
+              <li>{{$error}}</li>
+              @endforeach
+            </ul>
+          </div>
+          @endif
           <div class="col-12 ">
             <ul class="nav nav-pills user-profile-tab" id="pills-tab" role="tablist">
               <li class="nav-item" role="presentation">
@@ -80,7 +89,6 @@
                   id="ethereum-tab" data-bs-toggle="pill" data-bs-target="#ethereum" type="button" role="tab"
                   aria-controls="ethereum" aria-selected="false">
                   <i class="ti ti-currency-ethereum me-2 fs-6"></i>
-
                   <span class="d-none d-md-block">Ethereum </span>
                 </button>
               </li>
@@ -115,22 +123,20 @@
                         <div class=" m-0 p-2">
                           <h5 class="card-title fw-semibold">Bitcoin</h5>
                           <p class="card-subtitle mb-4">Request for withdrawal using bitcoin</p>
-
-                          <form>
+                          <form action="{{route('withdrawal.bitcoin')}}" method="POST">
+                            @csrf
                             <div class="row">
-
-
                               <div class="col-12 mb-3">
                                 <div>
-                                  <label for="exampleInputtext4" class="form-label">Bitcoin Address</label>
-                                  <input type="text" class="form-control" id="exampleInputtext4"
+                                  <label class="form-label">Bitcoin Address</label>
+                                  <input required type="text" class="form-control" name="bitcoin_address"
                                     placeholder="BTC Address">
                                 </div>
                               </div>
                               <div class="col-12">
                                 <div>
-                                  <label for="exampleInputtext4" class="form-label">Amount To Withdraw (USD)</label>
-                                  <input type="number" class="form-control" id="exampleInputtext4" placeholder="Amount">
+                                  <label class="form-label">Amount To Withdraw (USD)</label>
+                                  <input required type="number" class="form-control" name="amount" placeholder="Amount">
                                 </div>
                               </div>
                               <div class="col-12">
@@ -140,11 +146,9 @@
                               </div>
                             </div>
                           </form>
-
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
                 {{-- Bitcoin ends --}}
@@ -157,19 +161,20 @@
                         <div class=" m-0 p-2">
                           <h5 class="card-title fw-semibold">Ethereum</h5>
                           <p class="card-subtitle mb-4">Request for withdrawal using ethereum</p>
-                          <form>
+                          <form action="{{route('withdrawal.ethereum')}}" method="POST">
+                            @csrf
                             <div class="row">
                               <div class="col-12 mb-3">
                                 <div>
-                                  <label for="exampleInputtext4" class="form-label">Ethereum Address</label>
-                                  <input type="text" class="form-control" id="exampleInputtext4"
+                                  <label class="form-label">Ethereum Address</label>
+                                  <input required type="text" class="form-control" name="ethereum_address"
                                     placeholder="ETH Address">
                                 </div>
                               </div>
                               <div class="col-12">
                                 <div>
-                                  <label for="exampleInputtext4" class="form-label">Amount To Withdraw (USD) </label>
-                                  <input type="number" class="form-control" id="exampleInputtext4" placeholder="Amount">
+                                  <label class="form-label">Amount To Withdraw (USD) </label>
+                                  <input required type="number" class="form-control" name="amount" placeholder="Amount">
                                 </div>
                               </div>
                               <div class="col-12">
@@ -179,11 +184,9 @@
                               </div>
                             </div>
                           </form>
-
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
                 {{-- Ethereum Ends --}}
@@ -196,43 +199,41 @@
                         <div class=" m-0 p-2">
                           <h5 class="card-title fw-semibold">Bank Transfer</h5>
                           <p class="card-subtitle mb-4">Request for withdrawal using Bank Transfer</p>
-
-                          <form>
+                          <form action="{{route('withdrawal.bank')}}" method="POST">
+                            @csrf
                             <div class="row">
-
-
                               <div class="col-12 mb-3">
                                 <div>
-                                  <label for="exampleInputtext4" class="form-label">Bank Name</label>
-                                  <input type="text" class="form-control" id="exampleInputtext4"
+                                  <label class="form-label">Bank Name</label>
+                                  <input name="bank_name" required type="text" class="form-control"
                                     placeholder="Enter Bank Name">
                                 </div>
                               </div>
                               <div class="col-12 mb-3">
                                 <div>
-                                  <label for="exampleInputtext4" class="form-label">Account Name</label>
-                                  <input type="text" class="form-control" id="exampleInputtext4"
+                                  <label class="form-label">Account Name</label>
+                                  <input name="bank_account_name" required type="text" class="form-control"
                                     placeholder="Enter Account Name">
                                 </div>
                               </div>
                               <div class="col-12 mb-3">
                                 <div>
-                                  <label for="exampleInputtext4" class="form-label">Account Number</label>
-                                  <input type="number" class="form-control" id="exampleInputtext4"
+                                  <label class="form-label">Account Number</label>
+                                  <input name="bank_account_number" required type="number" class="form-control"
                                     placeholder="Enter Account Number">
                                 </div>
                               </div>
                               <div class="col-12 mb-3">
                                 <div>
-                                  <label for="exampleInputtext4" class="form-label">Swift Code</label>
-                                  <input type="number" class="form-control" id="exampleInputtext4"
+                                  <label class="form-label">Swift Code</label>
+                                  <input type="text" required name="swift_code" class="form-control"
                                     placeholder="Enter Swift Code">
                                 </div>
                               </div>
                               <div class="col-12 mb-3">
                                 <div>
-                                  <label for="exampleInputtext4" class="form-label">Amount To Withdraw</label>
-                                  <input type="number" class="form-control" id="exampleInputtext4"
+                                  <label class="form-label">Amount To Withdraw</label>
+                                  <input type="number" required name="amount" class="form-control"
                                     placeholder="Amount ">
                                 </div>
                               </div>
@@ -243,7 +244,6 @@
                               </div>
                             </div>
                           </form>
-
                         </div>
                       </div>
                     </div>
@@ -264,51 +264,73 @@
                           <h5 class="card-title fw-semibold">Credit Card</h5>
                           <p class="card-subtitle mb-4">Request for withdrawal using Credit Card</p>
 
-                          <form>
+                          <form action="{{route('withdrawal.card')}}" method="POST">
+                            @csrf
                             <div class="row">
-
-
                               <div class="col-12 mb-3">
                                 <div>
-                                  <label for="exampleInputtext4" class="form-label">*FullName (Surname
+                                  <label class="form-label">*FullName (Surname
                                     First)</label>
-                                  <input type="text" class="form-control" id="exampleInputtext4"
+                                  <input required name="card_name" type="text" class="form-control"
                                     placeholder="(on the card)">
                                 </div>
                               </div>
 
                               <div class="col-12 mb-3">
                                 <div>
-                                  <label for="exampleInputtext4" class="form-label">Card Number</label>
+                                  <label class="form-label">Card Number</label>
                                   <div class="d-flex align-items-center">
-
-                                    <input type="number" class="form-control" id="exampleInputtext4"
+                                    <input required
+                                      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                      name="card_number" type="number" class="form-control"
                                       placeholder="Enter Card Number">
                                     <i class="ti ti-brand-visa fs-6"></i>
                                     <i class="ti ti-brand-mastercard fs-6"></i>
                                     <i class="ti ti-cards fs-6"></i>
-
                                   </div>
                                 </div>
                               </div>
                               <div class="row mb-3">
                                 <div class="col-md-4 col-6">
-                                  <label for="exampleInputtext4" class="form-label">Year</label>
-                                  <input type="number" class="form-control" id="exampleInputtext4" placeholder="YY">
+                                  <label class="form-label">Year</label>
+                                  <select required name="card_year" type="number" class="form-control" placeholder="YY">
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                                  </select>
                                 </div>
                                 <div class="col-md-4 col-6">
-                                  <label for="exampleInputtext4" class="form-label">Month</label>
-                                  <input type="number" class="form-control" id="exampleInputtext4" placeholder="MM">
+                                  <label class="form-label">Month</label>
+                                  <select name="card_month" type="number" class="form-control" placeholder="MM">
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                  </select>
                                 </div>
                                 <div class="col-md-4 mt-md-0 mt-2">
-                                  <label for="exampleInputtext4" class="form-label">CVV</label>
-                                  <input type="number" class="form-control" id="exampleInputtext4" placeholder="CVV">
+                                  <label class="form-label">CVV</label>
+                                  <input name="card_cvc" required type="number" class="form-control" placeholder="CVV">
                                 </div>
                               </div>
                               <div class="col-12 mb-3">
                                 <div>
-                                  <label for="exampleInputtext4" class="form-label">Amount To Withdraw</label>
-                                  <input type="number" class="form-control" id="exampleInputtext4"
+                                  <label class="form-label">Amount To Withdraw</label>
+                                  <input type="number" name="amount" required class="form-control"
                                     placeholder="Amount ">
                                 </div>
                               </div>
@@ -341,21 +363,41 @@
                   <table class="table table-striped mb-0">
                     <thead>
                       <tr>
+                        <th>
+                          #
+                        </th>
                         <th>Amount</th>
-                        <th class="">Withdrawal Date</th>
                         <th>Status</th>
-                        <th>Actions</th>
+                        <th>Withdrawal Method</th>
+                        <th>Transaction Id</th>
+                        <th>Withdrawal Date</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>0.00</td>
-                        <td>2022-02-02</td>
-                        <td><span class="badge bg-success">Success</span></td>
-                        <td>
-                          <a href="javascript:void(0);" class="btn btn-sm btn-primary">View</a>
-                        </td>
-                      </tr>
+                      @if(count($withdrawals) < 1) <tr>
+                        <td colspan="6" class="text-center fw-bolder">No Previous Withdrawal</td>
+                        </tr>
+                        @endif
+                        @foreach($withdrawals as $withdrawal)
+                        <tr>
+                          <td>{{$loop->iteration}}</td>
+                          <td>{{ucwords($withdrawal->method)}}</td>
+                          <td>${{number_format($withdrawal->amount, 2)}}</td>
+                          <td>
+                            @if($withdrawal->status == 'pending')
+                            <span class="badge fw-bold fs-1 bg-warning">Pending</span>
+                            @elseif($withdrawal->status == 'approved')
+                            <span class="badge fw-bold fs-1 bg-success">Approved</span>
+                            @else
+                            <span class="badge fw-bold fs-1 bg-danger">Declined</span>
+                            @endif
+                          </td>
+                          <td>{{$withdrawal->transaction_id}}</td>
+                          <td>{{
+                            \Carbon\Carbon::parse($withdrawal->created_at)->format('d M, Y h:i A')
+                            }}</td>
+                        </tr>
+                        @endforeach
                     </tbody>
                   </table>
 

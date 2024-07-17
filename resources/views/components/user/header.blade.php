@@ -14,6 +14,7 @@
           </a>
         </li>
       </ul>
+      @if(auth()->user()->verified == true)
       <ul class="navbar-nav quick-links d-none d-lg-flex">
         <li class="nav-item dropdown-hover d-none d-lg-block">
           <a class="nav-link" href="{{route('tradehistory')}}">Trade History</a>
@@ -22,6 +23,7 @@
           <a class="nav-link" href="{{route('upgradeaccount')}}">Upgrade Account</a>
         </li>
       </ul>
+      @endif
       <div class="d-block d-lg-none">
         <a href="{{route('user')}}" class="text-nowrap logo-img">
           <img src="{{asset('assets/images/logo/log-footer.png')}}" alt="Logo-Dark" width="200px">
