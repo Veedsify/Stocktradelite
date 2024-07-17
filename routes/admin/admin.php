@@ -10,6 +10,7 @@ use App\Http\Controllers\admin\SecurityController;
 use App\Http\Controllers\admin\TermsController;
 use App\Http\Controllers\admin\UsersController;
 use App\Http\Controllers\admin\WalletController;
+use App\Http\Controllers\user\ChangePasswordController;
 use App\Http\Controllers\user\KycController;
 use App\Http\Controllers\user\NotificationController;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,9 @@ Route::prefix("admin")->middleware(["admin"])->group(function () {
     Route::get("/privacy", [PrivacyController::class, "privacy"])->name("admin.privacy");
     Route::get("/terms-condition", [TermsController::class, "termsCondition"])->name("admin.terms");
     Route::get("/notification", [NotificationController::class, "notificationAdmin"])->name("admin.notification");
+
+    // Change Password
+    Route::post('/admin/change-password', [ChangePasswordController::class, "changePasswordSubmit"])->name("changepassword.admin");
 
     // blog
     Route::get('/blog/all', [BlogController::class, "allBlog"])->name("admin.all.blog");

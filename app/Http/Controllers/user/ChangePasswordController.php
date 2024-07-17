@@ -22,9 +22,9 @@ class ChangePasswordController extends Controller
             'confirm_password' => 'required|same:password',
         ]);
 
-        $user = User::find(auth()->user()->id);
+        $user = User::find(auth()->user()->id)::first();
 
-        if (password_verify($request->current_password, $user->password)) {
+        if (password_verify($request->current_password, $user->password) == false) {
             return redirect()->back()->with('error', 'Old password is incorrect');
         }
 
