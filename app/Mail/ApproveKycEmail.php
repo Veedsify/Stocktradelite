@@ -2,9 +2,10 @@
 
 namespace App\Mail;
 
+use App\Models\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
@@ -16,9 +17,11 @@ class ApproveKycEmail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+
+    public $user;
+    public function __construct(User $user)
     {
-        //
+        $this->user = $user;
     }
 
     /**
@@ -27,7 +30,8 @@ class ApproveKycEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Approve Kyc Email',
+            subject: 'Congratulations, your KYC was approved',
+            from: new Address(config('mail.from.address'), config('mail.from.name')),
         );
     }
 
@@ -37,7 +41,10 @@ class ApproveKycEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'email-templates.kyc',
+            with: [
+                'user' => $this->user,
+            ]
         );
     }
 

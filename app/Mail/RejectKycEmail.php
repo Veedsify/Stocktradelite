@@ -2,9 +2,10 @@
 
 namespace App\Mail;
 
+use App\Models\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
@@ -16,9 +17,14 @@ class RejectKycEmail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+
+    public $user;
+    public $data;
+
+    public function __construct(User $user, $data)
     {
-        //
+        $this->user = $user;
+        $this->data = $data;
     }
 
     /**
@@ -27,7 +33,8 @@ class RejectKycEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Reject Kyc Email',
+            subject: 'Sorry, your KYC was declined',
+            from: new Address(config('mail.from.address'), config('mail.from.name')),
         );
     }
 
@@ -37,7 +44,11 @@ class RejectKycEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'email-templates.kyc-decline',
+            with: [
+                'user' => $this->user,
+                'data' => $this->data,
+            ]
         );
     }
 

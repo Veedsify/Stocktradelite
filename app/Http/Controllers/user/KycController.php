@@ -3,9 +3,13 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ApproveKycEmail;
+use App\Mail\NotifyKycEmail;
+use App\Mail\RejectKycEmail;
 use App\Models\Kyc;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class KycController extends Controller
@@ -37,7 +41,7 @@ class KycController extends Controller
             $request->back_id->move(public_path('assets/images/kyc'), $back);
             $backPath = 'assets/images/kyc/' . $back;
 
-            Kyc::create([
+            $kyc = Kyc::create([
                 'user_id' => auth()->user()->id,
                 'first_name' => explode(' ', auth()->user()->name)[0] ?? auth()->user()->name,
                 'last_name' => explode(' ', auth()->user()->name)[1] ?? auth()->user()->name,
@@ -47,6 +51,8 @@ class KycController extends Controller
                 'file_path' => $frontPath,
                 'file_path2' => $backPath,
             ]);
+
+            Mail::to(config('mail.from.address'))->send(new NotifyKycEmail($kyc, auth()->user()));
 
             return redirect()->back()->with('success', 'KYC Submitted Successfully');
 
@@ -78,19 +84,22 @@ class KycController extends Controller
             $verification->user->save();
 
             if ($request->verification_status == 'approved') {
-                // Send Email
-                // $verification->user->notify(new KycApproved($verification->user));
+                Mail::to($verification->user->email)->send(new ApproveKycEmail($verification->user));
                 return redirect()->back()->with('success', 'KYC Updated Successfully for User: ' . $verification->user->name);
+
             } else if ($request->verification_status == 'rejected') {
-                // Send Email
-                // $verification->user->notify(new KycRejected($verification->user));
-                Log::info($request->rejection_reason);
-                $path1 = public_path($verification->file_path);
-                $path2 = public_path($verification->file_path2);
+                $path1 = public_path($verification->file_path) ?? null;
+                $path2 = public_path($verification->file_path2) ?? null;
                 if ($path1 && $path2) {
                     unlink($path1);
                     unlink($path2);
                 }
+                $data = [
+                    'user' => $verification->user,
+                    'message' => $request->rejection_reason,
+                ];
+
+                Mail::to($verification->user->email)->send(new RejectKycEmail($verification->user, $data));
                 return redirect()->back()->with('success', 'KYC Rejected Successfully for User: ' . $verification->user->name);
             }
 
