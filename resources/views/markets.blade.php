@@ -28,8 +28,8 @@
 <section class="wallet buy-crypto flat-tabs">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <div class="content-tab">
+      <div class="col-md-12" style="min-height: 200vh;">
+        {{-- <div class="content-tab">
           <div class="content-inner">
             <div class="coin-list-wallet">
               <table class="table">
@@ -1480,7 +1480,26 @@
               </table>
             </div>
           </div>
+        </div> --}}
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js"
+            async>
+            {
+          "width": "100%",
+          "height": "100%",
+          "defaultColumn": "overview",
+          "screener_type": "crypto_mkt",
+          "displayCurrency": "USD",
+          "colorTheme": "light",
+          "locale": "en",
+          "isTransparent": true,
+          "largeChartUrl": "https://google.com"
+        }
+          </script>
         </div>
+        <!-- TradingView Widget END -->
       </div>
     </div>
   </div>

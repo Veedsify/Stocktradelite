@@ -3,12 +3,18 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\Profit;
+use App\Models\Trade;
 
 class TradeHistoryController extends Controller
 {
     //{
-    public function tradeHistory(){
-        return view('user.trade-history');
+    public function tradeHistory()
+    {
+        $trades = Profit::where('user_id', auth()->user()->id)->orderBy('id', 'desc')->get();
+        return view('user.trade-history', [
+            'trades' => $trades,
+        ]);
+
     }
 }

@@ -46,6 +46,17 @@ class User extends Authenticatable
         return $this->hasMany(Blog::class);
     }
 
+    public function trades(): HasMany
+    {
+        return $this->hasMany(Trade::class);
+    }
+
+    public function profits(): HasMany
+    {
+        return $this->hasMany(Profit::class);
+    }
+    
+
     /**
      * The attributes that should be hidden for serialization.
      *

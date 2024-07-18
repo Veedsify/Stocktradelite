@@ -53,12 +53,7 @@
                         <div class="card bg-primary-subtle shadow-none">
                             <div class="card-body p-4">
                                 <div class="d-flex align-items-center">
-
                                     <h6 class="mb-0 ">Available Balance</h6>
-                                    <div class="ms-auto text-primary d-flex align-items-center">
-                                        <i class="ti ti-trending-up text-primary fs-6 me-1"></i>
-                                        <span class="fs-2 fw-bold">+ 2.30%</span>
-                                    </div>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-between mt-4">
                                     <h3 class="mb-0 fw-semibold fs-7" id="user-balance"
@@ -77,10 +72,6 @@
                                 <div class="d-flex align-items-center">
 
                                     <h6 class="mb-0">BTC Equivalent</h6>
-                                    <div class="ms-auto text-info d-flex align-items-center">
-                                        <i class="ti ti-trending-down text-success fs-6 me-1"></i>
-                                        <span class="fs-2 fw-bold text-success">+ 3.20%</span>
-                                    </div>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-between mt-4">
                                     <h3 class="mb-0 fw-semibold fs-7" id="btc-equivalent">
@@ -117,7 +108,9 @@
                                 </div>
                                 <div class="d-flex align-items-center justify-content-between mt-4">
                                     <h3 class="mb-0 fw-semibold fs-7">
-                                        {{ 45 }}
+                                        {{
+                                        auth()->user()->trades->first()->total_count ?? 0
+                                        }}
                                     </h3>
                                 </div>
                             </div>
@@ -126,183 +119,188 @@
                 </div>
                 <!--  Row 1 -->
                 <div class="row">
-                    <div class="col-lg-8 d-flex align-items-strech">
-                                
-                                <div class="card-body p-0">
-                                    <iframe src="demo-trader.php" width="100%" height="350" frameBorder="0"></iframe>
+                    <div class="col-lg-6">
+                        <div class="card p-0">
+                            <div class="card-body">
+                                <!-- TradingView Widget BEGIN -->
+                                <div class="tradingview-widget-container">
+                                    <div class="tradingview-widget-container__widget"></div>
+                                    <script type="text/javascript"
+                                        src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js"
+                                        async>
+                                        {
+                                  "colorTheme": "light",
+                                  "dateRange": "12M",
+                                  "showChart": true,
+                                  "locale": "en",
+                                  "width": "100%",
+                                  "height": "600",
+                                  "largeChartUrl": "https://google.com",
+                                  "isTransparent": true,
+                                  "showSymbolLogo": true,
+                                  "showFloatingTooltip": false,
+                                  "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+                                  "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+                                  "gridLineColor": "rgba(240, 243, 250, 0)",
+                                  "scaleFontColor": "rgba(19, 23, 34, 1)",
+                                  "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+                                  "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+                                  "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+                                  "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+                                  "symbolActiveColor": "rgba(41, 98, 255, 0.12)",
+                                  "tabs": [
+                                    {
+                                      "title": "Indices",
+                                      "symbols": [
+                                        {
+                                          "s": "FOREXCOM:SPXUSD",
+                                          "d": "S&P 500 Index"
+                                        },
+                                        {
+                                          "s": "FOREXCOM:NSXUSD",
+                                          "d": "US 100 Cash CFD"
+                                        },
+                                        {
+                                          "s": "FOREXCOM:DJI",
+                                          "d": "Dow Jones Industrial Average Index"
+                                        },
+                                        {
+                                          "s": "INDEX:NKY",
+                                          "d": "Nikkei 225"
+                                        },
+                                        {
+                                          "s": "INDEX:DEU40",
+                                          "d": "DAX Index"
+                                        },
+                                        {
+                                          "s": "FOREXCOM:UKXGBP",
+                                          "d": "FTSE 100 Index"
+                                        }
+                                      ],
+                                      "originalTitle": "Indices"
+                                    },
+                                    {
+                                      "title": "Futures",
+                                      "symbols": [
+                                        {
+                                          "s": "CME_MINI:ES1!",
+                                          "d": "S&P 500"
+                                        },
+                                        {
+                                          "s": "CME:6E1!",
+                                          "d": "Euro"
+                                        },
+                                        {
+                                          "s": "COMEX:GC1!",
+                                          "d": "Gold"
+                                        },
+                                        {
+                                          "s": "NYMEX:CL1!",
+                                          "d": "WTI Crude Oil"
+                                        },
+                                        {
+                                          "s": "NYMEX:NG1!",
+                                          "d": "Gas"
+                                        },
+                                        {
+                                          "s": "CBOT:ZC1!",
+                                          "d": "Corn"
+                                        }
+                                      ],
+                                      "originalTitle": "Futures"
+                                    },
+                                    {
+                                      "title": "Bonds",
+                                      "symbols": [
+                                        {
+                                          "s": "CBOT:ZB1!",
+                                          "d": "T-Bond"
+                                        },
+                                        {
+                                          "s": "CBOT:UB1!",
+                                          "d": "Ultra T-Bond"
+                                        },
+                                        {
+                                          "s": "EUREX:FGBL1!",
+                                          "d": "Euro Bund"
+                                        },
+                                        {
+                                          "s": "EUREX:FBTP1!",
+                                          "d": "Euro BTP"
+                                        },
+                                        {
+                                          "s": "EUREX:FGBM1!",
+                                          "d": "Euro BOBL"
+                                        }
+                                      ],
+                                      "originalTitle": "Bonds"
+                                    },
+                                    {
+                                      "title": "Forex",
+                                      "symbols": [
+                                        {
+                                          "s": "FX:EURUSD",
+                                          "d": "EUR to USD"
+                                        },
+                                        {
+                                          "s": "FX:GBPUSD",
+                                          "d": "GBP to USD"
+                                        },
+                                        {
+                                          "s": "FX:USDJPY",
+                                          "d": "USD to JPY"
+                                        },
+                                        {
+                                          "s": "FX:USDCHF",
+                                          "d": "USD to CHF"
+                                        },
+                                        {
+                                          "s": "FX:AUDUSD",
+                                          "d": "AUD to USD"
+                                        },
+                                        {
+                                          "s": "FX:USDCAD",
+                                          "d": "USD to CAD"
+                                        }
+                                      ],
+                                      "originalTitle": "Forex"
+                                    }
+                                  ]
+                                }
+                                    </script>
                                 </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-6">
-                                <!-- Yearly Breakup -->
-                                <div class="card">
-                                    <div class="card-body p-4">
-                                        <!-- Nav tabs -->
-                                        <ul class="nav nav-tabs nav-fill" role="tablist">
-                                            <li class="nav-item">
-                                                <a class="nav-link rounded active" data-bs-toggle="tab" href="#home"
-                                                    role="tab">
-                                                    <span>Buy</span>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link rounded" data-bs-toggle="tab" href="#profile"
-                                                    role="tab">
-                                                    <span>Sell</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <!-- Tab panes -->
-                                        <div class="tab-content mt-4">
-                                            <div class="tab-pane active" id="home" role="tabpanel">
-                                                <form>
-                                                    <span class="d-block mb-1">Amount</span>
-                                                    <div class="input-group mb-3">
-                                                        <input type="text" class="form-control  border-end-0"
-                                                            aria-label="Text input with dropdown button"
-                                                            value="0.20125">
-                                                        <button
-                                                            class="btn btn-sm arrow-none p-0 border-top border-bottom border-end border-0"
-                                                            type="button" data-bs-toggle="dropdown"
-                                                            aria-expanded="false">
-                                                            <span class="bg-danger-subtle text-danger p-6 rounded">
-                                                                <span> USD </span>
-                                                                <i class="ti ti-chevron-down ms-1 fs-4"></i>
-                                                            </span>
-                                                        </button>
-                                                        <ul class="dropdown-menu dropdown-menu-end">
-                                                            <li>
-                                                                <a class="dropdown-item" href="#">INR</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item" href="#">CLP</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item" href="#">AMD</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <span class="d-block mb-1">Amount</span>
-                                                    <div class="input-group mb-3">
-                                                        <input type="text" class="form-control  border-end-0"
-                                                            aria-label="Text input with dropdown button"
-                                                            value="0.20125">
-                                                        <button
-                                                            class="btn btn-sm arrow-none p-0 border-top border-bottom border-end border-0"
-                                                            type="button" data-bs-toggle="dropdown"
-                                                            aria-expanded="false">
-                                                            <span class="bg-primary-subtle text-primary p-6 rounded">
-                                                                <span> BTC </span>
-                                                                <i class="ti ti-chevron-down ms-1 fs-4"></i>
-                                                            </span>
-                                                        </button>
-                                                        <ul class="dropdown-menu dropdown-menu-end">
-                                                            <li>
-                                                                <a class="dropdown-item" href="#">LTC</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item" href="#">XRP</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item" href="#">ETH</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <button class="btn btn-primary w-100">Buy BTC</button>
-                                                </form>
-                                            </div>
-                                            <div class="tab-pane" id="profile" role="tabpanel">
-                                                <form>
-                                                    <span class="d-block mb-1">Amount</span>
-                                                    <div class="input-group mb-3">
-                                                        <input type="text" class="form-control  border-end-0"
-                                                            aria-label="Text input with dropdown button"
-                                                            value="0.20125">
-                                                        <button
-                                                            class="btn btn-sm arrow-none p-0 border-top border-bottom border-end border-0"
-                                                            type="button" data-bs-toggle="dropdown"
-                                                            aria-expanded="false">
-                                                            <span class="bg-danger-subtle text-danger p-6 rounded">
-                                                                <span> USD </span>
-                                                                <i class="ti ti-chevron-down ms-1 fs-4"></i>
-                                                            </span>
-                                                        </button>
-                                                        <ul class="dropdown-menu dropdown-menu-end">
-                                                            <li>
-                                                                <a class="dropdown-item" href="#">INR</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item" href="#">CLP</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item" href="#">AMD</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <span class="d-block mb-1">Amount</span>
-                                                    <div class="input-group mb-3">
-                                                        <input type="text" class="form-control  border-end-0"
-                                                            aria-label="Text input with dropdown button"
-                                                            value="0.20125">
-                                                        <button
-                                                            class="btn btn-sm arrow-none p-0 border-top border-bottom border-end border-0"
-                                                            type="button" data-bs-toggle="dropdown"
-                                                            aria-expanded="false">
-                                                            <span class="bg-primary-subtle text-primary p-6 rounded">
-                                                                <span> BTC </span>
-                                                                <i class="ti ti-chevron-down ms-1 fs-4"></i>
-                                                            </span>
-                                                        </button>
-                                                        <ul class="dropdown-menu dropdown-menu-end">
-                                                            <li>
-                                                                <a class="dropdown-item" href="#">LTC</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item" href="#">XRP</a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item" href="#">ETH</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <button class="btn btn-danger w-100">Sell BTC</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <!-- TradingView Widget END -->
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
                             <div class="col-lg-12 col-md-6">
                                 <!-- Monthly Earnings -->
                                 <div class="card">
                                     <div class="card-body">
-                                        <div class="row align-items-start">
-                                            <div class="col-8">
-                                                <h5 class="card-title mb-9 fw-semibold">
-                                                    Monthly Earnings
-                                                </h5>
-                                                <h4 class="fw-semibold mb-3">$6,820</h4>
-                                                <div class="d-flex align-items-center pb-1">
-                                                    <span
-                                                        class="me-2 rounded-circle bg-danger-subtle round-20 d-flex align-items-center justify-content-center">
-                                                        <i class="ti ti-arrow-down-right text-danger"></i>
-                                                    </span>
-                                                    <p class="text-dark me-1 fs-3 mb-0">+9%</p>
-                                                    <p class="fs-3 mb-0">last year</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="d-flex justify-content-end">
-                                                    <div
-                                                        class="text-white text-bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
-                                                        <i class="ti ti-currency-dollar fs-6"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <!-- TradingView Widget BEGIN -->
+                                        <div class="tradingview-widget-container">
+                                            <div class="tradingview-widget-container__widget"></div>
+                                            <script type="text/javascript"
+                                                src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+                                                async>
+                                                {
+                                      "interval": "1m",
+                                      "width": "100%",
+                                      "isTransparent": true,
+                                      "height": "600",
+                                      "symbol": "BITSTAMP:BTCUSD",
+                                      "showIntervalTabs": true,
+                                      "displayMode": "multiple",
+                                      "locale": "en",
+                                      "colorTheme": "light",
+                                      "largeChartUrl": "https://google.com"
+                                    }
+                                            </script>
                                         </div>
+                                        <!-- TradingView Widget END -->
                                     </div>
-                                    <div id="earning"></div>
                                 </div>
                             </div>
                         </div>

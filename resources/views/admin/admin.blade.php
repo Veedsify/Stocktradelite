@@ -116,7 +116,7 @@
                 </div>
                 <div class="d-flex align-items-center justify-content-between mt-3">
                   <h3 class="mb-0 fw-semibold fs-7">
-                    {{number_format($contactCount)}}
+                    {{number_format($pendingWIthdrwal)}}
                   </h3>
                 </div>
                 <div class="ms-auto text-info d-flex align-items-center mt-3">

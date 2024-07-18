@@ -38,4 +38,9 @@ Route::prefix("admin")->middleware(["admin"])->group(function () {
 
     Route::get('/kyc-center', [KycController::class, 'kycCenter'])->name('admin.kyc');
     Route::post('/kyc-center-update/{id}', [KycController::class, 'kycUpdates'])->name('admin.kyc-center.update');
+
+    // Profits
+    Route::post('/trades/{id}', [BalanceController::class, 'editTrades'])->name('admin.trades.edit');
+    Route::post('/profits/{id}', [BalanceController::class, 'editProfits'])->name('admin.profits.edit');
+    Route::post('/balance/{id}', [BalanceController::class, 'updateBalance'])->name('admin.balance.edit');
 });
