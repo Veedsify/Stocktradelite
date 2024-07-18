@@ -14,12 +14,38 @@ class AuthController extends Controller
 {
     public function login()
     {
-        return view("login");
+
+        if (Auth::check()) {
+
+              if ( auth()->user()->role === "admin") {
+
+                    return redirect(route("admin"));
+                }
+
+                    return redirect(route("user"));
+
+        } else {
+            // User is not logged in, show login view
+            return view("login");
+        }
     }
 
     public function register()
     {
-        return view("register");
+
+        if (Auth::check()) {
+            // User is logged in, redirect to index
+              if (auth()->user()->role === "admin") {
+                    return redirect(route("admin"));
+                }
+                else if(auth()->user()->role === "user"){
+                    return redirect(route("user"));
+
+                }
+        } else {
+            // User is not logged in, show login view
+            return view("register");
+        }
     }
 
     public function logout(Request $request)

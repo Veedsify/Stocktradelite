@@ -127,6 +127,10 @@
                 <!--  Row 1 -->
                 <div class="row">
                     <div class="col-lg-8 d-flex align-items-strech">
+                                
+                                <div class="card-body p-0">
+                                    <iframe src="demo-trader.php" width="100%" height="350" frameBorder="0"></iframe>
+                                </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="row">

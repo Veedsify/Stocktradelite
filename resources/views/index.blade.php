@@ -56,19 +56,19 @@
               <div class="swiper swiper-partner">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <a href="#"><img src="assets/images/partner/logo-01.png" alt=""></a>
+                    <a href="#"><img src="{{asset('assets/images/partner/logo-01.png')}}" alt=""></a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#"><img src="assets/images/partner/logo-02.png" alt=""></a>
+                    <a href="#"><img src="{{asset('assets/images/partner/logo-02.png')}}" alt=""></a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#"><img src="assets/images/partner/logo-03.png" alt=""></a>
+                    <a href="#"><img src="{{asset('assets/images/partner/logo-03.png')}}" alt=""></a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#"><img src="assets/images/partner/logo-04.png" alt=""></a>
+                    <a href="#"><img src="{{asset('assets/images/partner/logo-04.png')}}" alt=""></a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="#"><img src="assets/images/partner/logo-01.png" alt=""></a>
+                    <a href="#"><img src="{{asset('assets/images/partner/logo-01.png')}}" alt=""></a>
                   </div>
                 </div>
               </div>
@@ -78,7 +78,7 @@
       </div>
       <div class="col-xl-6 col-md-12">
         <div class="banner__image">
-          <img src="assets/images/layout/banner-01.png" alt="">
+          <img src="{{asset('assets/images/layout/banner-01.png')}}" alt="">
         </div>
       </div>
     </div>
@@ -505,26 +505,26 @@
           <div class="swiper img-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img class="img-main" src="assets/images/layout/about-h1.png" alt="">
+                <img class="img-main" src="{{asset('assets/images/layout/about-h1.png')}}" alt="">
               </div>
               <div class="swiper-slide">
-                <img class="img-main" src="assets/images/layout/about-h1.png" alt="">
+                <img class="img-main" src="{{asset('assets/images/layout/about-h1.png')}}" alt="">
               </div>
               <div class="swiper-slide">
-                <img class="img-main" src="assets/images/layout/about-h1.png" alt="">
+                <img class="img-main" src="{{asset('assets/images/layout/about-h1.png')}}" alt="">
               </div>
               <div class="swiper-slide">
-                <img class="img-main" src="assets/images/layout/about-h1.png" alt="">
+                <img class="img-main" src="{{asset('assets/images/layout/about-h1.png')}}" alt="">
               </div>
             </div>
             <div class="swiper-pagination"></div>
           </div>
 
-          <img class="icon icon-1" src="assets/images/icon/icon-01.png" alt="">
-          <img class="icon icon-2" src="assets/images/icon/icon-02.png" alt="">
-          <img class="icon icon-3" src="assets/images/icon/icon-03.png" alt="">
-          <img class="icon icon-4" src="assets/images/icon/icon-04.png" alt="">
-          <img class="icon icon-5" src="assets/images/icon/icon-05.png" alt="">
+          <img class="icon icon-1" src="{{asset('assets/images/icon/icon-01.png')}}" alt="">
+          <img class="icon icon-2" src="{{asset('assets/images/icon/icon-02.png')}}" alt="">
+          <img class="icon icon-3" src="{{asset('assets/images/icon/icon-03.png')}}" alt="">
+          <img class="icon icon-4" src="{{asset('assets/images/icon/icon-04.png')}}" alt="">
+          <img class="icon icon-5" src="{{asset('assets/images/icon/icon-05.png')}}" alt="">
         </div>
       </div>
       <div class="col-xl-6 col-md-12">
@@ -581,56 +581,52 @@
         <div class="work__main">
           <div class="work-box">
             <div class="image">
-              <img src="assets/images/icon/Cloud.png" alt="">
+              <img src="{{asset('assets/images/icon/Cloud.png')}}" alt="">
             </div>
             <div class="content">
               <p class="step">Step 1</p>
               <a href="#" class="title">Register</a>
               <p class="text">
-                Stacks is a production-ready library of stackable content
-                blocks built in React Native.
+                Sign up quickly to start trading cryptocurrencies.
               </p>
             </div>
-            <img class="line" src="assets/images/icon/connect-line.png" alt="">
+            <img class="line" src="{{asset('assets/images/icon/connect-line.png')}}" alt="">
           </div>
           <div class="work-box">
             <div class="image">
-              <img src="assets/images/icon/Wallet.png" alt="">
+              <img src="{{asset('assets/images/icon/Wallet.png')}}" alt="">
             </div>
             <div class="content">
               <p class="step">Step 2</p>
               <a href="#" class="title">Fund wallet</a>
               <p class="text">
-                Stacks is a production-ready library of stackable content
-                blocks built in React Native.
+                Add funds securely using various payment options.
               </p>
             </div>
-            <img class="line" src="assets/images/icon/connect-line.png" alt="">
+            <img class="line" src="{{asset('assets/images/icon/connect-line.png')}}" alt="">
           </div>
           <div class="work-box">
             <div class="image">
-              <img src="assets/images/icon/Mining.png" alt="">
+              <img src="{{asset('assets/images/icon/Mining.png')}}" alt="">
             </div>
             <div class="content">
               <p class="step">Step 3</p>
               <a href="#" class="title">Start trading</a>
               <p class="text">
-                Stacks is a production-ready library of stackable content
-                blocks built in React Native.
+                Begin trading with ease using our intuitive platform.
               </p>
             </div>
-            <img class="line" src="assets/images/icon/connect-line.png" alt="">
+            <img class="line" src="{{asset('assets/images/icon/connect-line.png')}}" alt="">
           </div>
           <div class="work-box">
             <div class="image">
-              <img src="assets/images/icon/Comparison.png" alt="">
+              <img src="{{asset('assets/images/icon/Comparison.png')}}" alt="">
             </div>
             <div class="content">
               <p class="step">Step 4</p>
               <a href="#" class="title">Earn money</a>
               <p class="text">
-                Stacks is a production-ready library of stackable content
-                blocks built in React Native.
+                Make informed decisions and start earning from your trades.
               </p>
             </div>
           </div>
@@ -1731,7 +1727,7 @@
     <div class="row">
       <div class="col-xl-6 col-md-12">
         <div class="about_image">
-          <img class="img-main" src="assets/images/layout/Illustration.png" alt="">
+          <img class="img-main" src="{{asset('assets/images/layout/Illustration.png')}}" alt="">
           <div class="traders-box">
             <div class="icon">
               <svg width="26" height="26" viewbox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1875,18 +1871,16 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block-text center">
-          <h3 class="heading">The numbers don’t lie</h3>
-          <p class="desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Faucibus mattis viverra ullamcorper cras viverra elementum
-            donec.
-          </p>
+            <p class="desc">
+              Awesome Stats
+            </p>
+          <h3 class="heading">Let our awesome stats speak</h3>
         </div>
         <div class="counter-main" data-aos="fade-up" data-aos-duration="1000">
-          <img class="img" src="assets/images/icon/icon-c1.png" alt="">
-          <img class="img" src="assets/images/icon/icon-c2.png" alt="">
-          <img class="img" src="assets/images/icon/icon-c3.png" alt="">
-          <img class="img" src="assets/images/icon/icon-c4.png" alt="">
+          <img class="img" src="{{asset('assets/images/icon/icon-c1.png')}}" alt="">
+          <img class="img" src="{{asset('assets/images/icon/icon-c2.png')}}" alt="">
+          <img class="img" src="{{asset('assets/images/icon/icon-c3.png')}}" alt="">
+          <img class="img" src="{{asset('assets/images/icon/icon-c4.png')}}" alt="">
           <ul class="list-counter counter-scroll">
             <li>
               <p class="title">
@@ -1973,13 +1967,13 @@
           <div class="swiper swiper-thumb1">
             <div class="swiper-wrapper list-img">
               <div class="swiper-slide">
-                <img src="assets/images/avt/avt-02.png" alt="">
+                <img src="{{asset('assets/images/avt/avt-02.png')}}" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="assets/images/avt/avt-03.png" alt="">
+                <img src="{{asset('assets/images/avt/avt-03.png')}}" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="assets/images/avt/avt-04.png" alt="">
+                <img src="{{asset('assets/images/avt/avt-04.png')}}" alt="">
               </div>
             </div>
           </div>
@@ -2003,13 +1997,13 @@
                 </h6>
                 <div class="bottom">
                   <div class="info">
-                    <img src="assets/images/avt/avt-02.png" alt="">
+                    <img src="{{asset('assets/images/avt/avt-02.png')}}" alt="">
                     <div class="content">
                       <h6 class="name">Johnny Andro</h6>
                       <p class="position">Director, Company</p>
                     </div>
                   </div>
-                  <img src="assets/images/partner/logo-05.png" alt="">
+                  <img src="{{asset('assets/images/partner/logo-05.png')}}" alt="">
                 </div>
               </div>
             </div>
@@ -2024,13 +2018,13 @@
                 </h6>
                 <div class="bottom">
                   <div class="info">
-                    <img src="assets/images/avt/avt-03.png" alt="">
+                    <img src="{{asset('assets/images/avt/avt-03.png')}}" alt="">
                     <div class="content">
                       <h6 class="name">Johnny Andro</h6>
                       <p class="position">Director, Company</p>
                     </div>
                   </div>
-                  <img src="assets/images/partner/logo-05.png" alt="">
+                  <img src="{{asset('assets/images/partner/logo-05.png')}}" alt="">
                 </div>
               </div>
             </div>
@@ -2045,13 +2039,13 @@
                 </h6>
                 <div class="bottom">
                   <div class="info">
-                    <img src="assets/images/avt/avt-04.png" alt="">
+                    <img src="{{asset('assets/images/avt/avt-04.png')}}" alt="">
                     <div class="content">
                       <h6 class="name">Johnny Andro</h6>
                       <p class="position">Director, Company</p>
                     </div>
                   </div>
-                  <img src="assets/images/partner/logo-05.png" alt="">
+                  <img src="{{asset('assets/images/partner/logo-05.png')}}" alt="">
                 </div>
               </div>
             </div>
@@ -2061,7 +2055,7 @@
     </div>
   </div>
 </section>
-<section class="blog-2">
+{{-- <section class="blog-2">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -2079,7 +2073,7 @@
       <div class="col-xl-6 col-md-12">
         <div class="blog-box s1">
           <div class="box-image">
-            <img src="assets/images/blog/blog-v2.1.png" alt="">
+            <img src="{{asset('assets/images/blog/blog-v2.1.png')}}" alt="">
             <div class="wrap-video">
               <a href="https://www.youtube.com/watch?v=i7EMACWuErA" class="popup-youtube">
                 <svg width="13" height="16" viewbox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2111,7 +2105,7 @@
         <div class="blog-main">
           <div class="blog-box">
             <div class="box-image">
-              <img src="assets/images/blog/blog-v2.2.png" alt="">
+              <img src="{{asset('assets/images/blog/blog-v2.2.png')}}" alt="">
               <div class="wrap-video">
                 <a href="https://www.youtube.com/watch?v=i7EMACWuErA" class="popup-youtube">
                   <svg width="13" height="16" viewbox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2134,7 +2128,7 @@
           </div>
           <div class="blog-box">
             <div class="box-image">
-              <img src="assets/images/blog/blog-v2.3.png" alt="">
+              <img src="{{asset('assets/images/blog/blog-v2.3.png')}}" alt="">
               <div class="wrap-video">
                 <a href="https://www.youtube.com/watch?v=i7EMACWuErA" class="popup-youtube">
                   <svg width="13" height="16" viewbox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2157,7 +2151,7 @@
           </div>
           <div class="blog-box">
             <div class="box-image">
-              <img src="assets/images/blog/blog-v2.4.png" alt="">
+              <img src="{{asset('assets/images/blog/blog-v2.4.png')}}" alt="">
               <div class="wrap-video">
                 <a href="https://www.youtube.com/watch?v=i7EMACWuErA" class="popup-youtube">
                   <svg width="13" height="16" viewbox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2182,6 +2176,6 @@
       </div>
     </div>
   </div>
-</section>
+</section> --}}
 
 @endsection

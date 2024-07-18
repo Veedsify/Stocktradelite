@@ -252,12 +252,10 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block-text center">
-          <h3 class="heading">The numbers don’t lie</h3>
-          <p class="desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Faucibus mattis viverra ullamcorper cras viverra elementum
-            donec.
-          </p>
+            <p class="desc">
+              Awesome Stats
+            </p>
+          <h3 class="heading">Let our awesome stats speak</h3>
         </div>
         <div class="counter-main" data-aos="fade-up" data-aos-duration="1000">
           <img class="img" src="assets/images/icon/icon-c1.png" alt="">
@@ -349,12 +347,9 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="testimonials-box-2">
-                <h6>“Trading crypto has never been so easy.”</h6>
+                <h6>“Effortless Crypto Purchases”</h6>
                 <p class="text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mi non viverra eros purus. Turpis ac scelerisque blandit
-                  mauris ut senectus nibh. Pretium cras sit non at amet
-                  velit id in.
+                    Stocktradelite made my first cryptocurrency purchase a breeze! The platform is incredibly user-friendly and secure. Highly recommend!
                 </p>
                 <div class="bottom">
                   <div class="info">
@@ -370,12 +365,9 @@
             </div>
             <div class="swiper-slide">
               <div class="testimonials-box-2">
-                <h6>“Trading crypto has never been so easy.”</h6>
+                <h6>“Simple and Straightforward”</h6>
                 <p class="text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mi non viverra eros purus. Turpis ac scelerisque blandit
-                  mauris ut senectus nibh. Pretium cras sit non at amet
-                  velit id in.
+                    I love how simple and straightforward Stocktradelite is. It only took a few minutes to sign up and start trading. Great experience!
                 </p>
                 <div class="bottom">
                   <div class="info">
@@ -391,12 +383,9 @@
             </div>
             <div class="swiper-slide">
               <div class="testimonials-box-2">
-                <h6>“Trading crypto has never been so easy.”</h6>
+                <h6>“Easiest Crypto Trading Platform”</h6>
                 <p class="text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mi non viverra eros purus. Turpis ac scelerisque blandit
-                  mauris ut senectus nibh. Pretium cras sit non at amet
-                  velit id in.
+                    Stocktradelite is hands down the easiest place to buy and sell crypto. Their customer support is also top-notch. I'm very impressed!
                 </p>
                 <div class="bottom">
                   <div class="info">
@@ -412,12 +401,9 @@
             </div>
             <div class="swiper-slide">
               <div class="testimonials-box-2">
-                <h6>“Trading crypto has never been so easy.”</h6>
+                <h6>“Perfect for Beginner”</h6>
                 <p class="text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mi non viverra eros purus. Turpis ac scelerisque blandit
-                  mauris ut senectus nibh. Pretium cras sit non at amet
-                  velit id in.
+                    As a beginner, I found Stocktradelite's interface intuitive and easy to navigate. I feel confident trading here. Five stars!
                 </p>
                 <div class="bottom">
                   <div class="info">
@@ -434,12 +420,9 @@
 
             <div class="swiper-slide">
               <div class="testimonials-box-2">
-                <h6>“Trading crypto has never been so easy.”</h6>
+                <h6>“Quick and Hassle-Free Signup”</h6>
                 <p class="text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mi non viverra eros purus. Turpis ac scelerisque blandit
-                  mauris ut senectus nibh. Pretium cras sit non at amet
-                  velit id in.
+                    Signing up for Stocktradelite was quick and hassle-free. It's the perfect platform for anyone looking to get started with cryptocurrency trading.
                 </p>
                 <div class="bottom">
                   <div class="info">
@@ -454,27 +437,7 @@
               </div>
             </div>
 
-            <div class="swiper-slide">
-              <div class="testimonials-box-2">
-                <h6>“Trading crypto has never been so easy.”</h6>
-                <p class="text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mi non viverra eros purus. Turpis ac scelerisque blandit
-                  mauris ut senectus nibh. Pretium cras sit non at amet
-                  velit id in.
-                </p>
-                <div class="bottom">
-                  <div class="info">
-                    <img src="assets/images/avt/use-06.png" alt="">
-                    <div class="content">
-                      <h6 class="name">Marvin McKinney</h6>
-                      <p class="position">CEO of Startup</p>
-                    </div>
-                  </div>
-                  <img src="assets/images/partner/logo-06.png" alt="">
-                </div>
-              </div>
-            </div>
+           
           </div>
         </div>
         <div class="swiper-button-next">
@@ -541,9 +504,7 @@
         <div class="join__content" data-aos="fade-up" data-aos-duration="1000">
           <h3 class="heading">Join our trading global community</h3>
           <p class="desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sit
-            amet, sagittis leo aliquam nunc etiam. Ac et mauris et nisi
-            molestie.
+            Unlock your StockTradeLite account now to investing in crypto seamlessly, without any fees for buying, selling, or exchanging. Get started today!
           </p>
           <a href="#" class="btn-action">Join now</a>
         </div>

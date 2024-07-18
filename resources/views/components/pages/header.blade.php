@@ -18,36 +18,38 @@
                         </div>
                         <div class="left__main">
                             <nav id="main-nav" class="main-nav">
-                                <ul id="menu-primary-menu" class="menu">
-                                    <li class="menu-item current-menu-item">
-                                        <a href="{{route('index')}}">Home </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="{{route('about')}}">About</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="{{route('markets')}}">Markets </a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#">Live Updates</a>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="{{route('blogs')}}">Blog</a>
-                                    </li>
 
+                                <ul id="menu-primary-menu" class="menu">
+                                    <li class="menu-item">
+                                        <a href="{{route('index')}}" data-id="home">Home</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="{{route('about')}}" data-id="about">About</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="{{route('markets')}}" data-id="markets">Markets</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="{{route('login')}}" data-id="live-updates">Live Updates</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="{{route('blogs')}}" data-id="blogs">Blog</a>
+                                    </li>
                                     <li class="menu-item-has-children">
-                                        <a href="#"> More </a>
+                                        <a href="#" data-id="more">More</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item">
-                                                <a href="{{route('terms-of-use')}}">Terms of Use</a>
+                                                <a href="{{route('terms-of-use')}}" data-id="terms-of-use">Terms of Use</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="{{route('privacy.policy')}}">Privacy Policy</a>
+                                                <a href="{{route('privacy.policy')}}" data-id="privacy-policy">Privacy Policy</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="{{route('contact')}}">Contact</a>
+                                                <a href="{{route('contact')}}" data-id="contact">Contact</a>
                                             </li>
-                                            <li class="menu-item"><a href="{{route('faq')}}">FAQ</a></li>
+                                            <li class="menu-item">
+                                                <a href="{{route('faq')}}" data-id="faq">FAQ</a>
+                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -175,3 +177,6 @@
     </div>
 </header>
 <!-- end Header -->
+
+
+

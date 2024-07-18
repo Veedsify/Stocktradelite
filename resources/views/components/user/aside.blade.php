@@ -113,16 +113,16 @@
     <div class="fixed-profile p-3 mx-4 mb-2 bg-secondary-subtle rounded mt-3">
       <div class="hstack gap-3">
         <div class="john-img">
-          <img src="../user-assets/images/profile/user-1.jpg" class="rounded-circle" width="40" height="40" alt="">
+          <img src="{{asset(auth()->user()->avatar)}}" class="rounded-circle" width="40" height="40" alt="">
         </div>
         <div class="john-title">
-          <h6 class="mb-0 fs-4 fw-semibold">Mathew</h6>
-          <span class="fs-2">Designer</span>
+          <h6 class="mb-0 fs-4 fw-semibold">{{ucwords(explode(' ', auth()->user()->name)[0])}}</h6>
+          <span class="fs-2">{{\App\Models\Tier::where('id', auth()->user()->tier)->first()->name ?? 'User'}}</span>
         </div>
-        <button class="border-0 bg-transparent text-primary ms-auto" tabindex="0" type="button" aria-label="logout"
+        <a class="border-0 bg-transparent text-primary ms-auto" tabindex="0" href="{{route('logout')}}" aria-label="logout"
           data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="logout">
           <i class="ti ti-power fs-6"></i>
-        </button>
+    </a>
       </div>
     </div>
 

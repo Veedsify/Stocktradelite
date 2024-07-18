@@ -637,7 +637,6 @@ body[data-magic-cursor=hide] .mouse-cursor {
 .header .header__left .main-nav .menu li.current-item>a {
   color: var(--primary);
 }
-
 .header .header__left .main-nav .menu li .sub-menu {
   padding: 16px;
   background: var(--bg);
@@ -3630,9 +3629,7 @@ body[data-magic-cursor=hide] .mouse-cursor {
   }
 }
 
-.faq .block-text .heading {
-  margin-bottom: 15px;
-}
+
 
 .faq .flat-accordion {
   margin-top: 80px;
@@ -3647,6 +3644,7 @@ body[data-magic-cursor=hide] .mouse-cursor {
 .faq .flat-accordion .flat-toggle .toggle-title {
   margin-bottom: 0;
   position: relative;
+  cursor: pointer;
 }
 
 .faq .flat-accordion .flat-toggle .toggle-title::after {
@@ -3655,6 +3653,7 @@ body[data-magic-cursor=hide] .mouse-cursor {
   font-family: "Font Awesome 6 Free";
   font-weight: 700;
   content: "\f107";
+  bottom: 0;
   font-size: 20px;
 }
 
