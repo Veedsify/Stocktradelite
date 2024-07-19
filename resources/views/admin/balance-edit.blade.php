@@ -98,11 +98,11 @@
               <!-- end row -->
             </thead>
             <tbody>
-              @foreach ($user->profits as $profit)
+              @foreach ($profits as $profit)
               <tr>
                 <td>{{ $profit->user->name }}</td>
                 <td>$ {{ $profit->total_profit }}</td>
-                <td>{{ $profit->created_at->format('d M Y h:i A') }}</td>
+                <td>{{ $profit->created_at->format('D M Y h:i A') }}</td>
               </tr>
               @endforeach
             </tbody>

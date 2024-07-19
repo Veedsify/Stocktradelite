@@ -14,8 +14,10 @@ class BalanceController extends Controller
     public function editBalance($id)
     {
         $user = User::find($id);
+        $profits = Profit::where('user_id', $id)->orderBy('id', 'desc')->get();
         return view('admin.balance-edit', [
             'user' => $user,
+            'profits' => $profits,
         ]);
     }
 

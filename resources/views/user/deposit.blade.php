@@ -5,14 +5,9 @@
   <!-- Sidebar Start -->
   <x-user.aside />
   <!--  Sidebar End -->
-
   <div class="page-wrapper">
     <!--  Header Start -->
     <x-user.header />
-
-    <!--  Header End -->
-
-
     <div class="body-wrapper">
       <div class="container-fluid">
         <!--  Owl carousel -->
@@ -34,10 +29,8 @@
             </div>
           </div>
         </div>
-
         <p class="px-2">Make your first deposit with any of the following methods immediately your deposit has been
           confirmed.</p>
-
         <div class="row">
           <div class="col-md-6">
             <div class="card">
@@ -65,10 +58,8 @@
                             <button class="btn btn-primary " type="button"
                               style="border-bottom-left-radius: 0px !important; border-top-left-radius: 0px !important;"
                               onclick="copyText('inputText1')">Copy</button>
-
                           </div>
                         </div>
-
                         <p class="text-center">
 
                           <a href="#" class="btn  btn-primary d-inline-block mx-auto">Pay Using BTC Wallet App</a>
@@ -112,9 +103,6 @@
               <div class="card-body">
                 <h4 class="card-title" style="font: 700 !important">Ethereum</h4>
                 <img src="{{asset ('/user-assets/images/png/ethereum.png')}}" alt="" class="w-100">
-
-
-
                 <!-- ethereum-model content -->
                 <div id="ethereum-model" class="modal fade" tabindex="-1" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-scrollable modal-md">
@@ -182,30 +170,39 @@
         <div class="row text-truncate ">
           <div class="col-lg-12">
             <div class="card">
-
               <div class="card-body truncate">
                 <div class="table-responsive">
-                  <table class="table table-striped mb-0">
+                  <table id="zero_config" class="table border table-striped table-bordered text-nowrap align-middle">
                     <thead>
+                      <!-- start row -->
                       <tr>
                         <th>Amount</th>
-                        <th class="">Transcation Date</th>
                         <th>Status</th>
-                        <th>Actions</th>
+                        <th>Payment Method</th>
+                        <th>Date</th>
                       </tr>
+                      <!-- end row -->
                     </thead>
                     <tbody>
+                      <!-- start row -->
+                      @foreach($deposits as $deposit)
                       <tr>
-                        <td>0.00</td>
-                        <td>2022-02-02</td>
-                        <td><span class="badge bg-success">Success</span></td>
+                        <td>$
+                          {{number_format($deposit->amount)}}
+                        </td>
                         <td>
-                          <a href="javascript:void(0);" class="btn btn-sm btn-primary">View</a>
+                          <div
+                            class="text-capitalize badge p-2 {{$deposit->status == 'pending' ? 'badge-warning text-warning' : ($deposit->status == 'approved' ? 'badge-success text-success' : 'badge-danger text-danger')}}">
+                            {{$deposit->status}}
+                          </div>
+                        </td>
+                        <td>BTC</td>
+                        <td>
+                          {{$deposit->created_at->format('d M Y h:i A')}}
                         </td>
                       </tr>
-                    </tbody>
+                      @endforeach
                   </table>
-
                 </div>
               </div>
             </div>

@@ -18,26 +18,29 @@ function imageHandler() {
     };
 }
 
-var quill = new Quill("#editor", {
-    theme: "snow",
-    modules: {
-        toolbar: {
-            container: [
-                [{
-                    font: []
-                }],
-                [{ header: [1, 2, 3, 4, 5, 6, false] }],
-                ["bold", "italic", "underline"],
-                [{ list: "ordered" }, { list: "bullet" }],
-                ["link"],
-                ["clean"],
-                ["code-block"],
-                ["blockquote"],
-                ["image", "video", "formula"]
-            ],
-            handlers: {
-                image: imageHandler
+
+if (document.getElementById("editor")){
+    var quill = new Quill("#editor", {
+        theme: "snow",
+        modules: {
+            toolbar: {
+                container: [
+                    [{
+                        font: []
+                    }],
+                    [{ header: [1, 2, 3, 4, 5, 6, false] }],
+                    ["bold", "italic", "underline"],
+                    [{ list: "ordered" }, { list: "bullet" }],
+                    ["link"],
+                    ["clean"],
+                    ["code-block"],
+                    ["blockquote"],
+                    ["image", "video", "formula"]
+                ],
+                handlers: {
+                    image: imageHandler
+                }
             }
         }
-    }
-});
+    });
+}

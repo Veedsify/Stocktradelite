@@ -12,8 +12,10 @@ class UpgradeAccountController extends Controller
     public function upgradeAccount()
     {
         $tiers = Tier::all();
+        $wallets = WalletAddress::first();
         return view('user.upgrade-account', [
             'tiers' => $tiers,
+            'wallet' => $wallets
         ]);
     }
 

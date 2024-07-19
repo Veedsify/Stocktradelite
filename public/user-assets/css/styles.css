@@ -31387,7 +31387,8 @@ body .dp-nav.dp-nav-right::before {
   cursor: pointer;
 }
 
-.deposit-modal {
+.deposit-modal,
+.confirm-modal {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
@@ -31401,13 +31402,15 @@ body .dp-nav.dp-nav-right::before {
   min-height: 100vh;
 }
 
-.deposit-modal .modal-header {
+.deposit-modal .modal-header,
+.confirm-modal .modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.deposit-modal > div:first-child{
+.deposit-modal>div:first-child,
+.confirm-modal>div:first-child {
   background: #fff;
   padding: 20px;
   border-radius: 5px;

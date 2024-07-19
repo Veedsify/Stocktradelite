@@ -72,10 +72,10 @@
                           <td>{{$user->email}}</td>
                           <td>{{$user->phone}}</td>
                           <td>
-                            <a href="{{route('admin.orders')}}"
+                            <a href="{{route('admin.orders', [$user->id])}}"
                               class=" text-decoration-underline text-neutral-950 ">View Order</a>
                           </td>
-                          <td>{{$user->balance}}</td>
+                          <td>${{number_format($user->balance)}}</td>
                           <td>
                             <a href="{{route('admin.balance.editbalance', $user->id)}}"
                               class="btn-sm btn btn-secondary">Settings</a>
