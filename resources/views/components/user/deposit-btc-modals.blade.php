@@ -12,10 +12,11 @@
       <img width="200" src="{{ asset('user-assets/images/png/bitcoin.jpg') }}" alt="bitcoin" class="d-block mx-auto">
       <form action="{{ route('deposit.btc', [$action['action'] ?? " upgrade"]) }}" method="POST" enctype="multipart/form-data">
         @csrf
+        <input type="hidden" name="tier_id" value="{{$tier}}">
         <div class="mb-5">
           <div class="d-flex align-items-center">
             <input type="text" class="form-control form-control-lg border py-3 border-primary"
-              placeholder="Wallet Address" value="{{ $wallet->btc_address }}">
+              placeholder="Wallet Address" value="{{ $wallet->btc_address ?? ""}}">
             <button type="button" class="btn btn-primary ms-2 h-100 px-3 py-3">
               <div class="d-flex align-items-center">
                 <i class="ti ti-clipboard me-2 fs-4"></i>

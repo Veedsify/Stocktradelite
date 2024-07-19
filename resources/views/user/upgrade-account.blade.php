@@ -23,13 +23,17 @@
           <div class="card-body px-4 py-3">
             <div class="row align-items-center">
               <div class="col-9">
-                <h4 class="fw-semibold mb-8">Pricing</h4>
+                <h4 class="fw-semibold mb-8">
+                  Upgrade Plans
+                </h4>
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item">
                       <a class="text-muted text-decoration-none" href="index.html">Home</a>
                     </li>
-                    <li class="breadcrumb-item" aria-current="page">Pricing</li>
+                    <li class="breadcrumb-item" aria-current="page">
+                      Upgrade Plans
+                    </li>
                   </ol>
                 </nav>
               </div>
@@ -80,10 +84,12 @@
                   </li>
                 </ul>
                 <h2 class="fw-bolder fs-big mb-3">INVEST ${{number_format($tier->price)}}</h2>
+                @if(auth()->user()->tier < $tier->id)
                 <a href="{{route('upgrade.deposit', [$tier->id])}}"
                   class="btn btn-primary fw-bolder py-6 w-100 text-capitalize">Choose
                   {{$tier->name}}
                 </a>
+                @endif
               </div>
             </div>
           </div>

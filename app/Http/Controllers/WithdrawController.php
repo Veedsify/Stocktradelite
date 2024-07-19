@@ -36,6 +36,7 @@ class WithdrawController extends Controller
         $withdrawal->save();
 
         Mail::to(auth()->user()->email)->send(new WithdrawalRequest($withdrawal));
+        
 
         User::find(auth()->user()->id)->update([
             'balance' => $user->balance - $request->amount,

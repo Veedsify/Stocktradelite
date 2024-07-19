@@ -29,6 +29,7 @@ class DepositController extends Controller
     {
         $request->validate([
             'amount' => 'required|numeric|min:0',
+            'tier_id' => 'required',
             'payment_proof' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
@@ -45,18 +46,20 @@ class DepositController extends Controller
         $deposit->status = 'pending';
         $deposit->is_upgrade = $upgrade === 'upgrade' ? 1 : 0;
         $deposit->payment_id = Str::random(10);
+        $deposit->tier_id = $request->tier_id;
         $deposit->payment_proof = 'assets/images/deposits/' . $imageName ?? '';
 
         $deposit->transaction_ref = Str::random(36);
         $deposit->save();
 
-        return redirect()->back()->with('success', 'Your deposit of ' . $request->amount . ' BTC has been received successfully, and is pending confirmation');
+        return redirect()->back()->with('success', 'Your deposit of $' . $request->amount . '  has been received successfully, and is pending confirmation');
     }
 
     public function depositEthUpgrade(Request $request, $upgrade)
     {
         $request->validate([
             'amount' => 'required|numeric|min:0',
+            'tier_id' => 'required',
             'payment_proof' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
@@ -75,8 +78,9 @@ class DepositController extends Controller
         $deposit->payment_id = Str::random(10);
         $deposit->payment_proof = 'assets/images/deposits/' . $imageName ?? '';
         $deposit->transaction_ref = Str::random(36);
+        $deposit->tier_id = $request->tier_id;
         $deposit->save();
 
-        return redirect()->back()->with('success', 'Your deposit of ' . $request->amount . ' ETH has been received successfully, and is pending confirmation');
+        return redirect()->back()->with('success', 'Your deposit of $' . $request->amount . ' has been received successfully, and is pending confirmation');
     }
 }

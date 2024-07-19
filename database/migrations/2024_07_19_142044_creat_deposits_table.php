@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('amount');
             $table->string('payment_method');
             $table->boolean('is_upgrade')->default(false);
+            $table->string('tier_id')->nullable();
             $table->text('payment_id');
             $table->string('payment_proof');
             $table->text('transaction_ref');

@@ -85,13 +85,13 @@
         const tierData = {
             min: '{{$tier->min}}',
             max: '{{$tier->max}}',
-            btc: '{{$wallet->btc_address}}',
-            eth: '{{$wallet->eth_address}}',
+         btc: '{{$wallet->btc_address ?? ""}}',
+          eth: '{{$wallet->eth_address ?? ""}}',
         }
       </script>
       {{-- DEPOSIT --}}
-      <x-user.deposit-eth-modals :wallet="$wallet" />
-      <x-user.deposit-btc-modals :wallet="$wallet" />
+      <x-user.deposit-eth-modals :wallet="$wallet" :tier="$tier->id" />
+      <x-user.deposit-btc-modals :wallet="$wallet" :tier="$tier->id" />
       {{--
 
       {{-- WITHDRAW --}}

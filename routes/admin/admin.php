@@ -34,7 +34,8 @@ Route::prefix("admin")->middleware(["admin"])->group(function () {
     Route::get("/notification", [NotificationController::class, "notificationAdmin"])->name("admin.notification");
 
     // order
-    Route::get("/orders/{id}", [OrderController::class, "orders"])->name("admin.orders");
+    Route::get("/deposits/{id}", [OrderController::class, "orders"])->name("admin.orders");
+    Route::post("/deposits/edit/{id}/{tier}", [OrderController::class, "updateOrder"])->name("admin.deposit.update");
 
     // Change Password
     Route::post('/admin/change-password', [ChangePasswordController::class, "changePasswordSubmit"])->name("changepassword.admin");

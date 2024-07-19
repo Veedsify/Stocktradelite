@@ -121,8 +121,8 @@
           const tierData = {
                           min: '1',
                           max: '1000000',
-                          btc: '{{$wallet->btc_address}}',
-                          eth: '{{$wallet->eth_address}}',
+                          btc: '{{$wallet->btc_address ?? ""}}',
+                          eth: '{{$wallet->eth_address ?? ""}}',
                       }
         </script>
         <x-user.search />
@@ -130,9 +130,10 @@
         {{-- DEPOSIT --}}
         @php
         $deposit = ['action'=>'deposit'];
+        $tier = auth()->user()->tier;
         @endphp
-        <x-user.deposit-eth-modals :wallet="$wallet" :action="$deposit" />
-        <x-user.deposit-btc-modals :wallet="$wallet" :action="$deposit" />
+        <x-user.deposit-eth-modals :wallet="$wallet" :action="$deposit" :tier="$tier" />
+        <x-user.deposit-btc-modals :wallet="$wallet" :action="$deposit" :tier="$tier" />
         {{--
 
         {{-- WITHDRAW --}}

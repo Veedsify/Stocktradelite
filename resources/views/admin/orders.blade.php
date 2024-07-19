@@ -75,7 +75,9 @@
                               {{$deposit->status}}
                             </div>
                           </td>
-                          <td>BTC</td>
+                          <td>
+                            {{$deposit->payment_method}}
+                          </td>
                           <td>
                             <a href="{{asset($deposit->payment_proof)}}" style="text-decoration: underline;"
                               download>Download
@@ -86,8 +88,12 @@
                             {{$deposit->is_upgrade ? 'Upgrade' : 'Deposit'}}
                           </td>
                           <td>
-                            <form class="d-flex gap-1">
-                              <select name="verification_status" id="verification_status"
+                            <form class="d-flex gap-1" action="{{route('admin.deposit.update', [
+                                'id' => $deposit->id,
+                                'tier'=> $deposit->is_upgrade ? 'upgrade' : 'deposit',
+                              ])}}" method="post">
+                              @csrf
+                              <select name="deposit_status" id="verification_status"
                                 class="px-1 py-1 border-1 border-muted btn-outline-info rounded-2">
                                 <option value="pending" {{$deposit->status == 'pending' ? 'selected' : ''}}
                                   >Pending
