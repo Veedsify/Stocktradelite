@@ -33,18 +33,28 @@
                   </ol>
                 </nav>
               </div>
-
             </div>
           </div>
+        </div>
+        <div>
+          @if($errors->any())
+          <div class="alert alert-danger">
+            <ul>
+              @foreach($errors->all() as $error)
+              <li>{{ $error }}</li>
+              @endforeach
+            </ul>
+          </div>
+          @endif
         </div>
         <div class="row">
           <div class="col-md-6">
             <div class="card">
               <div class="card-body">
                 <h4 class="card-title" style="font: 700 !important">BITCOIN</h4>
-                <img src="{{asset ('user-assets/images/png/bitcoin.jpg')}}" alt="" class="w-100">
+                <img src="{{asset ('user-assets/images/png/bitcoin.jpg')}}" alt="" class="w-50 d-block mx-auto">
                 <!-- Custom width modal -->
-                <button onclick="openModal({node:'deposit_eth', address:'{{$wallet->btc_address}}'})" type="button"
+                <button onclick="openModal({node:'deposit_btc'})" type="button"
                   class="btn mb-1 mt-3 bg-primary-subtle w-100 text-primary px-4 fs-4  text-black ">
                   <i class="ti ti-chevrons-right fs-5 "></i>
                   Choose this one
@@ -58,8 +68,8 @@
             <div class="card">
               <div class="card-body">
                 <h4 class="card-title" style="font: 700 !important">Ethereum</h4>
-                <img src="{{asset ('user-assets/images/png/ethereum.png')}}" alt="" class="w-100">
-                <button onclick="openModal({node:'deposit_eth', address:'{{$wallet->eth_address}}'})" type="button"
+                <img src="{{asset ('user-assets/images/png/ethereum.png')}}" alt="" class="w-50 d-block mx-auto">
+                <button onclick="openModal({node:'deposit_eth'})" type="button"
                   class="btn mb-1 mt-3 bg-primary-subtle w-100 text-primary px-4 fs-4  text-black ">
                   <i class="ti ti-chevrons-right fs-5 "></i>
                   Choose this one
@@ -71,18 +81,20 @@
         <x-user.search />
       </div>
 
-
-
+      <script>
+        const tierData = {
+            min: '{{$tier->min}}',
+            max: '{{$tier->max}}',
+            btc: '{{$wallet->btc_address}}',
+            eth: '{{$wallet->eth_address}}',
+        }
+      </script>
       {{-- DEPOSIT --}}
-      <template id="deposit_eth">
-        <x-user.deposit-eth-modals :wallet="$wallet" />
-      </template>
-      <template id="deposit_btc">
-        <x-user.deposit-btc-modals :wallet="$wallet" />
-      </template>
+      <x-user.deposit-eth-modals :wallet="$wallet" />
+      <x-user.deposit-btc-modals :wallet="$wallet" />
       {{--
 
       {{-- WITHDRAW --}}
-      {{--
-      <x-user.confirm-deposit /> --}}
+
+      <x-user.confirm-deposit />
       @endsection

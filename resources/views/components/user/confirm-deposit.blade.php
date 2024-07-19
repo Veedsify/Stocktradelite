@@ -1,17 +1,19 @@
 {{-- MODALS --}}
-<div class="confirm-modal">
+<div class="confirm-modal" data-node="confirm_deposit">
     <div class="bg-white p-5 rounded-2">
         <div class="mb-4 modal-header">
             <h3 class="fw-bold">
                 Confirm Deposit
             </h3>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-button="confirm_deposit"></button>
         </div>
-        <div class="modal-body">
+        <div class=" modal-body">
             <p class="card-subtitle mb-4">
                 After depositing, click the button below to confirm your deposit
             </p>
-            <form>
+            <form
+                id="confirm_deposit_form"
+            >
                 <div class="mb-3">
                     <input type="file" class="form-control border border-primary" placeholder="Address">
                     <label>

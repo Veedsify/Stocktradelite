@@ -39,6 +39,12 @@ Route::prefix("user")->middleware(["auth"])->group(function () {
         // Wallet Address
         Route::post('/wallet-address/btc', [WalletController::class, "walletAddressBtc"])->name("walletaddress.submit.btc");
         Route::post('/wallet-address/eth', [WalletController::class, "walletAddressEth"])->name("walletaddress.submit.eth");
+
+
+        // Deposit
+        Route::post('/deposit/btc/{upgrade}', [DepositController::class, "depositBtcUpgrade"])->name("deposit.btc");
+        Route::post('/deposit/eth/{upgrade}', [DepositController::class, "depositEthUpgrade"])->name("deposit.eth");
+        
     });
 
     // KYC Verification

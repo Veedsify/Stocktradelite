@@ -65,6 +65,7 @@
   <script src="{{ asset('user-assets/js/theme/app.init.js') }}"></script>
   <script src="{{ asset('user-assets/js/theme/theme.js') }}"></script>
   <script src="{{ asset('user-assets/js/theme/app.min.js') }}"></script>
+  <script src="{{ asset('user-assets/js/theme/deposit.js') }}"></script>
   <script src="{{ asset('user-assets/js/theme/sidebarmenu.js') }}"></script>
   <!-- solar icons -->
   <script src="{{ asset('user-assets/libs/owl.carousel/dist/owl.carousel.min.js') }}"></script>
