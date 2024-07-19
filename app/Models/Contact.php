@@ -13,6 +13,7 @@ class Contact extends Model
         'name',
         'email',
         'phone',
+        'subject',
         'message',
         'is_read',
         'is_responded',

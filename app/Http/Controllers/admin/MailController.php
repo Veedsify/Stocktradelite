@@ -16,6 +16,7 @@ class MailController extends Controller
 
     public function sendmail(Request $request)
     {
+        
         try {
             $request->validate([
                 'to' => 'required|email',

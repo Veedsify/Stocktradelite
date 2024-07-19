@@ -41,6 +41,7 @@ Route::get("/about", [AboutController::class, "about"])->name("about");
 
 // Contact
 Route::get('get-in-touch', [ContactController::class, 'getInTouch'])->name('contact');
+Route::post('/new', [ContactController::class, 'submitContactForm'])->name('contact.submit');
 
 // Terms Of Use
 Route::get("/terms-of-use", [TermsController::class, "terms"])->name("terms-of-use");
@@ -89,4 +90,7 @@ Route::get('/kyc-request', function () {
 });
 Route::get('/kyc-decline', function () {
     return view("email-templates.kyc-decline");
+});
+Route::get('/contact-mail', function () {
+    return view("email-templates.contact-mail");
 });
