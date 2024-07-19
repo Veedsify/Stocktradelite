@@ -21,13 +21,13 @@
           <div class="card-body px-4 py-3">
             <div class="row align-items-center">
               <div class="col-9">
-                <h4 class="fw-semibold mb-8">Users</h4>
+                <h4 class="fw-semibold mb-8">Order</h4>
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item">
                       <a class="text-muted text-decoration-none" href="index.html">Home</a>
                     </li>
-                    <li class="breadcrumb-item" aria-current="page">users</li>
+                    <li class="breadcrumb-item" aria-current="page">Orders</li>
                   </ol>
                 </nav>
               </div>
@@ -43,50 +43,58 @@
               <div class="card">
                 <div class="card-body">
                   <div class="mb-2">
-                    <h5 class="mb-0">User Datatable</h5>
+                    <h5 class="mb-0">Order Datatable</h5>
                   </div>
-                  <div class="table-responsivPe">
+                  <div class="table-responsive">
                     <table id="zero_config" class="table border table-striped table-bordered text-nowrap align-middle">
                       <thead>
                         <!-- start row -->
                         <tr>
-                          <th>Name</th>
-                          <th>Tier</th>
-                          <th>Email</th>
-                          <th>Phone</th>
-                          <th>Orders Request</th>
-                          <th>Balance</th>
-                          <th>Edit Settings</th>
-                          <th>Edit Trades</th>
+                          <th>Amount</th>
+                          <th>Status</th>
+                          <th>Payment Method</th>
+                          <th>Payment Proof</th>
+                          <th>Type</th>
+                          <th>Action</th>
                         </tr>
                         <!-- end row -->
                       </thead>
                       <tbody>
                         <!-- start row -->
-                        @foreach ($users as $user)
                         <tr>
-                          <td>{{$user->name}}</td>
-                          <td>{{
-                            \App\Models\Tier::where('id', $user->tier)->first()->name
-                            }}</td>
-                          <td>{{$user->email}}</td>
-                          <td>{{$user->phone}}</td>
+                          <td>$1000</td>
+                          <td>Pending</td>
+                          <td>BTC</td>
                           <td>
-                            <a href="{{route('admin.orders')}}"
-                              class=" text-decoration-underline text-neutral-950 ">View Order</a>
+                            <a href="{{asset('user-assets/images/breadcrumb/ChatBc.png')}}" style="text-decoration: underline;"
+                              download>Download
+                              Receipt</a>
+                            <br>
+
                           </td>
-                          <td>{{$user->balance}}</td>
+                          <td>Buy</td>
                           <td>
-                            <a href="{{route('admin.balance.editbalance', $user->id)}}"
-                              class="btn-sm btn btn-secondary">Settings</a>
-                          </td>
-                          <td>
-                            <a href="{{route('admin.balance.editbalance', $user->id)}}"
-                              class="btn-sm btn btn-primary">Edit</a>
+                            <form class="d-flex gap-1 kyc-verification-form"
+                                >
+                                <input type="hidden" name="rejection_reason" id="rejection_reason">
+                                <select name="verification_status" id="verification_status"
+                                  class="px-1 py-1 border-1 border-muted btn-outline-info rounded-2">
+                                  <option value="approved"
+                                    >Pending
+                                  </option>
+                                  <option value="pending"
+                                    >Successful
+                                  </option>
+                                  <option value="rejected"
+                                    >
+                                    Decline
+                                  </option>
+                                </select>
+                                <button type="submit" class="btn btn-primary btn-sm">Update</button>
+                              </form>
                           </td>
 
                         </tr>
-                        @endforeach
                         <!-- end row -->
 
 

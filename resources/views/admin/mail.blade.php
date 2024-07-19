@@ -38,24 +38,27 @@
 
         <div class="card">
           <div class="card-body">
+            <div class="">
 
-            <form action="" class="form-horizontal">
+
+            <form action="{{ route('sendmail') }}"  class="form-horizontal" method="POST">
+                @csrf
               <div class="mb-4">
                 <label class="form-label">To:<span class="text-danger">*</span>
                 </label>
-                <input type="text" class="form-control">
+                <input type="text" name="to" id="to" class="form-control" required>
               </div>
               <div class="mb-4">
-                <label class="form-label">Subject: <span class="text-danger">*</span>
+                <label class="form-label">Subject: <span class="text-danger ">*</span>
                 </label>
-                <input type="text" class="form-control">
+                <input type="text"  name="subject" id="subject" class="form-control" required>
               </div>
               <div>
                 <label class="form-label">Message:</label>
-                <div id="editor" style="min-height: 30vh">
-                </div>
+                <textarea id="editor"  name="message"  style="min-height: 30vh; width:100%" >
+                </textarea>
               </div>
-              <button class="btn btn-primary mt-2">Send</button>
+              <button class="btn btn-primary mt-2" type="submit">Send</button>
             </form>
           </div>
         </div>

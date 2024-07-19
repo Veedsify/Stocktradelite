@@ -60,7 +60,7 @@
                                                                     bgcolor="#fff" style="padding: 10px 0 ">
 
 
-                                                                    <img src="{{asset('assets/images/mail/custom-mail.png')}}" alt="" width="500" height="100%">
+                                                                    <img src="{{asset('assets/images/mail/confirmation-code.png')}}" alt="" width="500" height="100%">
 
                                                                 </td>
                                                             </tr>
@@ -85,15 +85,13 @@
                                                             <tr>
                                                                 <td class="col px-sm-16" bgcolor="#FFFFFF" align="left"
                                                                     width="352" style="padding: 48px 24px 32px 24px;">
-                                                                    <h3 class="quicksand"
-                                                                        style="color: #718096;font-size: 16px; font-weight: 400; line-height: 20px ;">
-                                                                        Hi John</h3>
+                                                                  
                                                                     <h1 class="quicksand"
                                                                         style="color: #1A202C;font-size: 24px; font-weight: 700; line-height: 30px ; margin-bottom: 7px;">
-                                                                        [mesage title]</h1>
+                                                                        {{ $data['subject'] }}</h1>
                                                                     <p class="source"
                                                                         style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
-                                                                        [message description]
+                                                                        {!! $data['message'] !!}
                                                                     </p>
 
 
