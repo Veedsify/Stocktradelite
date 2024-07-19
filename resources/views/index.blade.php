@@ -1787,8 +1787,7 @@
             We are the most trusted cryptocurrency platform.
           </h3>
           <p class="fs-20 desc">
-            We believe Cryptolly is here to stay — and that a future worth
-            building is one which opens its doors and invites everyone in.
+            offering secure transactions, transparent operations, and exceptional customer support for all your crypto needs.
           </p>
           <ul class="list">
             <li>
@@ -1957,11 +1956,10 @@
         <div class="block-text">
           <h3 class="heading">Our customers love what we do</h3>
           <h6 class="fs-20">
-            Transform Your idea into Reality With Finsweet
+            Transform Your idea into Reality With  Stocktradelite
           </h6>
           <p>
-            It is a long established fact that a reader will be distracted
-            by the readable content of a page when looking at its layout.
+            Our customers rave about our seamless and secure crypto trading experience, praising our intuitive tools and real-time analytics. Join the growing community of satisfied traders at Stocktradelite.
           </p>
 
           <div class="swiper swiper-thumb1">
@@ -1978,7 +1976,7 @@
             </div>
           </div>
           <div class="couter">
-            <h6>30+</h6>
+            <h6>1K+</h6>
             <p class="title">Customer Reviews</p>
           </div>
         </div>
