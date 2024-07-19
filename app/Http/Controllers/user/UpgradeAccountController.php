@@ -19,7 +19,7 @@ class UpgradeAccountController extends Controller
 
     public function upgradeAccountDeposit($id)
     {
-        $wallets = WalletAddress::all()->first();
+        $wallets = WalletAddress::first();
         $tier = Tier::find($id);
 
         return view('user.upgrade', [

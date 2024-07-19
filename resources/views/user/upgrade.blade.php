@@ -43,59 +43,8 @@
               <div class="card-body">
                 <h4 class="card-title" style="font: 700 !important">BITCOIN</h4>
                 <img src="{{asset ('user-assets/images/png/bitcoin.jpg')}}" alt="" class="w-100">
-                <div id="bitcoin-model" class="modal fade" tabindex="-1" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-scrollable modal-md">
-                    <div class="modal-content">
-                      <div class="modal-body">
-                        <div class="text-center mt-2 mb-4">
-                          <h4>BITCOIN DEPOSIT</h4>
-                        </div>
-                        <p>Please send the specified bitcoin amount to the Bitcoin address below</p>
-                        <p>Please note that there is a minimum deposit amount of 500 USD. Forward the amount paid via
-                          the input box provided</p>
-
-                        <small>Send BITCOIN To</small>
-                        <div class="input-group mb-3">
-                          <input type="text" id="inputText1" class="form-control" value="{{$wallet->bitcoin_address}}"
-                            style="border-bottom-right-radius: 0px !important; border-top-right-radius: 0px !important;"
-                            disabled>
-                          <div class="input-group-append">
-                            <button class="btn btn-primary " type="button"
-                              style="border-bottom-left-radius: 0px !important; border-top-left-radius: 0px !important;"
-                              onclick="copyText('inputText1')">Copy</button>
-
-                          </div>
-                        </div>
-
-                        <p class="text-center">
-
-                          <a href="#" class="btn  btn-primary d-inline-block mx-auto">Pay Using BTC Wallet App</a>
-                        </p>
-
-                        <form class="ps-3 pr-3" action="#">
-
-                          <div class="mb-3">
-                            <label for="amount">Amount Paid ($)</label>
-                            <input class="form-control" type="number" id="amount" required="" placeholder="0.00">
-                          </div>
-
-
-                          <div class="mb-3 text-center">
-                            <button class="btn btn-primary w-100" type="submit">
-                              Confirm Deposit
-                            </button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                    <!-- /.modal-content -->
-                  </div>
-                  <!-- /.modal-dialog -->
-                </div>
-                <!-- /.modal -->
                 <!-- Custom width modal -->
-                <button type="button" class="btn mb-1 mt-3 bg-primary-subtle w-100 text-primary px-4 fs-4  text-black"
-                  data-bs-toggle="modal" data-bs-target="#bitcoin-model">
+                <button type="button" class="btn mb-1 mt-3 bg-primary-subtle w-100 text-primary px-4 fs-4  text-black">
                   <i class="ti ti-chevrons-right fs-5 "></i>
                   Choose this one
                 </button>
@@ -105,64 +54,11 @@
           {{-- Etherem --}}
 
           <div class="col-md-6">
-
             <div class="card">
               <div class="card-body">
                 <h4 class="card-title" style="font: 700 !important">Ethereum</h4>
                 <img src="{{asset ('user-assets/images/png/ethereum.png')}}" alt="" class="w-100">
-                <!-- ethereum-model content -->
-                <div id="ethereum-model" class="modal fade" tabindex="-1" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-scrollable modal-md">
-                    <div class="modal-content">
-                      <div class="modal-body">
-                        <div class="text-center mt-2 mb-4">
-                          <h4>Ethereum DEPOSIT</h4>
-                        </div>
-                        <p>PPlease send the specified ethereum amount to the Ethereum address below</p>
-                        <p>Please note that there is a minimum deposit amount of 500 USD. Forward the amount paid via
-                          the input box provided</p>
-
-                        <small>Send ETHEREUM To</small>
-                        <div class="input-group mb-3">
-                          <input type="text" id="inputText2" class="form-control" value="{{$wallet->ethereum_address}}"
-                            style="border-bottom-right-radius: 0px !important; border-top-right-radius: 0px !important;"
-                            disabled>
-                          <div class="input-group-append">
-                            <button class="btn btn-primary " type="button"
-                              style="border-bottom-left-radius: 0px !important; border-top-left-radius: 0px !important;"
-                              onclick="copyText('inputText2')">Copy</button>
-
-                          </div>
-                        </div>
-
-                        <p class="text-center">
-
-                          <a href="#" class="btn  btn-primary d-inline-block mx-auto">Pay Using BTC Wallet App</a>
-                        </p>
-
-                        <form class="ps-3 pr-3" action="#">
-
-                          <div class="mb-3">
-                            <label for="amount">Amount Paid ($)</label>
-                            <input class="form-control" type="number" id="amount" required="" placeholder="0.00">
-                          </div>
-
-
-                          <div class="mb-3 text-center">
-                            <button class="btn btn-primary w-100" type="submit">
-                              Confirm Deposit
-                            </button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- /.modal-dialog -->
-                </div>
-                <!-- /.modal -->
-                <!-- Custom width modal -->
-                <button type="button" class="btn mb-1 mt-3 bg-primary-subtle w-100 text-primary px-4 fs-4  text-black "
-                  data-bs-toggle="modal" data-bs-target="#ethereum-model">
+                <button type="button" class="btn mb-1 mt-3 bg-primary-subtle w-100 text-primary px-4 fs-4  text-black ">
                   <i class="ti ti-chevrons-right fs-5 "></i>
                   Choose this one
                 </button>
@@ -172,35 +68,91 @@
         </div>
         <x-user.search />
       </div>
-      <script>
-        function copyText(inputId) {
-      var input = document.getElementById(inputId);
 
-      if (input && input.value) {
-        // Create a temporary input element
-        var tempInput = document.createElement('input');
-        tempInput.setAttribute('type', 'text');
-        tempInput.setAttribute('value', input.value);
-        document.body.appendChild(tempInput);
+      {{-- MODALS --}}
+      <div class="deposit-modal">
+        <div class="bg-white p-5 rounded-2">
+          <div class="mb-4 modal-header">
+            <h3 class="fw-bold">
+              Confirm Deposit
+            </h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="card-subtitle mb-4">
+              After depositing, click the button below to confirm your deposit
+            </p>
+            <form>
+              <div class="mb-3">
+                <input type="file" class="form-control border border-success" placeholder="Address">
+                <label>
+                  <img src="" id="" alt="" class="img-fluid">
+                </label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control border border-success" placeholder="Email">
+                <label><i class="ti ti-currency-dollar me-2 fs-4 text-success"></i><span
+                    class="border-start border-success ps-3">
+                    Transaction Ref</span></label>
+                <small>
+                  Paste the transaction reference here
+                </small>
+              </div>
+              <div class="d-md-flex align-items-center">
+                <div class="mt-3 mt-md-0 ms-auto">
+                  <button type="submit" class="btn btn-success  rounded-pill px-4">
+                    <div class="d-flex align-items-center">
+                      <i class="ti ti-send me-2 fs-4"></i>
+                      Submit Confirmation
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
 
-        // Select the text in the temporary input
-        tempInput.select();
-        tempInput.setSelectionRange(0, 99999); // For mobile devices
-
-        // Copy the selected text
-        document.execCommand('copy');
-
-        // Clean up - remove the temporary input element
-        document.body.removeChild(tempInput);
-
-        // Visual feedback - change button text to 'Copied!' temporarily
-        var copyButton = input.nextElementSibling.querySelector('.btn-primary');
-        copyButton.innerText = 'Copied!';
-        setTimeout(function() {
-          copyButton.innerText = 'Copy';
-        }, 1500); // Reset button text after 1.5 seconds
-      }
-    }
-      </script>
-
+      {{-- DEPOSIT --}}
+      {{-- <div class="deposit-modal">
+        <div class="bg-white p-5 rounded-2">
+          <div class="mb-4 modal-header">
+            <h3 class="fw-bold">
+              Deposit Bitcoin
+            </h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h5>
+              Deposit to the address below
+            </h5>
+            <p class="card-subtitle mb-4">
+              After depositing, click the button below to confirm your deposit
+            </p>
+            <form>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control border border-success" placeholder="Address">
+                <label><i class="ti ti-book me-2 fs-4 text-success"></i><span
+                    class="border-start border-success ps-3">Address</span></label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control border border-success" placeholder="Email">
+                <label><i class="ti ti-currency-dollar me-2 fs-4 text-success"></i><span
+                    class="border-start border-success ps-3">
+                    Amount</span></label>
+              </div>
+              <div class="d-md-flex align-items-center">
+                <div class="mt-3 mt-md-0 ms-auto">
+                  <button type="submit" class="btn btn-success  rounded-pill px-4">
+                    <div class="d-flex align-items-center">
+                      <i class="ti ti-send me-2 fs-4"></i>
+                      Confirm Deposit
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div> --}}
       @endsection

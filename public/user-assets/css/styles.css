@@ -31386,3 +31386,31 @@ body .dp-nav.dp-nav-right::before {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.deposit-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  min-height: 100vh;
+}
+
+.deposit-modal .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.deposit-modal > div:first-child{
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+}
