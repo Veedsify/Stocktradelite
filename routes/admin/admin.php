@@ -1,20 +1,20 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\user\KycController;
+use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\admin\BalanceController;
 use App\Http\Controllers\admin\BlogController;
 use App\Http\Controllers\admin\MailController;
-use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\OrderController;
-use App\Http\Controllers\admin\TermsController;
-use App\Http\Controllers\admin\UsersController;
-use App\Http\Controllers\admin\WalletController;
-use App\Http\Controllers\admin\BalanceController;
 use App\Http\Controllers\admin\PrivacyController;
 use App\Http\Controllers\admin\ProfileController;
 use App\Http\Controllers\admin\SecurityController;
-use App\Http\Controllers\user\NotificationController;
+use App\Http\Controllers\admin\TermsController;
+use App\Http\Controllers\admin\UsersController;
+use App\Http\Controllers\admin\WalletController;
 use App\Http\Controllers\user\ChangePasswordController;
+use App\Http\Controllers\user\KycController;
+use App\Http\Controllers\user\NotificationController;
+use Illuminate\Support\Facades\Route;
 
 // Index Pages
 Route::prefix("admin")->middleware(["admin"])->group(function () {
@@ -22,7 +22,6 @@ Route::prefix("admin")->middleware(["admin"])->group(function () {
     // Mail
     Route::get("/mail", [MailController::class, "mail"])->name("mail");
     Route::post("/sendmail", [MailController::class, "sendmail"])->name("sendmail");
-
 
     Route::get("/users", [UsersController::class, "users"])->name("users");
     Route::get("/users/balance/{id}", [BalanceController::class, "editBalance"])->name("admin.balance.editbalance");
@@ -35,7 +34,7 @@ Route::prefix("admin")->middleware(["admin"])->group(function () {
     Route::get("/notification", [NotificationController::class, "notificationAdmin"])->name("admin.notification");
 
     // order
-    Route::get("/orders", [OrderController::class, "orders"])->name("admin.orders");
+    Route::get("/orders/{id}", [OrderController::class, "orders"])->name("admin.orders");
 
     // Change Password
     Route::post('/admin/change-password', [ChangePasswordController::class, "changePasswordSubmit"])->name("changepassword.admin");

@@ -67,10 +67,8 @@
   <script src="{{ asset('user-assets/js/theme/app.min.js') }}"></script>
   <script src="{{ asset('user-assets/js/theme/sidebarmenu.js') }}"></script>
   <!-- solar icons -->
-  <script src="{{ asset('npm/iconify-icon%401.0.8/dist/iconify-icon.min.js') }}"></script>
   <script src="{{ asset('user-assets/libs/owl.carousel/dist/owl.carousel.min.js') }}"></script>
-  <script src="{{ asset('user-assets/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
-  <script src="{{ asset('user-assets/js/dashboards/dashboard.js') }}"></script>
+  {{-- <script src="{{ asset('user-assets/js/dashboards/dashboard.js') }}"></script> --}}
   <script src="{{asset('user-assets/js/apps/contact.js')}}"></script>
 
 
@@ -83,8 +81,7 @@
   <script src="{{ asset('user-assets/libs/jquery.repeater/jquery.repeater.min.js')}}"></script>
   <script src="{{ asset('user-assets/libs/jquery-validation/dist/jquery.validate.min.js')}}"></script>
   <script src="{{ asset('user-assets/js/forms/repeater-init.js')}}"></script>
-  <script src="{{ asset('user-assets/libs/apexcharts/dist/apexcharts.min.js')}}"></script>
-  <script src="{{ asset('user-assets/js/apps/edit-product.js')}}"></script>
+  {{-- <script src="{{ asset('user-assets/libs/apexcharts/dist/apexcharts.min.js')}}"></script> --}}
 </body>
 
 </body>

@@ -56,6 +56,10 @@ class User extends Authenticatable
         return $this->hasMany(Profit::class);
     }
 
+    public function deposits(): HasMany
+    {
+        return $this->hasMany(Deposit::class);
+    }
     /**
      * The attributes that should be hidden for serialization.
      *
