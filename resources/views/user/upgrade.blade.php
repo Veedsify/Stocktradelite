@@ -1,6 +1,8 @@
 ﻿@extends('../layouts/user/userlayout')
 @section('content')
 
+
+
 <div id="main-wrapper">
   <!-- Sidebar Start -->
   <x-user.aside />
@@ -9,10 +11,7 @@
   <div class="page-wrapper">
     <!--  Header Start -->
     <x-user.header />
-
     <!--  Header End -->
-
-
     <div class="body-wrapper">
       <div class="container-fluid">
         <!--  Owl carousel -->
@@ -20,13 +19,17 @@
           <div class="card-body px-4 py-3">
             <div class="row align-items-center">
               <div class="col-9">
-                <h4 class="fw-semibold mb-8">Fund Account</h4>
+                <h4 class="fw-semibold mb-8">
+                  Upgrade Account to {{
+                  $tier->name
+                  }}
+                </h4>
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item">
                       <a class="text-muted text-decoration-none" href="index.html">Home</a>
                     </li>
-                    <li class="breadcrumb-item" aria-current="page">deposit</li>
+                    <li class="breadcrumb-item" aria-current="page">Upgrade</li>
                   </ol>
                 </nav>
               </div>
@@ -34,22 +37,17 @@
             </div>
           </div>
         </div>
-
-        <p class="px-2">Make your first deposit with any of the following methods immediately your deposit has been
-          confirmed.</p>
-
         <div class="row">
           <div class="col-md-6">
             <div class="card">
               <div class="card-body">
                 <h4 class="card-title" style="font: 700 !important">BITCOIN</h4>
-                <img src="{{asset ('/user-assets/images/png/bitcoin.jpg')}}" alt="" class="w-100">
+                <img src="{{asset ('user-assets/images/png/bitcoin.jpg')}}" alt="" class="w-100">
                 <div id="bitcoin-model" class="modal fade" tabindex="-1" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-scrollable modal-md">
                     <div class="modal-content">
                       <div class="modal-body">
                         <div class="text-center mt-2 mb-4">
-
                           <h4>BITCOIN DEPOSIT</h4>
                         </div>
                         <p>Please send the specified bitcoin amount to the Bitcoin address below</p>
@@ -58,7 +56,7 @@
 
                         <small>Send BITCOIN To</small>
                         <div class="input-group mb-3">
-                          <input type="text" id="inputText1" class="form-control" value=" 27wml"
+                          <input type="text" id="inputText1" class="form-control" value="{{$wallet->bitcoin_address}}"
                             style="border-bottom-right-radius: 0px !important; border-top-right-radius: 0px !important;"
                             disabled>
                           <div class="input-group-append">
@@ -111,10 +109,7 @@
             <div class="card">
               <div class="card-body">
                 <h4 class="card-title" style="font: 700 !important">Ethereum</h4>
-                <img src="{{asset ('/user-assets/images/png/ethereum.png')}}" alt="" class="w-100">
-
-
-
+                <img src="{{asset ('user-assets/images/png/ethereum.png')}}" alt="" class="w-100">
                 <!-- ethereum-model content -->
                 <div id="ethereum-model" class="modal fade" tabindex="-1" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-scrollable modal-md">
@@ -129,8 +124,7 @@
 
                         <small>Send ETHEREUM To</small>
                         <div class="input-group mb-3">
-                          <input type="text" id="inputText2" class="form-control"
-                            value="bc1qy0cyjuhk3hxjj4lt4fgkhp2vaega0dnpw27wml"
+                          <input type="text" id="inputText2" class="form-control" value="{{$wallet->ethereum_address}}"
                             style="border-bottom-right-radius: 0px !important; border-top-right-radius: 0px !important;"
                             disabled>
                           <div class="input-group-append">
@@ -176,52 +170,8 @@
             </div>
           </div>
         </div>
-
-
-
-        <div class="row text-truncate ">
-          <div class="col-lg-12">
-            <div class="card">
-
-              <div class="card-body truncate">
-                <div class="table-responsive">
-                  <table class="table table-striped mb-0">
-                    <thead>
-                      <tr>
-                        <th>Amount</th>
-                        <th class="">Transcation Date</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>0.00</td>
-                        <td>2022-02-02</td>
-                        <td><span class="badge bg-success">Success</span></td>
-                        <td>
-                          <a href="javascript:void(0);" class="btn btn-sm btn-primary">View</a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <x-user.canvas />
-
-        </div>
         <x-user.search />
-
-
-
-
       </div>
-
-
       <script>
         function copyText(inputId) {
       var input = document.getElementById(inputId);

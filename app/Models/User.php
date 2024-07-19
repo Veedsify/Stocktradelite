@@ -55,7 +55,6 @@ class User extends Authenticatable
     {
         return $this->hasMany(Profit::class);
     }
-    
 
     /**
      * The attributes that should be hidden for serialization.

@@ -22,6 +22,7 @@ Route::prefix("user")->middleware(["auth"])->group(function () {
         Route::get('/withdrawal', [WithdrawalController::class, "withdrawal"])->name("withdrawal");
         Route::get('/trade-history', [TradeHistoryController::class, "tradeHistory"])->name("tradehistory");
         Route::get('/upgrade-account', [UpgradeAccountController::class, "upgradeAccount"])->name("upgradeaccount");
+        Route::get('/upgrade-account/{id}', [UpgradeAccountController::class, "upgradeAccountDeposit"])->name("upgrade.deposit");
         Route::get('/profile', [ProfileController::class, "profile"])->name("profile");
         Route::get('/notification', [NotificationController::class, "notification"])->name("notification");
 

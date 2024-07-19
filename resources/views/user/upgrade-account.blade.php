@@ -80,9 +80,10 @@
                   </li>
                 </ul>
                 <h2 class="fw-bolder fs-big mb-3">INVEST ${{number_format($tier->price)}}</h2>
-                <button class="btn btn-primary fw-bolder py-6 w-100 text-capitalize">Choose
+                <a href="{{route('upgrade.deposit', [$tier->id])}}"
+                  class="btn btn-primary fw-bolder py-6 w-100 text-capitalize">Choose
                   {{$tier->name}}
-                </button>
+                </a>
               </div>
             </div>
           </div>
