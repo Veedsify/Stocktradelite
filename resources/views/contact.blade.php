@@ -40,19 +40,24 @@
             <p class="desc fs-20">Get in touch with Stocktradelite</p>
           </div>
 
-          <form>
+          <form  action="{{ route('contact.submit') }}"  method="POST" >
+            @csrf
             <div class="form-group">
               <label>Your name</label>
-              <input type="text" class="form-control" placeholder="Enter your name">
+              <input type="text" class="form-control" placeholder="Enter your name" name="name" required>
             </div>
             <div class="form-group">
               <label>Email </label>
-              <input type="text" class="form-control" placeholder="Enter mail">
+              <input type="email" class="form-control" placeholder="Enter mail" name="email" required>
+            </div>
+            <div class="form-group">
+              <label>Phone </label>
+              <input type="number" class="form-control" placeholder="Enter mail" name="phone" required>
             </div>
 
             <div class="form-group">
               <label>Subject </label>
-              <select class="form-control" id="exampleFormControlSelect1">
+              <select class="form-control" id="exampleFormControlSelect1" name="subject" >
                 <option>NFT Items</option>
                 <option>NFT Items 1</option>
                 <option>NFT Items 1</option>
@@ -60,7 +65,7 @@
             </div>
             <div class="form-group">
               <label>Message </label>
-              <textarea cols="30" rows="10" class="form-control" placeholder="Enter your message"></textarea>
+              <textarea cols="30" rows="10" class="form-control"  name="message"  placeholder="Enter your message" required></textarea>
             </div>
 
             <button type="submit" class="btn-action">Send message</button>
