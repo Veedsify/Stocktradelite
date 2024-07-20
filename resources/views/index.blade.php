@@ -119,7 +119,7 @@
               <div class="content-inner" style="overflow: auto;">
                 <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinPriceBlock.js">
                 </script>
-                 <div id="coinmarketcap-widget-coin-price-block" coins="1,1027,825,1839,2010,74,6636,5426,1975" currency="EUR" theme="light" transparent="true" show-symbol-logo="true"></div>
+                 <div id="coinmarketcap-widget-coin-price-block" coins="1,1027,825,1839,2010,74,6636,5426" currency="EUR" theme="light" transparent="true" show-symbol-logo="true"></div>
 
               </div>
 
