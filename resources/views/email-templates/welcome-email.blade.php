@@ -91,13 +91,13 @@
                                                                     </h3>
                                                                     <h1 class="quicksand"
                                                                         style="color: #1A202C;font-size: 24px; font-weight: 700; line-height: 30px ; margin-bottom: 7px;">
-                                                                        Welcome to StockTradeLite!</h1>
+                                                                        Welcome to Stocklitetrade!</h1>
                                                                     <p class="source"
                                                                         style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
                                                                         We are happy to welcome you to our expanding
                                                                         network of traders, investors, and
                                                                         cryptocurrency lovers. Our goal at
-                                                                        StockTradeLite is to give you the most
+                                                                        Stocklitetrade is to give you the most
                                                                         up-to-date information, perspectives, and
                                                                         resources to help you successfully
                                                                         navigate the fascinating world of
@@ -146,7 +146,7 @@
                                                                         Find out about our most popular features like
                                                                         live presenting, private sharing and working
                                                                         together as a team in our knowledge base <span
-                                                                            style="font-weight: 400; color: #F8444F ;">help@stocktradelite.com</span>.
+                                                                            style="font-weight: 400; color: #F8444F ;">help@Stocklitetrade.com</span>.
                                                                     </p>
 
                                                                 </td>
@@ -180,10 +180,10 @@
                                                                     <p class="source"
                                                                         style="color: #A0AEC0;font-size: 12px; font-weight: 400; line-height: 12px;margin-bottom: 5px;">
                                                                         You are receiving this email because you signed
-                                                                        up for a StockTradeLite.com account.</p>
+                                                                        up for a Stocklitetrade.com account.</p>
                                                                     <p class="source"
                                                                         style="color: #A0AEC0;font-size: 12px; font-weight: 400; line-height: 12px;margin-bottom: 5px;">
-                                                                        © 2024 StockTradeLite</p>
+                                                                        © 2024 Stocklitetrade</p>
 
                                                                 </td>
                                                             </tr>

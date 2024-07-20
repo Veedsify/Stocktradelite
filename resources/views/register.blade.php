@@ -1,4 +1,6 @@
-﻿@extends('layouts.app')
+﻿@extends('layouts.app', [
+    'title' => 'Register',
+  ])
 @section('content')
 <x-pages.header />
 
@@ -11,7 +13,7 @@
       </div>
       <div class="col-md-6">
         <ul class="breadcrumb">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li>
             <p class="fs-18">/</p>
           </li>
@@ -30,7 +32,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block-text center">
-          <h3 class="heading">Register To Stocktradelite</h3>
+          <h3 class="heading">Register To Stocklitetrade</h3>
           <p class="desc fs-20">
             Register in advance and enjoy the event benefits
           </p>

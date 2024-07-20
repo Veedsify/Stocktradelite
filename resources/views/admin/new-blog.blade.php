@@ -25,7 +25,7 @@
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item">
-                        <a class="text-muted text-decoration-none" href="https://bootstrapdemos.adminmart.com/modernize/dist/main/index.html">Home</a>
+                        <a class="text-muted text-decoration-none" href="https://bootstrapdemos.adminmart.com/modernize/dist/main//">Home</a>
                       </li>
                       <li class="breadcrumb-item" aria-current="page">create Blog</li>
                     </ol>

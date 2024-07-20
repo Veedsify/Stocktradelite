@@ -46,9 +46,9 @@
     <div class="row">
       <div class="col-xl-6 col-md-12">
         <div class="banner__content ">
-          <h2 class="title">Buy & Sell Digital Assets In The Stocktradelite</h2>
+          <h2 class="title">Buy & Sell Digital Assets In The Stocklitetrade</h2>
           <p class="fs-20 desc">
-            Coin Stocktradelite is the easiest, safest, and fastest way to buy &
+            Coin Stocklitetrade is the easiest, safest, and fastest way to buy &
             sell crypto asset exchange.
           </p>
           <a href="
@@ -163,7 +163,7 @@
       </div>
       <div class="col-xl-6 col-md-12">
         <div class="about__content" data-aos="fade-up" data-aos-duration="1000">
-          <h3 class="heading">What Is Stocktradelite</h3>
+          <h3 class="heading">What Is Stocklitetrade</h3>
           <p class="fs-20 decs">
             Experience a variety of trading on Bitcost. You can use various
             types of coin transactions such as Spot Trade, Futures Trade,
@@ -541,11 +541,11 @@
         <div class="block-text">
           <h3 class="heading">Our customers love what we do</h3>
           <h6 class="fs-20">
-            Transform Your idea into Reality With Stocktradelite
+            Transform Your idea into Reality With Stocklitetrade
           </h6>
           <p>
             Our customers rave about our seamless and secure crypto trading experience, praising our intuitive tools and
-            real-time analytics. Join the growing community of satisfied traders at Stocktradelite.
+            real-time analytics. Join the growing community of satisfied traders at Stocklitetrade.
           </p>
 
           <div class="swiper swiper-thumb1">

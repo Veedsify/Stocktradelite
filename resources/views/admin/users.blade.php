@@ -22,7 +22,7 @@
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item">
-                                                <a class="text-muted text-decoration-none" href="index.html">Home</a>
+                                                <a class="text-muted text-decoration-none" href="/">Home</a>
                                             </li>
                                             <li class="breadcrumb-item" aria-current="page">users</li>
                                         </ol>
@@ -89,7 +89,7 @@
                                                                     <option value="admin"
                                                                         {{ $user->role === 'admin' ? 'selected' : '' }}>Admin
                                                                     </option>
-                                                                    
+
                                                                 </select>
                                                                 <button type="submit"
                                                                     class="btn btn-primary btn-sm">Update</button>

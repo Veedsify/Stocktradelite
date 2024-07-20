@@ -1,4 +1,6 @@
-﻿@extends('layouts.app')
+﻿@extends('layouts.app', [
+    'title' => 'Contact',
+  ])
 @section('content')
 <x-pages.header />
 
@@ -11,7 +13,7 @@
       </div>
       <div class="col-md-6">
         <ul class="breadcrumb">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li>
             <p class="fs-18">/</p>
           </li>
@@ -37,7 +39,7 @@
         <div class="contact-main">
           <div class="block-text center">
             <h3 class="heading">Leave a message for us</h3>
-            <p class="desc fs-20">Get in touch with Stocktradelite</p>
+            <p class="desc fs-20">Get in touch with Stocklitetrade</p>
           </div>
 
           <form action="{{ route('contact.submit') }}" method="POST">

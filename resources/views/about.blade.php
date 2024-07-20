@@ -1,4 +1,6 @@
-﻿@extends('layouts.app')
+﻿@extends('layouts.app', [
+    'title' => 'About',
+  ])
 @section('content')
 <x-pages.header />
 <!-- Banner Top -->
@@ -8,10 +10,10 @@
       <div class="col-md-12">
         <div class="banner__content text-center">
           <h2 class="title ">
-            Stocktradelite helps you smartly invest in cryptocurrencies.
+            Stocklitetrade helps you smartly invest in cryptocurrencies.
           </h2>
           <p class="fs-20 desc">
-            Stocktradelite is the easiest place to buy and sell cryptocurrency. Sign
+            Stocklitetrade is the easiest place to buy and sell cryptocurrency. Sign
             up and get started today.
           </p>
           <a href="{{route('register')}}" class="btn-action"><span>Start trading</span></a>
@@ -30,9 +32,9 @@
     <div class="row">
       <div class="col-xl-6 col-md-12">
         <div class="services__content" data-aos="fade-up" data-aos-duration="1000">
-          <h3 class="heading">Why choose Stocktradelite</h3>
+          <h3 class="heading">Why choose Stocklitetrade</h3>
           <p class="fs-20 desc">
-            Stocktradelite has a variety of features that make it the best place to
+            Stocklitetrade has a variety of features that make it the best place to
             start trading
           </p>
           <ul class="list">
@@ -202,7 +204,7 @@
         <div class="trading__content" data-aos="fade-up" data-aos-duration="1000">
           <h3 class="heading">3 steps easy trading</h3>
           <p class="desc fs-20">
-            Stocktradelite has a variety of features that make it the best place to
+            Stocklitetrade has a variety of features that make it the best place to
             start trading
           </p>
 
@@ -349,7 +351,7 @@
               <div class="testimonials-box-2">
                 <h6>“Effortless Crypto Purchases”</h6>
                 <p class="text">
-                    Stocktradelite made my first cryptocurrency purchase a breeze! The platform is incredibly user-friendly and secure. Highly recommend!
+                    Stocklitetrade made my first cryptocurrency purchase a breeze! The platform is incredibly user-friendly and secure. Highly recommend!
                 </p>
                 <div class="bottom">
                   <div class="info">
@@ -367,7 +369,7 @@
               <div class="testimonials-box-2">
                 <h6>“Simple and Straightforward”</h6>
                 <p class="text">
-                    I love how simple and straightforward Stocktradelite is. It only took a few minutes to sign up and start trading. Great experience!
+                    I love how simple and straightforward Stocklitetrade is. It only took a few minutes to sign up and start trading. Great experience!
                 </p>
                 <div class="bottom">
                   <div class="info">
@@ -385,7 +387,7 @@
               <div class="testimonials-box-2">
                 <h6>“Easiest Crypto Trading Platform”</h6>
                 <p class="text">
-                    Stocktradelite is hands down the easiest place to buy and sell crypto. Their customer support is also top-notch. I'm very impressed!
+                    Stocklitetrade is hands down the easiest place to buy and sell crypto. Their customer support is also top-notch. I'm very impressed!
                 </p>
                 <div class="bottom">
                   <div class="info">
@@ -403,7 +405,7 @@
               <div class="testimonials-box-2">
                 <h6>“Perfect for Beginner”</h6>
                 <p class="text">
-                    As a beginner, I found Stocktradelite's interface intuitive and easy to navigate. I feel confident trading here. Five stars!
+                    As a beginner, I found Stocklitetrade's interface intuitive and easy to navigate. I feel confident trading here. Five stars!
                 </p>
                 <div class="bottom">
                   <div class="info">
@@ -422,7 +424,7 @@
               <div class="testimonials-box-2">
                 <h6>“Quick and Hassle-Free Signup”</h6>
                 <p class="text">
-                    Signing up for Stocktradelite was quick and hassle-free. It's the perfect platform for anyone looking to get started with cryptocurrency trading.
+                    Signing up for Stocklitetrade was quick and hassle-free. It's the perfect platform for anyone looking to get started with cryptocurrency trading.
                 </p>
                 <div class="bottom">
                   <div class="info">
@@ -437,7 +439,7 @@
               </div>
             </div>
 
-           
+
           </div>
         </div>
         <div class="swiper-button-next">
@@ -504,7 +506,7 @@
         <div class="join__content" data-aos="fade-up" data-aos-duration="1000">
           <h3 class="heading">Join our trading global community</h3>
           <p class="desc">
-            Unlock your StockTradeLite account now to investing in crypto seamlessly, without any fees for buying, selling, or exchanging. Get started today!
+            Unlock your Stocklitetrade account now to investing in crypto seamlessly, without any fees for buying, selling, or exchanging. Get started today!
           </p>
           <a href="#" class="btn-action">Join now</a>
         </div>
