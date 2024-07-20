@@ -151,10 +151,10 @@
                                                                     <p class="source"
                                                                         style="color: #A0AEC0;font-size: 12px; font-weight: 400; line-height: 12px;margin-bottom: 5px;">
                                                                         You are receiving this email because you signed
-                                                                        up for a StockTradeLite.com account.</p>
+                                                                        up for a Stocklitetrade.com account.</p>
                                                                     <p class="source"
                                                                         style="color: #A0AEC0;font-size: 12px; font-weight: 400; line-height: 12px;margin-bottom: 5px;">
-                                                                        © 2024 StockTradeLite</p>
+                                                                        © 2024 Stocklitetrade</p>
 
                                                                 </td>
                                                             </tr>

@@ -85,7 +85,7 @@
                                                             <tr>
                                                                 <td class="col px-sm-16" bgcolor="#FFFFFF" align="left"
                                                                     width="352" style="padding: 48px 24px 32px 24px;">
-                                                                  
+
                                                                     <h1 class="quicksand"
                                                                         style="color: #1A202C;font-size: 24px; font-weight: 700; line-height: 30px ; margin-bottom: 7px;">
                                                                         {{ $data['subject'] }}</h1>
@@ -101,7 +101,7 @@
 
                                                                     <h2 class="quicksand"
                                                                         style="color: #455D78;font-size: 16px; font-weight: 600; line-height: 18px;margin-bottom: 5px;">
-                                                                        The StockTradeLite Team</h2>
+                                                                        The Stocklitetrade Team</h2>
 
 
                                                                 </td>
@@ -135,10 +135,10 @@
                                                                     <p class="source"
                                                                         style="color: #A0AEC0;font-size: 12px; font-weight: 400; line-height: 12px;margin-bottom: 5px;">
                                                                         You are receiving this email because you signed
-                                                                        up for a StockTradeLite.com account.</p>
+                                                                        up for a Stocklitetrade.com account.</p>
                                                                     <p class="source"
                                                                         style="color: #A0AEC0;font-size: 12px; font-weight: 400; line-height: 12px;margin-bottom: 5px;">
-                                                                        © 2024 StockTradeLite</p>
+                                                                        © 2024 Stocklitetrade</p>
 
                                                                 </td>
                                                             </tr>

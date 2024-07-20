@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-xl-4 col-md-6">
                     <div class="info">
-                        <a href="index.html" class="logo">
+                        <a href="/" class="logo">
                             <img src="assets/images/logo/log-footer.png" alt="">
                         </a>
                         <h6>Let's talk! 🤙</h6>
@@ -80,7 +80,7 @@
     <div class="container-fluid">
         <div class="footer__bottom">
             <p>
-                ©2022 Stocktradelite.com. All rights reserved. Terms of Service | Privacy
+                ©2022 Stocklitetrade.com. All rights reserved. Terms of Service | Privacy
                 Terms
             </p>
         </div>

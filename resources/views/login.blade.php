@@ -1,4 +1,6 @@
-﻿@extends('layouts.app')
+﻿@extends('layouts.app', [
+    'title' => 'Home',
+  ])
 @section('content')
 <x-pages.header />
 <!-- PageTitle -->
@@ -10,7 +12,7 @@
       </div>
       <div class="col-md-6">
         <ul class="breadcrumb">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li>
             <p class="fs-18">/</p>
           </li>
@@ -29,7 +31,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block-text center">
-          <h3 class="heading">Login To Stocktradelite</h3>
+          <h3 class="heading">Login To Stocklitetrade</h3>
           <p class="desc fs-20">
             Welcome back! Log In now to start trading
           </p>

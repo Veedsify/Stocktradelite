@@ -1,4 +1,6 @@
-﻿@extends('layouts.app')
+﻿@extends('layouts.app', [
+    'title' => 'Market',
+  ])
 @section('content')
 <x-pages.header />
 
@@ -11,7 +13,7 @@
       </div>
       <div class="col-md-6">
         <ul class="breadcrumb">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li>
             <p class="fs-18">/</p>
           </li>

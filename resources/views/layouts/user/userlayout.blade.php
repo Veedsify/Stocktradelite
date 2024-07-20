@@ -20,7 +20,7 @@
 
   <link rel="stylesheet" href="{{ asset('user-assets/css/styles.css') }}">
   <title>
-    {{ $title ?? 'Stocktradelite' }}
+    {{ $title ?? 'Stocklitetrade' }}
   </title>
   <!-- Owl Carousel  -->
   <link rel="stylesheet" href="{{ asset('user-assets/libs/owl.carousel/dist/assets/owl.carousel.min.css') }}">

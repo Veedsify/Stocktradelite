@@ -1,5 +1,5 @@
 ﻿@extends('../layouts/user/userlayout', [
-'title' => ucwords(auth()->user()->name) . ' | Dashboard - Stocktradelite',
+'title' => ucwords(auth()->user()->name) . ' | Dashboard - Stocklitetrade',
 ])
 @section('content')
 <div id="main-wrapper">
