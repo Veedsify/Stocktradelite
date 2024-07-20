@@ -54,7 +54,7 @@
                                                         <th>Phone</th>
                                                         <th>Deposits</th>
                                                         <th>Balance</th>
-                                                        <th>Edit Settings</th>
+                                                        <th> Role</th>
                                                         <th>Edit Trades</th>
                                                     </tr>
                                                     <!-- end row -->
@@ -75,10 +75,20 @@
                                                                 </a>
                                                             </td>
                                                             <td>${{ number_format($user->balance) }}</td>
-                                                            {{-- <td>
-                                                                <a href="{{ route('admin.balance.editbalance', $user->id) }}"
-                                                                    class="btn-sm btn btn-secondary">Settings</a>
-                                                            </td> --}}
+                                                            <td>
+                                                                <form class="d-flex gap-1" action="" method="post">
+                                                                <input type="hidden" name="_token" value="" autocomplete="off"> <input type="hidden" name="_method" value="PUT"> <select name="role" id="role" class="px-1 py-1 border-1 border-muted btn-outline-info rounded-2">
+                                                                <option value="user" selected="">User
+                                                                </option>
+                                                                <option value="admin">Admin
+                                                                </option>
+                                                                <option value="moderator">
+                                                                Moderator
+                                                                </option>
+                                                                </select>
+                                                                <button type="submit" class="btn btn-primary btn-sm">Update</button>
+                                                                </form>
+                                                                </td>
                                                             <td>
                                                                 <a href="{{ route('admin.balance.editbalance', $user->id) }}"
                                                                     class="btn-sm btn btn-primary">Edit</a>

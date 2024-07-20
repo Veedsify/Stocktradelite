@@ -1,6 +1,4 @@
-﻿@extends('../layouts/admin/adminlayout',[
-    'title' => 'Privacy Content Configuration '
-])
+﻿@extends('layouts.app')
 @section('content')
 
 
@@ -15,10 +13,9 @@
               <div class="col-lg-4">
                 <div class="text-center">
 
-                  <img src="{{asset('user-assets/images/backgrounds/404.png" alt="matdash-img')}}" class="img-fluid" width="500">
-                  <h1 class="fw-semibold mb-7 fs-9">Opps!!!</h1>
-                  <h4 class="fw-semibold mb-7">This page you are looking for could not be found.</h4>
-                  <a class="btn btn-primary" href="/" role="button">Go Back to Home</a>
+                  <img src="{{asset('assets/images/background/internal-error.png')}}" alt="matdash-img" class="img-fluid" width="500">
+                  <h1 class="fw-semibold mb-7 fs-9">505 INTERNAL ERROR!!!</h1>
+                  <a class="btn " href="/"  style="background:#d5745b; "  role="button">Go Back to Home</a>
                 </div>
               </div>
             </div>

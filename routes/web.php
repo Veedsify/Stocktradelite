@@ -64,10 +64,10 @@ Route::post("/verify", [VerifyController::class, "verifyAccount"])->name("verify
 
 // Email Template
 Route::get('/error-404', function () {
-    return view("admin.error-404");
+    return view("errors.error-404");
 });
-Route::get('/error-505', function () {
-    return view("admin.error-505");
+Route::get('/error-500', function () {
+    return view("errors.error-505");
 });
 
 // Route::get('/withdraw-request', function () {

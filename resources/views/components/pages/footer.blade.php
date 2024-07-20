@@ -38,11 +38,11 @@
                         <div class="widget-link s2">
                             <h6 class="title">MORE LINKS</h6>
                             <ul>
-                                <li><a href="buy-crypto-select.html">Terms of Use</a></li>
-                                <li><a href="markets.html">Privacy Policy</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">My Account</a></li>
+                                <li><a href="{{route('terms-of-use')}}">Terms of Use</a></li>
+                                <li><a href="{{route('privacy.policy')}}">Privacy Policy</a></li>
+                                <li><a href="{{route('contact')}}">Contact</a></li>
+                                <li><a href="{{route('faq')}}">FAQ</a></li>
+                                <li><a href="{{route('user')}}">My Account</a></li>
                             </ul>
                         </div>
                     </div>
