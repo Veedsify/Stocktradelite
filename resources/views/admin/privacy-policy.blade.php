@@ -39,14 +39,18 @@
         <div class="card">
           <div class="card-body">
 
-            <form action="" class="form-horizontal">
+            <form action="{{ route('admin.settings.update.privacy.policy') }}" method="post" class="form-horizontal">
+                @csrf
               <div class="mb-4">
 
-                <input type="text" class="form-control" value="Virtual Land In The Metaverse Is Selling For Millions Of Dollars">
+                <input type="text" class="form-control" name="title"  value=""
+                >
               </div>
 
               <div>
-                <div id="editor" style="min-height: 30vh">
+                <div id="editor" style="min-height: 30vh; width: 100%; outline: none;" name="content" class="p-3" >
+
+
                 </div>
               </div>
               <button class="btn btn-primary mt-2">Send</button>
