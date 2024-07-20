@@ -65,6 +65,10 @@ Route::prefix("admin")->middleware(["admin"])->group(function () {
     Route::post('/balance/{id}', [BalanceController::class, 'updateBalance'])->name('admin.balance.edit');
 
     // Withdrawal
-    Route::get('/withdrawals', [WithdrawController::class, 'allWithDrawals'])->name('admin.withdrawals');
+    Route::get( '/withdrawals', [WithdrawController::class, 'allWithDrawals'])->name('admin.withdrawals');
+
+
+
+    
 
 });
