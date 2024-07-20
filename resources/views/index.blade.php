@@ -639,127 +639,14 @@
     </div>
   </div>
 </section>
-{{-- <section class="blog-2">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block-text">
-          <h3 class="heading">Learn And Earn</h3>
-          <p class="desc">
-            Stacks is a production-ready library of stackable <br>
-            content blocks built in React Native.
-          </p>
 
-          <a href="#" class="btn-action-3">See all article</a>
-        </div>
-      </div>
-
-      <div class="col-xl-6 col-md-12">
-        <div class="blog-box s1">
-          <div class="box-image">
-            <img src="{{asset('assets/images/blog/blog-v2.1.png')}}" alt="">
-            <div class="wrap-video">
-              <a href="https://www.youtube.com/watch?v=i7EMACWuErA" class="popup-youtube">
-                <svg width="13" height="16" viewbox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M0.466675 2.92407C0.466675 1.35705 2.187 0.398733 3.51938 1.22354L11.7197 6.2999C12.9827 7.0818 12.9827 8.91907 11.7197 9.70096L3.51938 14.7773C2.187 15.6021 0.466675 14.6438 0.466675 13.0768V2.92407Z"
-                    fill="#777E90"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <div class="box-content">
-            <div class="left">
-              <a href="#" class="category btn-action">learn & earn</a>
-              <a href="" class="title">Learn about UI8 coin and earn an All-Access Pass</a>
-              <p class="text fs-18">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Facilisi id vestibulum sem
-              </p>
-            </div>
-
-            <div class="right">
-              <a href="#" class="btn-action-3">Learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-6 col-md-12">
-        <div class="blog-main">
-          <div class="blog-box">
-            <div class="box-image">
-              <img src="{{asset('assets/images/blog/blog-v2.2.png')}}" alt="">
-              <div class="wrap-video">
-                <a href="https://www.youtube.com/watch?v=i7EMACWuErA" class="popup-youtube">
-                  <svg width="13" height="16" viewbox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M0.466675 2.92407C0.466675 1.35705 2.187 0.398733 3.51938 1.22354L11.7197 6.2999C12.9827 7.0818 12.9827 8.91907 11.7197 9.70096L3.51938 14.7773C2.187 15.6021 0.466675 14.6438 0.466675 13.0768V2.92407Z"
-                      fill="#777E90"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="box-content">
-              <a href="#" class="category btn-action">learn & earn</a>
-              <a href="" class="title">Learn about UI8 coin and earn an All-Access Pass</a>
-
-              <p class="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-            </div>
-          </div>
-          <div class="blog-box">
-            <div class="box-image">
-              <img src="{{asset('assets/images/blog/blog-v2.3.png')}}" alt="">
-              <div class="wrap-video">
-                <a href="https://www.youtube.com/watch?v=i7EMACWuErA" class="popup-youtube">
-                  <svg width="13" height="16" viewbox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M0.466675 2.92407C0.466675 1.35705 2.187 0.398733 3.51938 1.22354L11.7197 6.2999C12.9827 7.0818 12.9827 8.91907 11.7197 9.70096L3.51938 14.7773C2.187 15.6021 0.466675 14.6438 0.466675 13.0768V2.92407Z"
-                      fill="#777E90"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="box-content">
-              <a href="#" class="category btn-action">learn & earn</a>
-              <a href="" class="title">Learn about UI8 coin and earn an All-Access Pass</a>
-
-              <p class="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-            </div>
-          </div>
-          <div class="blog-box">
-            <div class="box-image">
-              <img src="{{asset('assets/images/blog/blog-v2.4.png')}}" alt="">
-              <div class="wrap-video">
-                <a href="https://www.youtube.com/watch?v=i7EMACWuErA" class="popup-youtube">
-                  <svg width="13" height="16" viewbox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M0.466675 2.92407C0.466675 1.35705 2.187 0.398733 3.51938 1.22354L11.7197 6.2999C12.9827 7.0818 12.9827 8.91907 11.7197 9.70096L3.51938 14.7773C2.187 15.6021 0.466675 14.6438 0.466675 13.0768V2.92407Z"
-                      fill="#777E90"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="box-content">
-              <a href="#" class="category btn-action">learn & earn</a>
-              <a href="" class="title">Learn about UI8 coin and earn an All-Access Pass</a>
-
-              <p class="text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div id="notification">
+  <img src="{{asset('assets/images/custom/bitcoin.png')}}" alt="Profile Image" id="profile-img">
+  <div class="notification_context">
+    <strong id="notification-title">
+    </strong>
+    <span id="notification-text"></span>
   </div>
-</section> --}}
+</div>
 
 @endsection
