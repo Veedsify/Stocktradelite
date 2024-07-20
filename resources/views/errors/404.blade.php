@@ -11,14 +11,12 @@
                   <img src="{{asset('assets/images/background/404.png ')}}" alt="matdash-img" class="img-fluid" width="500">
                   <h1 class="fw-semibold mb-7 fs-9">Opps!!!</h1>
                   <h4 class="fw-semibold mb-7">This page you are looking for could not be found.</h4>
-                  <a class="btn " style="background:#d5745b; " href="/" role="button">Go Back to Home</a>
+                  <a class="btn text-white" style="background:#d5745b ;" href="/">Go Back to Home</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
 
 @endsection
