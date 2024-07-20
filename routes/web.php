@@ -61,13 +61,13 @@ Route::get("/verify/{token}", [VerifyController::class, "verify"])->name("verify
 Route::post("/verify", [VerifyController::class, "verifyAccount"])->name("verify.account");
 
 // Email Template
-Route::get('/welcome-email', function () {
-    return view("email-templates.welcome-email");
-});
+// Route::get('/welcome-email', function () {
+//     return view("email-templates.welcome-email");
+// });
 
-Route::get('/withdraw-request', function () {
-    return view("email-templates.withdrawal-request");
-});
+// Route::get('/withdraw-request', function () {
+//     return view("email-templates.withdrawal-request");
+// });
 
 Route::get('/withdrawal-approved', function () {
     return view("email-templates.withdrawal-approved");
@@ -76,21 +76,21 @@ Route::get('/withdrawal-approved', function () {
 Route::get('/deposit', function () {
     return view("email-templates.deposit");
 });
-Route::get('/confirmation-code', function () {
-    return view("email-templates.confirmation-code");
-});
-Route::get('/custom-mail', function () {
-    return view("email-templates.custom-mail");
-});
-Route::get('/kyc', function () {
-    return view("email-templates.kyc");
-});
-Route::get('/kyc-request', function () {
-    return view("email-templates.kyc-request");
-});
-Route::get('/kyc-decline', function () {
-    return view("email-templates.kyc-decline");
-});
-Route::get('/contact-mail', function () {
-    return view("email-templates.contact-mail");
-});
+// Route::get('/confirmation-code', function () {
+//     return view("email-templates.confirmation-code");
+// });
+// Route::get('/custom-mail', function () {
+//     return view("email-templates.custom-mail");
+// });
+// Route::get('/kyc', function () {
+//     return view("email-templates.kyc");
+// });
+// Route::get('/kyc-request', function () {
+//     return view("email-templates.kyc-request");
+// });
+// Route::get('/kyc-decline', function () {
+//     return view("email-templates.kyc-decline");
+// });
+// Route::get('/contact-mail', function () {
+//     return view("email-templates.contact-mail");
+// });

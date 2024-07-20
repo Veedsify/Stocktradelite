@@ -14,6 +14,7 @@ use App\Http\Controllers\admin\WalletController;
 use App\Http\Controllers\user\ChangePasswordController;
 use App\Http\Controllers\user\KycController;
 use App\Http\Controllers\user\NotificationController;
+use App\Http\Controllers\WithdrawController;
 use Illuminate\Support\Facades\Route;
 
 // Index Pages
@@ -51,4 +52,8 @@ Route::prefix("admin")->middleware(["admin"])->group(function () {
     Route::post('/trades/{id}', [BalanceController::class, 'editTrades'])->name('admin.trades.edit');
     Route::post('/profits/{id}', [BalanceController::class, 'editProfits'])->name('admin.profits.edit');
     Route::post('/balance/{id}', [BalanceController::class, 'updateBalance'])->name('admin.balance.edit');
+
+    // Withdrawal
+    Route::get('/withdrawals', [WithdrawController::class, 'allWithDrawals'])->name('admin.withdrawals');
+
 });

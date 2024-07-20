@@ -51,9 +51,19 @@ confirmBtcButton?.addEventListener('click', (event) => {
             text: `Amount should be between ${minBtc} and ${maxBtc}`,
             icon: "error",
         });
-    } else {
-        event.target.closest('form').submit();
     }
+
+    const fileInput = event.target.closest('form').querySelector('input[type="file"]');
+    if (fileInput.files.length === 0) {
+        return swal({
+            title: "Invalid File",
+            text: "Please upload a valid proof of payment",
+            icon: "error",
+        });
+    }
+
+    event.target.closest('form').submit();
+
 });
 
 confirmEthButton?.addEventListener('click', (e) => {
@@ -68,9 +78,18 @@ confirmEthButton?.addEventListener('click', (e) => {
             text: `Amount should be between ${minEth} and ${maxEth}`,
             icon: "error",
         });
-    } else {
-        e.target.closest('form').submit();
     }
+
+    const fileInput = e.target.closest('form').querySelector('input[type="file"]');
+    if (fileInput.files.length === 0) {
+        return swal({
+            title: "Invalid File",
+            text: "Please upload a valid proof of payment",
+            icon: "error",
+        });
+    }
+    e.target.closest('form').submit();
+
 });
 
 

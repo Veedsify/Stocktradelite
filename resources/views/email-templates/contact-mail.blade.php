@@ -102,13 +102,6 @@
                                                                         <strong>Subject:</strong> {{ $user->subject }} </p>
                                                                     <p class="quicksand">
                                                                         <strong>Subject:</strong> {{ $user->message }} </p>
-
-
-
-
-
-
-
                                                                     <h2 class="quicksand"
                                                                         style="color: #455D78;font-size: 16px; font-weight: 600; line-height: 18px;margin-bottom: 5px;">
                                                                         The StockTradeLite Team</h2>

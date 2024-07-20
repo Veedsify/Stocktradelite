@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Mail\DepositEmail;
 use App\Models\Deposit;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
@@ -40,16 +42,31 @@ class OrderController extends Controller
                 $order->user->tier = $order->tier_id;
             }
 
-            // send mail to user
             $order->save();
             $order->user->save();
 
+            // send mail to user
+            $data = [
+                'name' => $order->user->name,
+                'subject' => 'Hi ' . $order->user->name . ', Your Deposit has been Approved',
+                'message' => 'Your deposit of $' . $order->amount . ' has been approved successfully, and your balance has been updated, <br> Thank you for choosing us',
+            ];
+
+            Mail::to($order->user->email)->send(new DepositEmail($order, $data));
             return redirect()->back()->with('success', 'Deposit Approved');
 
         } elseif ($request->deposit_status == 'declined') {
             $order->status = 'rejected';
             // send mail to user
             $order->save();
+
+            $data = [
+                'name' => $order->user->name,
+                'subject' => 'Hi ' . $order->user->name . ', Your Deposit has been Declined',
+                'message' => 'Your deposit of $' . $order->amount . ' has been declined, please contact support for more information',
+            ];
+
+            Mail::to($order->user->email)->send(new DepositEmail($order, $data));
             return redirect()->back()->with('success', 'Deposit Declined');
         }
 

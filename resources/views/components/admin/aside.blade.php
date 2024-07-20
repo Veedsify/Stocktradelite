@@ -71,6 +71,16 @@
           </a>
         </li>
         <li class="sidebar-item">
+          <a class="sidebar-link" href="{{route('admin.withdrawals')}}" aria-expanded="false">
+            <span>
+              <i class="ti ti-chevron-down"></i>
+            </span>
+            <span class="hide-menu">
+              Withdrawals
+            </span>
+          </a>
+        </li>
+        <li class="sidebar-item">
           <a class="sidebar-link" href="{{route('users')}}" aria-expanded="false">
             <span>
               <i class="ti ti-users"></i>

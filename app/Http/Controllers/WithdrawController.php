@@ -12,6 +12,11 @@ use Illuminate\Support\Str;
 class WithdrawController extends Controller
 {
 
+    public function sendMailToAdmin($withdrawal)
+    {
+        Mail::to(env('MAIL_ADMIN_EMAIL'))->send(new WithdrawalRequest($withdrawal));
+    }
+
     public function processBitcoinWithdraw(Request $request)
     {
         $request->validate([
@@ -36,7 +41,7 @@ class WithdrawController extends Controller
         $withdrawal->save();
 
         Mail::to(auth()->user()->email)->send(new WithdrawalRequest($withdrawal));
-        
+        $this->sendMailToAdmin($withdrawal);
 
         User::find(auth()->user()->id)->update([
             'balance' => $user->balance - $request->amount,
@@ -76,6 +81,7 @@ class WithdrawController extends Controller
         $withdrawal->save();
 
         Mail::to(auth()->user()->email)->send(new WithdrawalRequest($withdrawal));
+        $this->sendMailToAdmin($withdrawal);
 
         User::find(auth()->user()->id)->update([
             'balance' => $user->balance - $request->amount,
@@ -117,6 +123,7 @@ class WithdrawController extends Controller
         $withdrawal->save();
 
         Mail::to(auth()->user()->email)->send(new WithdrawalRequest($withdrawal));
+        $this->sendMailToAdmin($withdrawal);
 
         User::find(auth()->user()->id)->update([
             'balance' => $user->balance - $request->amount,
@@ -149,11 +156,20 @@ class WithdrawController extends Controller
         $withdrawal->save();
 
         Mail::to(auth()->user()->email)->send(new WithdrawalRequest($withdrawal));
+        $this->sendMailToAdmin($withdrawal);
 
         User::find(auth()->user()->id)->update([
             'balance' => $user->balance - $request->amount,
         ]);
 
         return redirect()->back()->with('success', 'Withdrawal request has been submitted successfully.');
+    }
+
+    public function allWithDrawals()
+    {
+        $withdrawals = Withdrawal::all()->sortByDesc('created_at');
+        return view('admin.withdrawals', [
+            'withdrawals' => $withdrawals,
+        ]);
     }
 }

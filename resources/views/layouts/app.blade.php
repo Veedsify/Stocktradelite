@@ -18,17 +18,38 @@
     <link href=" https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css " rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" />
 
     <!-- End Style CSS -->
-
     <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('assets/images/logo/favicon.png') }}">
-    @vite('resources/css/app.css')
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body class="body header-fixed">
+    @if(session('success'))
+    <script>
+        swal({
+            title: "Success!",
+            text: "{{ session('success') }}",
+            icon: "success",
+            button: "OK",
+          })
+    </script>
+    @endif
+    @if(session('error'))
+    <script>
+        swal({
+            title: "Error!",
+            text: "{{ session('error') }}",
+            icon: "error",
+            button: "OK",
+          })
+    </script>
+    @endif
     @yield('content')
     <x-pages.footer />
 

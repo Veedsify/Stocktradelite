@@ -101,7 +101,7 @@
                                 <option value="approved" {{$deposit->status == 'approved' ? 'selected' : ''}}
                                   >Approved
                                 </option>
-                                <option value="rejected" {{$deposit->status == 'rejected' ? 'selected' : ''}}
+                                <option value="declined" {{$deposit->status == 'rejected' ? 'selected' : ''}}
                                   >
                                   Decline
                                 </option>

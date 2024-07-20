@@ -56,8 +56,10 @@
                                                         width="100%">
                                                         <tbody>
                                                             <tr>
-                                                                <td class="col" align="center" width="400" bgcolor="#fff" style="padding: 10px 0 ">
-                                                                    <img src="{{asset('assets/images/mail/deposit.png')}}" alt="" width="500" height="100%">
+                                                                <td class="col" align="center" width="400"
+                                                                    bgcolor="#fff" style="padding: 10px 0 ">
+                                                                    <img src="{{asset('assets/images/mail/deposit.png')}}"
+                                                                        alt="" width="500" height="100%">
 
 
                                                                 </td>
@@ -85,33 +87,60 @@
                                                                     width="352" style="padding: 48px 24px 32px 24px;">
                                                                     <h3 class="quicksand"
                                                                         style="color: #718096;font-size: 16px; font-weight: 400; line-height: 20px ;">
-                                                                        Hi John</h3>
+                                                                        Hi
+                                                                        {{$data['name']}},</h3>
+                                                                    </h3>
                                                                     <h1 class="quicksand"
                                                                         style="color: #1A202C;font-size: 24px; font-weight: 700; line-height: 30px ; margin-bottom: 7px;">
-                                                                        Account Deposit</h1>
+                                                                        {{$data['subject']}}
+                                                                    </h1>
                                                                     <p class="source"
                                                                         style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
-                                                                        Your recent deposit of <b>$6000</b> has been
-                                                                        successfully credited to your account.
+                                                                        {!!
+                                                                        $data['message']
+                                                                        !!}
                                                                     </p>
 
-                                                                        <p class="source"
-                                                                        style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;"><b>Amount:</b> $6,000</p>
-                                                                        <p class="source"
-                                                                        style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;"><b>Deposit Method:</b> Bitcoin</p>
-                                                                        <p class="source"
-                                                                        style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;"><b>Deposit Date:</b> 22 Mar, 2024</p>
-                                                                        <p class="source"
-                                                                        style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;"><b>Deposit Time:</b> 08:51 AM</p>
+                                                                    <p class="source"
+                                                                        style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
+                                                                        <b>Amount:</b> ${{$deposit->amount}}
+                                                                    </p>
+                                                                    <p class="source"
+                                                                        style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
+                                                                        <b>Deposit Method:</b>
+                                                                        {{$deposit->payment_method}}
+                                                                    </p>
+                                                                    <p class="source"
+                                                                        style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
+                                                                        <b>Deposit Date:</b> {{date('d M Y',
+                                                                        strtotime($deposit->created_at))}}
+                                                                    </p>
+                                                                    <p class="source"
+                                                                        style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
+                                                                        <b>Deposit Time:</b> {{date('h:i A',
+                                                                        strtotime($deposit->created_at))}}
+                                                                    </p>
+
+                                                                    @if($deposit->status == "pending")
+                                                                    <p class="source"
+                                                                        style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
+                                                                        <b>Status:</b> Pending
+                                                                    </p>
+                                                                    @elseif($deposit->status == "approved")
+                                                                    <p class="source"
+                                                                        style="color: #05f93e;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
+                                                                        <b>Status:</b> Approved
+                                                                    </p>
+                                                                    @else
+                                                                    <p class="source"
+                                                                        style="color: #f90505;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
+                                                                        <b>Status:</b> Rejected
+                                                                    </p>
+                                                                    @endif
 
                                                                     <p class="source"
                                                                         style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
                                                                         You can log in to view the deposit details.</p>
-
-
-
-
-
                                                                     <h2 class="quicksand"
                                                                         style="color: #455D78;font-size: 16px; font-weight: 600; line-height: 18px;margin-bottom: 5px;">
                                                                         The StockTradeLite Team</h2>

@@ -2,7 +2,7 @@
 
 namespace App\Mail;
 
-use App\Models\Contact;
+use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Address;
@@ -10,17 +10,17 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ContactEmail extends Mailable
+class IntroMail extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      */
-    public $contact;
-    public function __construct(Contact $contact)
+    public User $user;
+    public function __construct(User $user)
     {
-        $this->contact = $contact;
+        $this->user = $user;
     }
 
     /**
@@ -29,8 +29,8 @@ class ContactEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'New Contact Request From ' . config('app.name'),
-            from: new Address(config("mail.from.address"), "Stocklitetrade"),
+            subject: 'Welcome to ' . config('app.name') . ' ' . $this->user->name,
+            from: new Address(config('mail.from.address'), config('app.name')),
         );
     }
 
@@ -40,9 +40,9 @@ class ContactEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'email-templates.contact-mail',
+            view: 'email-templates.welcome-email',
             with: [
-                'user' => $this->contact,
+                'user' => $this->user,
             ]
         );
     }

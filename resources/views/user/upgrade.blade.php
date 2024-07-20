@@ -90,8 +90,13 @@
         }
       </script>
       {{-- DEPOSIT --}}
-      <x-user.deposit-eth-modals :wallet="$wallet" :tier="$tier->id" />
-      <x-user.deposit-btc-modals :wallet="$wallet" :tier="$tier->id" />
+
+      @php
+      $tierId = $tier->id;
+      $action = ['action'=>'upgrade'];
+      @endphp
+      <x-user.deposit-eth-modals :wallet="$wallet" :action="$action" :tier="$tierId" />
+      <x-user.deposit-btc-modals :wallet="$wallet" :action="$action" :tier="$tierId" />
       {{--
 
       {{-- WITHDRAW --}}

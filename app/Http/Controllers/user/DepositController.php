@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
+use App\Mail\DepositEmail;
 use App\Models\Deposit;
 use App\Models\Tier;
 use App\Models\WalletAddress;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class DepositController extends Controller
@@ -52,6 +54,21 @@ class DepositController extends Controller
         $deposit->transaction_ref = Str::random(36);
         $deposit->save();
 
+        $data = [
+            'name' => auth()->user()->name,
+            'subject' => 'BTC Deposit Request Received',
+            'message' => 'Your deposit of $' . $request->amount . ' has been received successfully, and is pending confirmation, please wait for confirmation',
+        ];
+
+        $data2 = [
+            'name' => 'Admin',
+            'subject' => 'BTC Deposit Request Received',
+            'message' => 'Hi Admin <br> ' . auth()->user()->name . ' made a deposit of $' . $request->amount . ' and is pending confirmation, please confirm the deposit',
+        ];
+
+        Mail::to(auth()->user()->email)->send(new DepositEmail($deposit, $data));
+        Mail::to(env('MAIL_ADMIN_EMAIL'))->send(new DepositEmail($deposit, $data2));
+
         return redirect()->back()->with('success', 'Your deposit of $' . $request->amount . '  has been received successfully, and is pending confirmation');
     }
 
@@ -80,6 +97,21 @@ class DepositController extends Controller
         $deposit->transaction_ref = Str::random(36);
         $deposit->tier_id = $request->tier_id;
         $deposit->save();
+
+        $data = [
+            'name' => auth()->user()->name,
+            'subject' => 'ETH Deposit Request Received',
+            'message' => 'Your deposit of $' . $request->amount . ' has been received successfully, and is pending confirmation, please wait for confirmation',
+        ];
+
+        $data2 = [
+            'name' => 'Admin',
+            'subject' => 'ETH Deposit Request Received',
+            'message' => 'Hi Admin <br> ' . auth()->user()->name . ' made a deposit of $' . $request->amount . ' and is pending confirmation, please confirm the deposit',
+        ];
+
+        Mail::to(auth()->user()->email)->send(new DepositEmail($deposit, $data));
+        Mail::to(env('MAIL_ADMIN_EMAIL'))->send(new DepositEmail($deposit, $data2));
 
         return redirect()->back()->with('success', 'Your deposit of $' . $request->amount . ' has been received successfully, and is pending confirmation');
     }

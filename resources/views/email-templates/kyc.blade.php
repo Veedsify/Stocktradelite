@@ -92,7 +92,7 @@
                                                                     </h3>
                                                                     <h1 class="quicksand"
                                                                         style="color: #1A202C;font-size: 24px; font-weight: 700; line-height: 30px ; margin-bottom: 7px;">
-                                                                        KYC Approve Validation Successful</h1>
+                                                                        KYC Verification Successful</h1>
                                                                     <p class="source"
                                                                         style="color: #718096;font-size: 16px; font-weight: 300; line-height: 21px ; margin-bottom: 25px;">
                                                                         Your KYC (Know Your Customer) validation has

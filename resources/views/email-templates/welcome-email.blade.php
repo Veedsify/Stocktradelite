@@ -53,8 +53,10 @@
                                                         width="100%">
                                                         <tbody>
                                                             <tr>
-                                                                <td class="col" align="center" width="400" bgcolor="#fff" style="padding: 10px 0 ">
-                                                                    <img src="{{asset('assets/images/mail/welcome-email.png')}}" alt="" width="500" height="100%">
+                                                                <td class="col" align="center" width="400"
+                                                                    bgcolor="#fff" style="padding: 10px 0 ">
+                                                                    <img src="{{asset('assets/images/mail/welcome-email.png')}}"
+                                                                        alt="" width="500" height="100%">
 
 
                                                                 </td>
@@ -82,7 +84,11 @@
                                                                     width="352" style="padding: 48px 24px 32px 24px;">
                                                                     <h3 class="quicksand"
                                                                         style="color: #718096;font-size: 16px; font-weight: 400; line-height: 20px ;">
-                                                                        Hi John</h3>
+                                                                        Hi
+                                                                        {{
+                                                                        explode(' ', $user->name)[0] ?? $user->name
+                                                                        }}
+                                                                    </h3>
                                                                     <h1 class="quicksand"
                                                                         style="color: #1A202C;font-size: 24px; font-weight: 700; line-height: 30px ; margin-bottom: 7px;">
                                                                         Welcome to StockTradeLite!</h1>
@@ -97,11 +103,6 @@
                                                                         navigate the fascinating world of
                                                                         cryptocurrency.
                                                                     </p>
-
-                                                                    <a href="#"
-                                                                        style="background-color: #F8444F; color: #FFFFFF; font-size: 16px; font-weight: 600; line-height: 20px; text-align: center; text-decoration: none; display: inline-block; padding: 10px 20px; border-radius: 4px; margin-bottom: 25px;">
-                                                                        Verify Account
-                                                                    </a>
 
 
                                                                     <h2 class="quicksand"
@@ -145,7 +146,7 @@
                                                                         Find out about our most popular features like
                                                                         live presenting, private sharing and working
                                                                         together as a team in our knowledge base <span
-                                                                            style="font-weight: 400; color: #F8444F ;">help.StockTradeLite.com</span>.
+                                                                            style="font-weight: 400; color: #F8444F ;">help@stocktradelite.com</span>.
                                                                     </p>
 
                                                                 </td>

@@ -10,8 +10,7 @@
         After depositing, click the button below to confirm your deposit
       </p>
       <img width="200" src="{{ asset('user-assets/images/png/ethereum.png') }}" alt="Ethereum" class="d-block mx-auto">
-      <form action="{{ route('deposit.eth', [$action['action'] ?? "upgrade"]) }}" method="POST"
-        enctype="multipart/form-data">
+      <form action="{{ route('deposit.eth', [$action['action']]) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <input type="hidden" name="tier_id" value="{{$tier}}">
         <div class="mb-5">

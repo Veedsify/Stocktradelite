@@ -72,10 +72,14 @@
           </div>
         </div>
 
+
         <div class="row text-truncate ">
           <div class="col-lg-12">
             <div class="card">
               <div class="card-body truncate">
+                <h4 class="card-title mb-4">
+                  Deposit History
+                </h4>
                 <div class="table-responsive">
                   <table id="zero_config" class="table border table-striped table-bordered text-nowrap align-middle">
                     <thead>
