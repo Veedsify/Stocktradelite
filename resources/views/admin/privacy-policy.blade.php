@@ -48,7 +48,6 @@
                 <div id="editor" style="min-height: 30vh; width: 100%; outline: none;" name="content" class="p-3">
                   {!! $privacyPolicy->content ?? "" !!}
                 </div>
-                <textarea name="content" id="textareaMail" class="d-none" cols="30" rows="10">{!! $privacyPolicy->content ?? "" !!}</textarea>
               </div>
               <button class="btn btn-primary mt-2 w-50 btn-lg">
                 Save
