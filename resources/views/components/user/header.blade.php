@@ -47,7 +47,7 @@
               @if(auth()->user()->role == 'admin')
               <a href="{{route('admin')}}" class="nav-link nav-icon-hover">
                 <i class="ti ti-dashboard"></i>
-                  Admin Page
+                Admin Page
               </a>
               @endif
             </li>
@@ -60,16 +60,28 @@
               <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                 <div class="d-flex align-items-center justify-content-between py-3 px-7">
                   <h5 class="mb-0 fs-5 fw-semibold">Notifications</h5>
-                  <span class="badge text-bg-primary rounded-4 px-3 py-1 lh-sm">5 new</span>
+                  <span class="badge text-bg-primary rounded-4 px-3 py-1 lh-sm">
+                    {{
+                    $notificationsCount > 0 ? $notificationsCount. " New" : 0
+                    }}
+                  </span>
                 </div>
                 <div class="message-body" data-simplebar="">
-                  <a href="{{route ('notification')}}" class="py-6 px-7 d-flex align-items-center dropdown-item">
-                    <div class="w-75 d-inline-block v-middle">
-                      <h6 class="mb-1 fw-semibold lh-base">Roman Joined the Team!</h6>
-                      <span class="fs-2 d-block text-body-secondary">Congratulate him</span>
+                  @foreach($customNotifications as $notification)
+                  <a href="{{route ('notification')}}" class="py-6 px-7 d-flex align-items-center dropdown-item {{!$notification->is_read ? " bg-primary-subtle" : "" }}">
+                    <div class="w-75 d-inline-block v-middle ">
+                      <h6 class="mb-1 fw-semibold lh-base">
+                        {{$notification->title}}
+                      </h6>
+                      <span class="fs-2 d-block text-body-secondary">
+                        {{Str::limit($notification->content, 50)}}
+                      </span>
                     </div>
-                    <small>1min ago</small>
+                    <small>
+                      {{$notification->created_at->diffForHumans()}}
+                    </small>
                   </a>
+                  @endforeach
                 </div>
                 <div class="py-6 px-7 mb-1">
                 </div>

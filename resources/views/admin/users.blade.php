@@ -75,10 +75,10 @@
                                                                 </a>
                                                             </td>
                                                             <td>${{ number_format($user->balance) }}</td>
-                                                            <td>
+                                                            {{-- <td>
                                                                 <a href="{{ route('admin.balance.editbalance', $user->id) }}"
                                                                     class="btn-sm btn btn-secondary">Settings</a>
-                                                            </td>
+                                                            </td> --}}
                                                             <td>
                                                                 <a href="{{ route('admin.balance.editbalance', $user->id) }}"
                                                                     class="btn-sm btn btn-primary">Edit</a>

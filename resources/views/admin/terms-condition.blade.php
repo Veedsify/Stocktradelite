@@ -38,8 +38,6 @@
 
         <div class="card">
           <div class="card-body">
-
-
             <form action="{{ route('admin.settings.update.terms.condition') }}" method="post" class="form-horizontal">
               @csrf
               <div class="mb-4">
