@@ -22,6 +22,7 @@ function imageHandler() {
 if (document.getElementById("editor")){
     var quill = new Quill("#editor", {
         theme: "snow",
+        height: 500,
         modules: {
             toolbar: {
                 container: [
@@ -42,5 +43,13 @@ if (document.getElementById("editor")){
                 }
             }
         }
+    });
+
+    var textarea = document.getElementById('textareaMail');
+    quill.root.innerHTML = textarea.value;
+
+    // Sync Quill content with the textarea on change
+    quill.on('text-change', function () {
+        textarea.value = quill.root.innerHTML;
     });
 }

@@ -24,7 +24,6 @@ Route::prefix("/login")->group(function () {
     Route::post("/login", [AuthController::class, "loginUser"])->name("login.user");
 });
 
-Route::get("/login", [AuthController::class, "login"])->name("login");
 Route::prefix("register")->group(function () {
     Route::get("/", [AuthController::class, "register"])->name("register");
     Route::post("/new", [AuthController::class, "registerNew"])->name("register.new");
@@ -33,7 +32,7 @@ Route::get("/logout", [AuthController::class, "logout"])->name("logout");
 
 // Blogs
 Route::get("/blogs", [BlogController::class, "blogs"])->name("blogs");
-Route::get("/blog/{id}", [BlogController::class, "blog"])->name("blog.single");
+Route::get("/blog/{slug}", [BlogController::class, "blog"])->name("blog.single");
 Route::get("/markets", [MarketController::class, "markets"])->name("markets");
 
 // ABout
@@ -69,13 +68,13 @@ Route::post("/verify", [VerifyController::class, "verifyAccount"])->name("verify
 //     return view("email-templates.withdrawal-request");
 // });
 
-Route::get('/withdrawal-approved', function () {
-    return view("email-templates.withdrawal-approved");
-});
+// Route::get('/withdrawal-approved', function () {
+//     return view("email-templates.withdrawal-approved");
+// });
 
-Route::get('/deposit', function () {
-    return view("email-templates.deposit");
-});
+// Route::get('/deposit', function () {
+//     return view("email-templates.deposit");
+// });
 // Route::get('/confirmation-code', function () {
 //     return view("email-templates.confirmation-code");
 // });

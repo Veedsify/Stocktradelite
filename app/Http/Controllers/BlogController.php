@@ -16,8 +16,17 @@ class BlogController extends Controller
         ]);
     }
 
-    public function blog($id)
+    public function blog($slug)
     {
-        return view("blog", ["id" => $id]);
+        if(!$slug){
+            return redirect()->route("blogs");
+        }
+        $blog = Blog::where('slug', $slug)->first();
+        if(!$blog){
+            return abort(404);
+        }
+        return view("blog", [
+            "blog" => $blog,
+        ]);
     }
 }
