@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use App\Http\Controllers\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class BlogController extends Controller
 {
@@ -41,6 +42,12 @@ class BlogController extends Controller
             $image->save(public_path("custom/blog/" . $fileName), 80, 'webp');
             $filepath = "custom/blog/" . $fileName;
 
+            $meta_image = $this->manager->read($file);
+            $meta_image->cover(900, 600);
+            $fileName = time() . '.webp';
+            $meta_image->save(public_path("custom/blog/" . $fileName), 80, 'webp');
+            $filepath = "custom/blog/" . $fileName;
+
             $checkSlug = Blog::where("slug", Str::slug($request->get("title")))->first();
 
             if ($checkSlug && $checkSlug->count() > 0) {
@@ -51,7 +58,7 @@ class BlogController extends Controller
             $article = new Blog();
             $article->title = $request->get("title");
             $article->slug = isset($newSlug) ? $newSlug : Str::slug($request->get("title"));
-            $article->content = $request->html;
+            $article->content = $request->htCml;
             $article->image = $filepath ?? "custom/placeholder.png";
             $article->category = $request->get("category");
             $article->tags = $request->get("tags");
@@ -61,7 +68,7 @@ class BlogController extends Controller
             $article->meta_keywords = $request->get("tags");
             $article->meta_image = $filepath ?? "custom/placeholder.png";
 
-            
+
             $article->user_id = auth()->user()->id;
 
 

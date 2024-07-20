@@ -35,7 +35,8 @@
               </div>
             </div>
           </div>
-          <form class="row" action="{{ route('blog.new.article') }}">
+          <form class="row" action="{{ route('blog.new.article') }}" method="POST">
+            @csrf
             <div class="col-lg-12 ">
               <div class="card">
                 <div class="card-body">
@@ -49,7 +50,8 @@
                     <div>
                       <label class="form-label">Description <span class="text-danger">*</span></label>
                       <div>
-                        <div id="editor" style="min-height: 30vh">
+
+                        <div id="editor" style="min-height: 30vh" name="html">
                         </div>
                       </div>
                     </div>
@@ -67,7 +69,7 @@
                             <input type="file" class="d-none" name="back_id" id="back-id" class="form-control"
                             placeholder="Upload ID">
                             <img src="{{asset('assets\images\custom\id_placeholder.jpg')}}" alt="upload"
-                            class="d-block ratio ratio-16x9 object-fit-cover">
+                            class="d-block ratio ratio-16x9 object-fit-cover" name="file">
                         </label>
                     </div>
                 </div>
