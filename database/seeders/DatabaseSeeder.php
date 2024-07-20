@@ -2,14 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Blog;
-use App\Models\Tier;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Tier;
 use App\Models\User;
-use App\Models\Terms;
-use Illuminate\Support\Str;
-use App\Models\PrivacyPolicy;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -77,6 +74,5 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        Blog::factory(50)->create();
     }
 }

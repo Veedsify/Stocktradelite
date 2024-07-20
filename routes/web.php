@@ -31,8 +31,10 @@ Route::prefix("register")->group(function () {
 Route::get("/logout", [AuthController::class, "logout"])->name("logout");
 
 // Blogs
-Route::get("/blogs", [BlogController::class, "blogs"])->name("blogs");
-Route::get("/blog/{slug}", [BlogController::class, "blog"])->name("blog.single");
+// Route::get("/blogs", [BlogController::class, "blogs"])->name("blogs");
+// Route::get("/blog/{slug}", [BlogController::class, "blog"])->name("blog.single");
+
+// Markets
 Route::get("/markets", [MarketController::class, "markets"])->name("markets");
 
 // ABout
