@@ -144,6 +144,7 @@ class WithdrawController extends Controller
         if ($user->balance < $request->amount) {
             return redirect()->back()->with("error", "Insufficient funds to complete this transaction");
         }
+        
         $trasaction_id = Str::random(10);
 
         $withdrawal = new Withdrawal();

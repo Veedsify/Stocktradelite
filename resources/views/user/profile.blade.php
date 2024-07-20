@@ -109,8 +109,6 @@
 
                   <form>
                     <div class="row">
-
-
                       <div class="col-12 mb-3 mt-3">
                         <div>
                           <label for="" class="form-label">Full Name</label>
@@ -139,7 +137,12 @@
                       </div>
                       <div class="col-12">
                         <div class="mt-2 ">
-                          <button class="btn btn-primary col-lg-6 col-12">Save</button>
+                          To update your profile, please contact the support team.
+                          <br>
+                          <br>
+                          <a href="mailto:support@{{config('app.name')}}.com" class="btn btn-primary col-lg-6 col-12">Contact
+                            Support</a>
+                          {{-- <button class="btn btn-primary col-lg-6 col-12">Save</button> --}}
                         </div>
                       </div>
                     </div>
