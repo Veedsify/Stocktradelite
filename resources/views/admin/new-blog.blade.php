@@ -35,25 +35,25 @@
               </div>
             </div>
           </div>
-          <div class="row">
+          <form class="row" action="{{ route('blog.new.article') }}">
             <div class="col-lg-12 ">
               <div class="card">
                 <div class="card-body">
 
-                  <form action="https://bootstrapdemos.adminmart.com/modernize/dist/main/eco-add-product.html" class="form-horizontal">
+                  <div  class="form-horizontal">
                     <div class="mb-4">
                       <label class="form-label">Add Title.. <span class="text-danger">*</span>
                       </label>
-                      <input type="text" class="form-control" value="Product Name">
+                      <input type="text" class="form-control" placeholder="Add a title ..." name="title">
                     </div>
                     <div>
-                      <label class="form-label">Descriptio <span class="text-danger">*</span></label>
+                      <label class="form-label">Description <span class="text-danger">*</span></label>
                       <div>
                         <div id="editor" style="min-height: 30vh">
                         </div>
                       </div>
                     </div>
-                  </form>
+                </div>
                 </div>
               </div>
 
@@ -110,7 +110,7 @@
                     <h4 class="card-title">Status <span class="text-danger">*</span></h4>
                     <div class="p-2 h-100 bg-success rounded-circle"></div>
                   </div>
-                  <form action="https://bootstrapdemos.adminmart.com/modernize/dist/main/eco-add-product.html" class="form-horizontal">
+                  <div action="" class="form-horizontal">
                     <div>
                       <select class="form-select mr-sm-2  mb-2" id="inlineFormCustomSelect">
                         <option selected="">Published</option>
@@ -122,7 +122,7 @@
                         Set the product status.
                       </p>
                     </div>
-                  </form>
+                </div>
                 </div>
               </div>
 
@@ -137,7 +137,7 @@
               </div>
             </div>
 
-          </div>
+        </form>
         </div>
       </div>
 

@@ -55,6 +55,7 @@ Route::prefix("admin")->middleware(["admin"])->group(function () {
     // blog
     Route::get('/blog/all', [BlogController::class, "allBlog"])->name("admin.all.blog");
     Route::get('/blog/create', [BlogController::class, "newBlog"])->name("admin.new.blog");
+    Route::post("/create/new", [BlogController::class, "newarticle"])->name("blog.new.article");
 
     Route::get('/kyc-center', [KycController::class, 'kycCenter'])->name('admin.kyc');
     Route::post('/kyc-center-update/{id}', [KycController::class, 'kycUpdates'])->name('admin.kyc-center.update');
@@ -69,6 +70,6 @@ Route::prefix("admin")->middleware(["admin"])->group(function () {
 
 
 
-    
+
 
 });
