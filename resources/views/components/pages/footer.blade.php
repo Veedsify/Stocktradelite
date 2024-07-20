@@ -5,7 +5,7 @@
                 <div class="col-xl-4 col-md-6">
                     <div class="info">
                         <a href="/" class="logo">
-                            <img src="assets/images/logo/log-footer.png" alt="">
+                            <img src="assets/images/logo/log-footer.png" alt="" width="200">
                         </a>
                         <h6>Let's talk! 🤙</h6>
                         <ul class="list">
