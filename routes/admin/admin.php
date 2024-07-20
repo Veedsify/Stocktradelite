@@ -30,7 +30,13 @@ Route::prefix("admin")->middleware(["admin"])->group(function () {
     Route::get("/profile", [ProfileController::class, "profile"])->name("admin.profile");
     Route::get("/wallet-btc", [WalletController::class, "btc"])->name("admin.btc");
     Route::get("/wallet-eth", [WalletController::class, "eth"])->name("admin.eth");
+
+    // Privacy
     Route::get("/privacy", [PrivacyController::class, "privacy"])->name("admin.privacy");
+    Route::post("/privacy-policy-content", [PrivacyController::class, 'updatePolicyContent'])->name("admin.settings.update.privacy.policy");
+
+
+
     Route::get("/terms-condition", [TermsController::class, "termsCondition"])->name("admin.terms");
     Route::get("/notification", [NotificationController::class, "notificationAdmin"])->name("admin.notification");
 

@@ -6,8 +6,9 @@ use App\Models\Blog;
 use App\Models\Tier;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\User;
-use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
+use App\Models\PrivacyPolicy;
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -69,11 +70,17 @@ class DatabaseSeeder extends Seeder
             'description' => 'This is an elite tier',
         ]);
 
+
+        PrivacyPolicy::create([
+            'title' => 'Privacy Policy',
+            'content' => 'Privacy Policy',
+        ]);
         User::factory()->create([
             'name' => 'Test User',
             'userid' => Str::random(10),
             'email' => 'test@example.com',
         ]);
+
         Blog::factory(50)->create();
     }
 }
