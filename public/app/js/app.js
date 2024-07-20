@@ -48,7 +48,7 @@
       });
 
       // Run on Window Load
-      self.config.$window.on("load", function () {});
+      self.config.$window.on("load", function () { });
     },
 
     // Retina Logos
@@ -408,3 +408,102 @@
     });
   });
 })(jQuery);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const notifications = [
+    { text: 'Mike *** made $2,000 in interest', action: "Deposit" },
+    { text: 'Tomika *** withdrew $5,000', action: "Withdrew" },
+    { text: 'John *** deposited $1,500', action: "Deposit" },
+    { text: 'Sarah *** made $3,200 in profit', action: "Profit" },
+    { text: 'David *** withdrew $4,000', action: "Withdrew" },
+    { text: 'Alex *** deposited $2,700', action: "Deposit" },
+    { text: 'Nina *** made $3,800 in profit', action: "Profit" },
+    { text: 'Chris *** withdrew $6,500', action: "Withdrew" },
+    { text: 'Emma *** deposited $3,000', action: "Deposit" },
+    { text: 'Liam *** made $2,400 in interest', action: "Interest" },
+    { text: 'Sophia *** withdrew $2,200', action: "Withdrew" },
+    { text: 'Lucas *** deposited $4,100', action: "Deposit" },
+    { text: 'Olivia *** made $1,900 in profit', action: "Profit" },
+    { text: 'Mason *** withdrew $3,300', action: "Withdrew" },
+    { text: 'Ava *** deposited $5,000', action: "Deposit" },
+    { text: 'Jacob *** made $2,700 in interest', action: "Interest" },
+    { text: 'Mia *** withdrew $1,800', action: "Withdrew" },
+    { text: 'Ethan *** deposited $3,900', action: "Deposit" },
+    { text: 'Isabella *** made $2,600 in profit', action: "Profit" },
+    { text: 'James *** withdrew $4,500', action: "Withdrew" },
+    { text: 'Amelia *** deposited $2,500', action: "Deposit" },
+    { text: 'Benjamin *** made $1,700 in interest', action: "Interest" },
+    { text: 'Charlotte *** withdrew $2,900', action: "Withdrew" },
+    { text: 'Henry *** deposited $3,500', action: "Deposit" },
+    { text: 'Evelyn *** made $3,100 in profit', action: "Profit" },
+    { text: 'Sebastian *** withdrew $4,300', action: "Withdrew" },
+    { text: 'Harper *** deposited $1,600', action: "Deposit" },
+    { text: 'Daniel *** made $3,400 in interest', action: "Interest" },
+    { text: 'Ella *** withdrew $5,200', action: "Withdrew" },
+    { text: 'Matthew *** deposited $2,300', action: "Deposit" }
+  ];
+
+  function showNotification() {
+    const notification = notifications[Math.floor(Math.random() * notifications.length)];
+    const notificationElement = document.getElementById('notification');
+    const profileImg = document.getElementById('profile-img');
+    const notificationText = document.getElementById('notification-text');
+    const notificationTitle = document.getElementById('notification-title');
+
+    // profileImg.src = notification.img;
+    notificationText.textContent = notification.text;
+    notificationTitle.textContent = notification.action;
+    notificationElement.classList.add('show');
+    notificationElement.classList.remove('hide');
+
+    setTimeout(() => {
+      fadeOut(notificationElement);
+    }, 3000);
+  }
+
+  function fadeOut(element) {
+    element.classList.add('hide');
+    element.classList.remove('show');
+  }
+
+  // Show a notification every 5 seconds
+  setInterval(showNotification, 5000);
+});
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   fetch('/get-notifications')
+//     .then(response => response.json())
+//     .then(data => {
+//       const notifications = data;
+
+//       function showNotification() {
+//         const notification = notifications[Math.floor(Math.random() * notifications.length)];
+//         const notificationElement = document.getElementById('notification');
+//         notificationElement.textContent = notification;
+//         notificationElement.style.display = 'block';
+//         notificationElement.style.opacity = 1;
+
+//         setTimeout(() => {
+//           fadeOut(notificationElement);
+//         }, 3000);
+//       }
+
+//       function fadeOut(element) {
+//         let op = 1;  // initial opacity
+//         const timer = setInterval(() => {
+//           if (op <= 0.1) {
+//             clearInterval(timer);
+//             element.style.display = 'none';
+//           }
+//           element.style.opacity = op;
+//           element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+//           op -= op * 0.1;
+//         }, 50);
+//       }
+
+//       // Show a notification every 5 seconds
+//       setInterval(showNotification, 5000);
+//     })
+//     .catch(error => console.error('Error fetching notifications:', error));
+// });
