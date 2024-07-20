@@ -31,6 +31,7 @@ return new class extends Migration
             $table->boolean("verified")->default(false);
             $table->string("verification_token")->nullable();
             $table->string('verification_code')->nullable();
+            $table->text('recovery_token')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

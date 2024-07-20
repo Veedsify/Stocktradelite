@@ -100,7 +100,7 @@
           </a>
         </li>
         <li class="sidebar-item">
-          <a class="sidebar-link" href="app-chat.html" aria-expanded="false">
+          <a class="sidebar-link" href="{{route('logout')}}" aria-expanded="false">
             <span>
               <i class="ti ti-logout"></i>
             </span>
@@ -119,10 +119,10 @@
           <h6 class="mb-0 fs-4 fw-semibold">{{ucwords(explode(' ', auth()->user()->name)[0])}}</h6>
           <span class="fs-2">{{\App\Models\Tier::where('id', auth()->user()->tier)->first()->name ?? 'User'}}</span>
         </div>
-        <a class="border-0 bg-transparent text-primary ms-auto" tabindex="0" href="{{route('logout')}}" aria-label="logout"
-          data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="logout">
+        <a class="border-0 bg-transparent text-primary ms-auto" tabindex="0" href="{{route('logout')}}"
+          aria-label="logout" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="logout">
           <i class="ti ti-power fs-6"></i>
-    </a>
+        </a>
       </div>
     </div>
 

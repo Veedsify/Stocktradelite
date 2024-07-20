@@ -70,11 +70,6 @@ class DatabaseSeeder extends Seeder
             'description' => 'This is an elite tier',
         ]);
 
-
-        PrivacyPolicy::create([
-            'title' => 'Privacy Policy',
-            'content' => 'Privacy Policy',
-        ]);
         User::factory()->create([
             'name' => 'Test User',
             'userid' => Str::random(10),

@@ -19,10 +19,9 @@ function imageHandler() {
 }
 
 
-if (document.getElementById("editor")){
+if (document.getElementById("editor")) {
     var quill = new Quill("#editor", {
         theme: "snow",
-        height: 500,
         modules: {
             toolbar: {
                 container: [

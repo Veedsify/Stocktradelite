@@ -39,10 +39,12 @@
                                         <a href="#" data-id="more">More</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item">
-                                                <a href="{{route('terms-of-use')}}" data-id="terms-of-use">Terms of Use</a>
+                                                <a href="{{route('terms-of-use')}}" data-id="terms-of-use">Terms of
+                                                    Use</a>
                                             </li>
                                             <li class="menu-item">
-                                                <a href="{{route('privacy.policy')}}" data-id="privacy-policy">Privacy Policy</a>
+                                                <a href="{{route('privacy.policy')}}" data-id="privacy-policy">Privacy
+                                                    Policy</a>
                                             </li>
                                             <li class="menu-item">
                                                 <a href="{{route('contact')}}" data-id="contact">Contact</a>
@@ -59,7 +61,7 @@
                     </div>
 
                     <div class="header__right">
-                        <div class="dropdown">
+                        {{-- <div class="dropdown">
                             <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton2"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 EN/USD
@@ -95,7 +97,7 @@
                                     <span class="align-middle">Russian</span>
                                 </a>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="mode-switcher">
                             <a class="sun" href="#" onclick="switchTheme()">
                                 <svg width="16" height="16" viewbox="0 0 16 16" fill="none"
@@ -177,6 +179,3 @@
     </div>
 </header>
 <!-- end Header -->
-
-
-

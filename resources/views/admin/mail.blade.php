@@ -55,7 +55,7 @@
                 </div>
                 <div>
                   <label class="form-label">Message:</label>
-                  <div id="editor" name="message">
+                  <div id="editor" name="message" style="min-height: 500px;">
                   </div>
                   <textarea name="message" id="textareaMail" class="d-none" cols="30" rows="10"></textarea>
                 </div>

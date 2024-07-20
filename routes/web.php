@@ -53,6 +53,9 @@ Route::get("/faq", [FAQController::class, "faq"])->name("faq");
 
 //Recovery Account
 Route::get("/recovery", [RecoveryController::class, "recovery"])->name("recovery");
+Route::post("/recovery", [RecoveryController::class, "recoverAccount"])->name("recovery.account");
+Route::get("/reset-password/{token}", [RecoveryController::class, "resetPassword"])->name('reset.password');
+Route::post("/reset-password/{token}", [RecoveryController::class, "updatePassword"])->name('reset.password.save');
 
 //Verify Account
 Route::get("/verify/{token}", [VerifyController::class, "verify"])->name("verify");

@@ -40,20 +40,19 @@
           <div class="card-body">
 
             <form action="{{ route('admin.settings.update.privacy.policy') }}" method="post" class="form-horizontal">
-                @csrf
+              @csrf
               <div class="mb-4">
-
-                <input type="text" class="form-control" name="title"  value=""
-                >
+                <input type="text" class="form-control" name="title" value="{{old('title') ?? $privacyPolicy->title}}">
               </div>
-
               <div>
-                <div id="editor" style="min-height: 30vh; width: 100%; outline: none;" name="content" class="p-3" >
-
-
+                <div id="editor" style="min-height: 30vh; width: 100%; outline: none;" name="content" class="p-3">
+                  {!! $privacyPolicy->content !!}
                 </div>
+                <textarea name="content" id="textareaMail" class="d-none" cols="30" rows="10">{!! $privacyPolicy->content !!}</textarea>
               </div>
-              <button class="btn btn-primary mt-2">Send</button>
+              <button class="btn btn-primary mt-2 w-50 btn-lg">
+                Save
+              </button>
             </form>
           </div>
         </div>

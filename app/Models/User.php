@@ -35,6 +35,7 @@ class User extends Authenticatable
         'tier',
         'verification_code',
         'tier_expires_at',
+        'recovery_token',
         'verified',
         'verification_token',
         'email_verified_at',

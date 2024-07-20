@@ -38,24 +38,24 @@
 
 <body>
     @if (session('success'))
-        <script>
-            swal({
+    <script>
+        swal({
                 title: "Success!",
                 text: "{{ session('success') }}",
                 icon: "success",
                 button: "OK",
             })
-        </script>
+    </script>
     @endif
     @if (session('error'))
-        <script>
-            swal({
+    <script>
+        swal({
                 title: "Error!",
                 text: "{{ session('error') }}",
                 icon: "error",
                 button: "OK",
             })
-        </script>
+    </script>
     @endif
     @yield('content')
 
@@ -68,10 +68,9 @@
     <script src="{{ asset('user-assets/js/theme/app.min.js') }}"></script>
     <script src="{{ asset('user-assets/js/theme/sidebarmenu.js') }}"></script>
     <!-- solar icons -->
-    <script src="{{ asset('npm/iconify-icon%401.0.8/dist/iconify-icon.min.js') }}"></script>
     <script src="{{ asset('user-assets/libs/owl.carousel/dist/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('user-assets/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
-    <script src="{{ asset('user-assets/js/dashboards/dashboard.js') }}"></script>
+    {{-- <script src="{{ asset('user-assets/js/dashboards/dashboard.js') }}"></script> --}}
     <!-- solar quil icons -->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
     <script src="{{ asset('user-assets/libs/quill/dist/quill.min.js') }}"></script>
@@ -83,9 +82,6 @@
     <script src="{{ asset('user-assets/libs/jquery.repeater/jquery.repeater.min.js') }}"></script>
     <script src="{{ asset('user-assets/libs/jquery-validation/dist/jquery.validate.min.js') }}"></script>
     <script src="{{ asset('user-assets/js/forms/repeater-init.js') }}"></script>
-    <script src="{{ asset('user-assets/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
-    <script src="{{ asset('user-assets/js/apps/edit-product.js') }}"></script>
-    <script src="{{ asset('user-assets/js/apps/edit-product.js') }}"></script>
 
     <!-- solar icons -->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>

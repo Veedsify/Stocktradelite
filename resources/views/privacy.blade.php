@@ -6,7 +6,9 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h3 class="heading">Privacy Policy</h3>
+        <h3 class="heading">
+          {{ $privacyContent->title ?? "Privacy Policy" }}
+        </h3>
       </div>
       <div class="col-md-6">
         <ul class="breadcrumb">
@@ -29,25 +31,10 @@
     <div class="row">
       <div class="col-xl-8 col-md-12">
         <div class="blog-main">
-          <h3 class="title">
-            {{ $privacyContent->title }}
-          </h3>
           <div class="content">
-
-                {!! $privacyContent->content !!}
+            {!! $privacyContent->content ?? "<p>Policy Page</p>" !!}
 
           </div>
-          <form action="#">
-            <h6 class="heading">Have a question?</h6>
-            <div class="form-group">
-              <input class="form-control" type="text" placeholder="Name">
-              <input class="form-control" type="text" placeholder="Email">
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" cols="30" rows="10" placeholder="Qeuestion"></textarea>
-            </div>
-            <button class="btn-action" type="submit">Send</button>
-          </form>
         </div>
       </div>
     </div>
