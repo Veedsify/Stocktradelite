@@ -24,46 +24,33 @@
         integrity="sha512-..." crossorigin="anonymous" />
 
     <!-- End Style CSS -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.png') }}" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('assets/images/logo/favicon.png') }}">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body class="body header-fixed">
-    @if(session('success'))
-    <script>
-        swal({
-            title: "Success!",
-            text: "{{ session('success') }}",
-            icon: "success",
-            button: "OK",
-          })
-    </script>
-    @endif
-    @if(session('error'))
-    <script>
-        swal({
-            title: "Error!",
-            text: "{{ session('error') }}",
-            icon: "error",
-            button: "OK",
-          })
-    </script>
-    @endif
+    <x-pages.alerts />
     @yield('content')
     <x-pages.footer />
 
+    <div id="notification">
+        <img src="{{asset('assets/images/custom/bitcoin.png')}}" alt="Profile Image" id="profile-img">
+        <div class="notification_context">
+            <strong id="notification-title">
+            </strong>
+            <span id="notification-text"></span>
+        </div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const menuItems = document.querySelectorAll('#menu-primary-menu .menu-item a');
-
             // Function to update the current menu item
             const updateCurrentMenuItem = (id) => {
                 document.querySelectorAll('.current-menu-item').forEach(menuItem => {
                     menuItem.classList.remove('current-menu-item');
                 });
-
                 const currentItem = document.querySelector(`#menu-primary-menu .menu-item a[data-id="${id}"]`);
                 if (currentItem) {
                     currentItem.parentElement.classList.add('current-menu-item');
@@ -75,21 +62,16 @@
             if (currentMenuItem) {
                 updateCurrentMenuItem(currentMenuItem);
             }
-
             menuItems.forEach(item => {
                 item.addEventListener('click', function (event) {
                     // Prevent the default action
                     event.preventDefault();
-
                     // Get the data-id of the clicked link
                     const id = this.getAttribute('data-id');
-
                     // Update the current menu item
                     updateCurrentMenuItem(id);
-
                     // Save the current menu item to localStorage
                     localStorage.setItem('currentMenuItem', id);
-
                     // Redirect to the actual link
                     window.location.href = this.href;
                 });
