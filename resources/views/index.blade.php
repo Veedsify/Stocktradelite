@@ -1,4 +1,6 @@
-﻿@extends('layouts.app')
+﻿@extends('layouts.app', [
+  'title' => 'Home',
+])
 @section('content')
 <!-- Banner Top -->
 <!-- TradingView Widget BEGIN -->
@@ -142,54 +144,6 @@
                 </script>
                 <div id="coinmarketcap-widget-coin-price-block" coins="1,1027,825" currency="USD" theme="light"
                   transparent="true" show-symbol-logo="true"></div>
-                {{-- <div class="crypto-box">
-                  <div class="top">
-                    <a href="#"><span class="icon-btc"><span class="path1"></span><span class="path2"></span></span>
-                      <span>Bitcoin</span>
-                      <span class="unit">BTC/USD</span></a>
-                  </div>
-                  <h6 class="price">USD 46,168.95</h6>
-                  <div class="bottom">
-                    <p>36,641.20</p>
-                    <p class="sale critical">-0.79%</p>
-                  </div>
-                </div>
-                <div class="crypto-box active">
-                  <div class="top">
-                    <a href="#"><span class="icon-eth"><span class="path1"></span><span class="path2"></span><span
-                          class="path3"></span><span class="path4"></span></span><span>Ethereum</span>
-                      <span class="unit">ETH/USD</span></a>
-                  </div>
-                  <h6 class="price">USD $3,480.04</h6>
-                  <div class="bottom">
-                    <p>36,641.20</p>
-                    <div class="sale success">+10.55%</div>
-                  </div>
-                </div>
-                <div class="crypto-box">
-                  <div class="top">
-                    <a href="#"><span class="icon-tether"><span class="path1"></span><span
-                          class="path2"></span></span><span>Tether</span>
-                      <span class="unit">USDT/USD</span></a>
-                  </div>
-                  <h6 class="price">USD 1.00</h6>
-                  <div class="bottom">
-                    <p>36,641.20</p>
-                    <div class="sale critical">-0.01%%</div>
-                  </div>
-                </div>
-                <div class="crypto-box">
-                  <div class="top">
-                    <a href="#"><span class="icon-bnb"><span class="path1"></span><span class="path2"></span><span
-                          class="path3"></span><span class="path4"></span><span class="path5"></span><span
-                          class="path6"></span></span><span>BNB</span> <span class="unit">BNB/USD</span></a>
-                  </div>
-                  <h6 class="price">USD 443.56</h6>
-                  <div class="bottom">
-                    <p>36,641.20</p>
-                    <div class="sale critical">-1.24%</div>
-                  </div>
-                </div> --}}
               </div>
               <div class="content-inner">
                 <div class="crypto-box">
@@ -647,12 +601,13 @@
           <a class="btn-action-2" href="#">See All Coins</a>
         </div>
         <div class="row py-5">
-              <div class="col-md-12" style="min-height: 80vh;">
-                <!-- TradingView Widget BEGIN -->
-                <div class="tradingview-widget-container">
-                  <div class="tradingview-widget-container__widget"></div>
-                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
-                    {
+          <div class="col-md-12" style="min-height: 80vh;">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+                {
                       "width": "100%",
                       "height": "100%",
                       "defaultColumn": "overview",
@@ -663,11 +618,11 @@
                       "isTransparent": true,
                       "largeChartUrl": "https://google.com"
                     }
-                  </script>
-                </div>
-                <!-- TradingView Widget END -->
-              </div>
+              </script>
             </div>
+            <!-- TradingView Widget END -->
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -738,7 +693,8 @@
             We are the most trusted cryptocurrency platform.
           </h3>
           <p class="fs-20 desc">
-            offering secure transactions, transparent operations, and exceptional customer support for all your crypto needs.
+            offering secure transactions, transparent operations, and exceptional customer support for all your crypto
+            needs.
           </p>
           <ul class="list">
             <li>
@@ -821,9 +777,9 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block-text center">
-            <p class="desc">
-              Awesome Stats
-            </p>
+          <p class="desc">
+            Awesome Stats
+          </p>
           <h3 class="heading">Let our awesome stats speak</h3>
         </div>
         <div class="counter-main" data-aos="fade-up" data-aos-duration="1000">
@@ -907,10 +863,11 @@
         <div class="block-text">
           <h3 class="heading">Our customers love what we do</h3>
           <h6 class="fs-20">
-            Transform Your idea into Reality With  Stocktradelite
+            Transform Your idea into Reality With Stocktradelite
           </h6>
           <p>
-            Our customers rave about our seamless and secure crypto trading experience, praising our intuitive tools and real-time analytics. Join the growing community of satisfied traders at Stocktradelite.
+            Our customers rave about our seamless and secure crypto trading experience, praising our intuitive tools and
+            real-time analytics. Join the growing community of satisfied traders at Stocktradelite.
           </p>
 
           <div class="swiper swiper-thumb1">
