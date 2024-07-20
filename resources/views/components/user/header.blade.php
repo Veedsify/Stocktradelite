@@ -43,6 +43,14 @@
             <i class="ti ti-align-justified fs-7"></i>
           </a>
           <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-center">
+            <li>
+              @if(auth()->user()->role == 'admin')
+              <a href="{{route('admin')}}" class="nav-link nav-icon-hover">
+                <i class="ti ti-dashboard"></i>
+                  Admin Page
+              </a>
+              @endif
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                 aria-expanded="false">

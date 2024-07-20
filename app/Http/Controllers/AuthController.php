@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ConfirmEmail;
+use App\Models\Notification;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
@@ -96,6 +97,13 @@ class AuthController extends Controller
             $user->save();
 
             session("verification_code", $verification_code);
+
+            Notification::create([
+                "user_id" => $user->id,
+                "title" => "Account Created",
+                "message" => "Your account has been created successfully. Please verify your account",
+                "is_read" => false,
+            ]);
 
             // Mail::to($user->email)->send(new WelcomeEmail($user, $verification_code));
             Mail::to($user->email)->send(new ConfirmEmail($user, $verification_code));

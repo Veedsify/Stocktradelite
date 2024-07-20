@@ -5,6 +5,7 @@ namespace App\Http\Controllers\user;
 use App\Http\Controllers\Controller;
 use App\Mail\DepositEmail;
 use App\Models\Deposit;
+use App\Models\Notification;
 use App\Models\Tier;
 use App\Models\WalletAddress;
 use Illuminate\Http\Request;
@@ -67,6 +68,13 @@ class DepositController extends Controller
         ];
 
         Mail::to(auth()->user()->email)->send(new DepositEmail($deposit, $data));
+        Notification::create([
+            "user_id" => auth()->user()->id,
+            "title" => "Deposit Request",
+            "message" => "Your deposit request has been submitted successfully",
+            "is_read" => false,
+        ]);
+
         Mail::to(env('MAIL_ADMIN_EMAIL'))->send(new DepositEmail($deposit, $data2));
 
         return redirect()->back()->with('success', 'Your deposit of $' . $request->amount . '  has been received successfully, and is pending confirmation');
@@ -111,6 +119,13 @@ class DepositController extends Controller
         ];
 
         Mail::to(auth()->user()->email)->send(new DepositEmail($deposit, $data));
+        Notification::create([
+            "user_id" => auth()->user()->id,
+            "title" => "Deposit Request",
+            "message" => "Your deposit request has been submitted successfully",
+            "is_read" => false,
+        ]);
+
         Mail::to(env('MAIL_ADMIN_EMAIL'))->send(new DepositEmail($deposit, $data2));
 
         return redirect()->back()->with('success', 'Your deposit of $' . $request->amount . ' has been received successfully, and is pending confirmation');
