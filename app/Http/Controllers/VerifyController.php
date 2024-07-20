@@ -47,7 +47,7 @@ class VerifyController extends Controller
         Notification::create([
             "user_id" => $user->id,
             "title" => "Email Verified",
-            "message" => "Your email has been verified successfully",
+            "content" => "Your email has been verified successfully",
             "is_read" => false,
         ]);
 

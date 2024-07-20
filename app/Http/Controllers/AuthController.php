@@ -101,7 +101,7 @@ class AuthController extends Controller
             Notification::create([
                 "user_id" => $user->id,
                 "title" => "Account Created",
-                "message" => "Your account has been created successfully. Please verify your account",
+                "content" => "Your account has been created successfully. Please verify your account",
                 "is_read" => false,
             ]);
 

@@ -51,7 +51,7 @@ class RecoveryController extends Controller
         Notification::create([
             "user_id" => $user->id,
             "title" => "Password Reset Request",
-            "message" => "We have sent you an email with instructions to reset your password",
+            "content" => "We have sent you an email with instructions to reset your password",
             "is_read" => false,
         ]);
 

@@ -71,7 +71,7 @@ class DepositController extends Controller
         Notification::create([
             "user_id" => auth()->user()->id,
             "title" => "Deposit Request",
-            "message" => "Your deposit request has been submitted successfully",
+            "content" => "Your deposit request has been submitted successfully",
             "is_read" => false,
         ]);
 
@@ -122,7 +122,7 @@ class DepositController extends Controller
         Notification::create([
             "user_id" => auth()->user()->id,
             "title" => "Deposit Request",
-            "message" => "Your deposit request has been submitted successfully",
+            "content" => "Your deposit request has been submitted successfully",
             "is_read" => false,
         ]);
 

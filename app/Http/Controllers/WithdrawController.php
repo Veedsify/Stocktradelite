@@ -18,7 +18,7 @@ class WithdrawController extends Controller
         Notification::create([
             "user_id" => $withdrawal->user->id,
             "title" => "Withdrawal Request",
-            "message" => "Your withdrawal request has been submitted successfully",
+            "content" => "Your withdrawal request has been submitted successfully",
             "is_read" => false,
         ]);
 

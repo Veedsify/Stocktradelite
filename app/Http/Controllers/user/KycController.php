@@ -57,7 +57,7 @@ class KycController extends Controller
             Notification::create([
                 "user_id" => auth()->user()->id,
                 "title" => "KYC Submitted",
-                "message" => "Your KYC has been submitted successfully. Please wait for approval",
+                "content" => "Your KYC has been submitted successfully. Please wait for approval",
                 "is_read" => false,
             ]);
 
@@ -95,7 +95,7 @@ class KycController extends Controller
                 Notification::create([
                     "user_id" => $verification->user->id,
                     "title" => "KYC Approved",
-                    "message" => "Your KYC has been approved successfully",
+                    "content" => "Your KYC has been approved successfully",
                     "is_read" => false,
                 ]);
                 return redirect()->back()->with('success', 'KYC Updated Successfully for User: ' . $verification->user->name);
@@ -116,7 +116,7 @@ class KycController extends Controller
                 Notification::create([
                     "user_id" => $verification->user->id,
                     "title" => "KYC Rejected",
-                    "message" => "Your KYC has been rejected. Reason: " . $request->rejection_reason,
+                    "content" => "Your KYC has been rejected. Reason: " . $request->rejection_reason,
                     "is_read" => false,
                 ]);
 
