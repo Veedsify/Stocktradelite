@@ -53,13 +53,23 @@
                   <span class="badge text-bg-primary rounded-4 px-3 py-1 lh-sm">5 new</span>
                 </div>
                 <div class="message-body" data-simplebar="">
-                  <a href="{{route ('admin.notification')}}" class="py-6 px-7 d-flex align-items-center dropdown-item">
-                    <div class="w-75 d-inline-block v-middle">
-                      <h6 class="mb-1 fw-semibold lh-base">Roman Joined the Team!</h6>
-                      <span class="fs-2 d-block text-body-secondary">Congratulate him</span>
+                  @foreach($customNotifications as $notification)
+                  <a href="{{route ('notification')}}"
+                    class="py-6 px-7 d-flex align-items-center dropdown-item {{!$notification->is_read ? "
+                    bg-primary-subtle" : "" }}">
+                    <div class="w-75 d-inline-block v-middle ">
+                      <h6 class="mb-1 fw-semibold lh-base">
+                        {{$notification->title}}
+                      </h6>
+                      <span class="fs-2 d-block text-body-secondary">
+                        {{Str::limit($notification->content, 50)}}
+                      </span>
                     </div>
-                    <small>1min ago</small>
+                    <small>
+                      {{$notification->created_at->diffForHumans()}}
+                    </small>
                   </a>
+                  @endforeach
                 </div>
                 <div class="py-6 px-7 mb-1">
                 </div>
