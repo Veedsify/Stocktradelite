@@ -13,7 +13,8 @@ class PrivacyController extends Controller
     public function privacy()
     {
         $privacyPolicy = PrivacyPolicy::first();
-        return view('admin.privacy-policy',[
+        return view('admin.privacy-policy'
+    ,[
             'privacyPolicy' => $privacyPolicy,
         ]);
     }

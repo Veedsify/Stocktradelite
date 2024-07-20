@@ -6,6 +6,7 @@ use App\Models\Blog;
 use App\Models\Tier;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\User;
+use App\Models\Terms;
 use Illuminate\Support\Str;
 use App\Models\PrivacyPolicy;
 use Illuminate\Database\Seeder;

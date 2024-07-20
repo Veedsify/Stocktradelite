@@ -39,17 +39,17 @@
         <div class="card">
           <div class="card-body">
 
-            <form action="" class="form-horizontal">
+            <form action="{{route('admin.terms.update')}}" class="form-horizontal" method="post">
               <div class="mb-4">
 
-                <input type="text" class="form-control" value="Virtual Land In The Metaverse Is Selling For Millions Of Dollars">
+                <input type="text" class="form-control" value="Virtual Land In The Metaverse Is Selling For Millions Of Dollars" name="title">
               </div>
 
               <div>
-                <div id="editor" style="min-height: 30vh">
+                <div id="editor" style="min-height: 30vh" name="content">
                 </div>
               </div>
-              <button class="btn btn-primary mt-2">Send</button>
+              <button class="btn btn-primary mt-2" type="submit">Send</button>
             </form>
           </div>
         </div>
