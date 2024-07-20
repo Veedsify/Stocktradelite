@@ -76,18 +76,24 @@
                                                             </td>
                                                             <td>${{ number_format($user->balance) }}</td>
                                                             <td>
-                                                                <form class="d-flex gap-1" action="" method="post">
-                                                                <input type="hidden" name="_token" value="" autocomplete="off"> <input type="hidden" name="_method" value="PUT"> <select name="role" id="role" class="px-1 py-1 border-1 border-muted btn-outline-info rounded-2">
-                                                                <option value="user" selected="">User
-                                                                </option>
-                                                                <option value="admin">Admin
-                                                                </option>
-                                                                <option value="moderator">
-                                                                Moderator
-                                                                </option>
+                                                                <form class="d-flex gap-1"
+                                                                action="{{ route('admin.users.upgrade', $user->id) }}"
+                                                                method="post">
+                                                                @csrf
+                                                                @method('PUT')
+                                                                <select name="role" id="role"
+                                                                    class="px-1 py-1 border-1 border-muted btn-outline-info rounded-2">
+                                                                    <option value="user"
+                                                                        {{ $user->role === 'user' ? 'selected' : '' }}>User
+                                                                    </option>
+                                                                    <option value="admin"
+                                                                        {{ $user->role === 'admin' ? 'selected' : '' }}>Admin
+                                                                    </option>
+                                                                    
                                                                 </select>
-                                                                <button type="submit" class="btn btn-primary btn-sm">Update</button>
-                                                                </form>
+                                                                <button type="submit"
+                                                                    class="btn btn-primary btn-sm">Update</button>
+                                                            </form>
                                                                 </td>
                                                             <td>
                                                                 <a href="{{ route('admin.balance.editbalance', $user->id) }}"

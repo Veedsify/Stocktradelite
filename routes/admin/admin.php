@@ -24,7 +24,12 @@ Route::prefix("admin")->middleware(["admin"])->group(function () {
     Route::get("/mail", [MailController::class, "mail"])->name("mail");
     Route::post("/sendmail", [MailController::class, "sendmail"])->name("sendmail");
 
+    // users
     Route::get("/users", [UsersController::class, "users"])->name("users");
+    Route::put('/admin/users/{userId}/upgrade', [UsersController::class, 'upgradeUser'])->name('admin.users.upgrade');
+
+
+
     Route::get("/users/balance/{id}", [BalanceController::class, "editBalance"])->name("admin.balance.editbalance");
     Route::get("/security", [SecurityController::class, "security"])->name("admin.security");
     Route::get("/profile", [ProfileController::class, "profile"])->name("admin.profile");
