@@ -12,7 +12,8 @@ class PrivacyController extends Controller
 
 
     public function privacy(){
-        return view('admin.privacy-policy');
+        return view('admin.privacy-policy'
+    );
     }
      public function updatePolicyContent(Request $request)
     {
