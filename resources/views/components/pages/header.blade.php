@@ -137,7 +137,7 @@
                         <div class="mobile-button"><span></span></div>
                         <div class="wallet">
                             @auth
-                            <a href="{{route('user')}}"> Dashboard </a>
+                            <a href="s"> Dashboard </a>
                             @endauth
                             @guest
                             <a href="{{route('login')}}"> Login </a>
@@ -150,19 +150,18 @@
                                 <img src="{{asset('assets/images/avt/avt-01.jpg')}}" alt="">
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
-                                <a class="dropdown-item" href="#"><i
+                                <a class="dropdown-item" href="{{route('profile')}}"><i
                                         class="bx bx-user font-size-16 align-middle me-1"></i>
                                     <span>Profile</span></a>
-                                <a class="dropdown-item" href="#"><i
+                                <a class="dropdown-item" href="{{route('user')}}"><i
                                         class="bx bx-wallet font-size-16 align-middle me-1"></i>
                                     <span>My Wallet</span></a>
-                                <a class="dropdown-item d-block" href="#"><span
-                                        class="badge bg-success float-end">11</span><i
+                                <a class="dropdown-item d-block" href="{{route('profile')}}"><i
                                         class="bx bx-wrench font-size-16 align-middle me-1"></i>
                                     <span>Settings</span></a>
-                                <a class="dropdown-item" href="#"><i
+                                <a class="dropdown-item" href="{{route('changepassword')}}"><i
                                         class="bx bx-lock-open font-size-16 align-middle me-1"></i>
-                                    <span>Lock screen</span></a>
+                                    <span>Security</span></a>
                                 <div class="dropdown-divider"></div>
                                 <a href="{{route('logout')}}" class="dropdown-item text-danger"
                                     href="user-login.html"><i

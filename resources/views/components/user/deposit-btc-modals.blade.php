@@ -15,12 +15,13 @@
         <input type="hidden" name="tier_id" value="{{$tier}}">
         <div class="mb-5">
           <div class="d-flex align-items-center">
-            <input type="text" class="form-control form-control-lg border py-3 border-primary"
+            <input type="text" id="btc-address" class="form-control form-control-lg border py-3 border-primary"
               placeholder="Wallet Address" value="{{ $wallet->btc_address ?? ""}}">
-            <button type="button" class="btn btn-primary ms-2 h-100 px-3 py-3">
+            <button type="button" id="copy-button" class="btn btn-primary ms-2 h-100 px-3 py-3">
               <div class="d-flex align-items-center">
                 <i class="ti ti-clipboard me-2 fs-4"></i>
-                Copy
+                <span id="copy-text">Copy</span>
+
               </div>
             </button>
           </div>
@@ -55,3 +56,17 @@
     </div>
   </div>
 </div>
+
+<script>
+    document.getElementById('copy-button').addEventListener('click', function() {
+      var btcAddress = document.getElementById('btc-address').value;
+      navigator.clipboard.writeText(btcAddress).then(function() {
+        document.getElementById('copy-text').innerText = 'Copied!';
+        setTimeout(function() {
+          document.getElementById('copy-text').innerText = 'Copy';
+        }, 2000); // Change the text back to "Copy" after 2 seconds
+      }, function(err) {
+        console.error('Could not copy text: ', err);
+      });
+    });
+  </script>
