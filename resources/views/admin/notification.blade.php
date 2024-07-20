@@ -42,7 +42,7 @@
             <div class="table-responsive">
               <table class="table search-table align-middle text-nowrap">
                 <thead class="header-item">
-                  <th class="px-0">
+                  <th class="">
                     <div class="n-chk align-self-center text-center">
                       <div class="form-check">
                         <input type="checkbox" class="form-check-input primary" id="contact-check-all">
@@ -51,9 +51,8 @@
                       </div>
                     </div>
                   </th>
-                  <th class="px-0">Notification</th>
-                  <th class="px-0 text-end">Time</th>
-
+                  <th class="">Notification</th>
+                  <th class=" text-end">Time</th>
                 </thead>
                 <tbody>
 
@@ -63,23 +62,14 @@
                       <div class="n-chk align-self-center text-center">
                         <div class="form-check">
                           <input type="checkbox" class="form-check-input primary" id="contact-check-1">
-                          <label class="form-check
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class=" d-flex align-items-center">
-                            <div class="flex-shrink-0">
-                              <img src="{{ asset('assets/images/avatars/avatar-1.png') }}" class="avatar rounded-circle"
-                                alt="">
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                              <h6 class="mb-1">{{ $notification->title }}</h6>
-                              <p class="mb-0">{{ $notification->content }}</p>
-                            </div>
                         </div>
+                      </div>
                     </td>
-                    <td class="text-end">{{ $notification->created_at }}</td>
+                    <td>
+                      <h6 class=" mb-1 fw-bolder">{{ $notification->title }}</h6>
+                      <p class="mb-0">{{ $notification->content }}</p>
+                    </td>
+                    <td class="text-end">{{ $notification->created_at->diffforHumans() }}</td>
                   </tr>
                   @endforeach
                 </tbody>
