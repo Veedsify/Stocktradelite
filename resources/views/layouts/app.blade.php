@@ -34,15 +34,12 @@
     @yield('content')
     <x-pages.footer />
 
-    <div id="notification">
-        <img src="{{asset('assets/images/custom/bitcoin.png')}}" alt="Profile Image" id="profile-img">
-        <div class="notification_context">
-            <strong id="notification-title">
-            </strong>
-            <span id="notification-text"></span>
-        </div>
-    </div>
-
+    <script>
+        window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}
+    </script>
+    <script id="zsiqscript"
+        src="https://salesiq.zohopublic.com/widget?wc=siq063c810021a3a315aa4956d8427cf8289ee5f1bdaacf6c7248296ec3ec51843f"
+        defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const menuItems = document.querySelectorAll('#menu-primary-menu .menu-item a');

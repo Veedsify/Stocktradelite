@@ -37,12 +37,6 @@
           </a>
         </li>
         <li class="sidebar-item">
-          <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-            <span class="d-flex">
-              <i class="ti ti-chart-donut-3"></i>
-            </span>
-            <span class="hide-menu">Blog</span>
-          </a>
           <ul aria-expanded="false" class="collapse first-level">
             <li class="sidebar-item">
               <a href="{{route('admin.all.blog')}}" class="sidebar-link">

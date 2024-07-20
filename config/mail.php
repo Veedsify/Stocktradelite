@@ -95,6 +95,17 @@ return [
             ],
         ],
 
+         'custom_mailer' => [
+            'transport' => 'smtp',
+            'url' => env('MAIL_URL'),
+            'host' => env('CUSTOM_MAIL_HOST', '127.0.0.1'),
+            'port' => env('CUSTOM_MAIL_PORT', 2525),
+            'encryption' => env('CUSTOM_MAIL_ENCRYPTION', 'tls'),
+            'username' => env('CUSTOM_MAIL_USERNAME'),
+            'password' => env('CUSTOM_MAIL_PASSWORD'),
+            'timeout' => null,
+            'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url(env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
+        ],
     ],
 
     /*

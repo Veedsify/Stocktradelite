@@ -452,10 +452,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const notificationTitle = document.getElementById('notification-title');
 
     // profileImg.src = notification.img;
-    notificationText.textContent = notification.text;
-    notificationTitle.textContent = notification.action;
-    notificationElement.classList.add('show');
-    notificationElement.classList.remove('hide');
+    if (notificationElement) {
+      notificationText.textContent = notification.text;
+      notificationTitle.textContent = notification.action;
+      notificationElement.classList.add('show');
+      notificationElement.classList.remove('hide');
+    }
 
     setTimeout(() => {
       fadeOut(notificationElement);
@@ -463,8 +465,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function fadeOut(element) {
-    element.classList.add('hide');
-    element.classList.remove('show');
+    element?.classList.add('hide');
+    element?.classList.remove('show');
   }
 
   // Show a notification every 5 seconds
