@@ -39,7 +39,7 @@ Route::prefix("admin")->middleware(["admin"])->group(function () {
 
     // Terms Condition
     Route::get("/terms-condition", [TermsController::class, "termsCondition"])->name("admin.terms");
-    Route::post("/Update-terms-condition", [TermsController::class, "updateTermsCondition"])->name("admin.terms.update");
+    Route::post("/Update-terms-condition", [TermsController::class, "updateTermsCondition"])->name("admin.settings.update.terms.condition");
 
 
 

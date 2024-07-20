@@ -39,18 +39,21 @@
         <div class="card">
           <div class="card-body">
 
-            <form action="{{route('admin.terms.update')}}" class="form-horizontal" method="post">
-              <div class="mb-4">
-
-                <input type="text" class="form-control" value="Virtual Land In The Metaverse Is Selling For Millions Of Dollars" name="title">
-              </div>
-
-              <div>
-                <div id="editor" style="min-height: 30vh" name="content">
+           
+            <form action="{{ route('admin.settings.update.terms.condition') }}" method="post" class="form-horizontal">
+                @csrf
+                <div class="mb-4">
+                  <input type="text" class="form-control" name="title" value="{{old('title') ?? $termsCondition->title ?? ""}}">
                 </div>
-              </div>
-              <button class="btn btn-primary mt-2" type="submit">Send</button>
-            </form>
+                <div>
+                  <div id="editor" style="min-height: 30vh; width: 100%; outline: none;" name="content" class="p-3">
+                    {!! $termsCondition->content ?? "" !!}
+                  </div>
+                </div>
+                <button class="btn btn-primary mt-2 w-50 btn-lg">
+                  Save
+                </button>
+              </form>
           </div>
         </div>
       </div>

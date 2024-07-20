@@ -10,26 +10,29 @@ class TermsController extends Controller
 {
     //
     public function termsCondition(){
-       Return view('admin.terms-condition');
+        $termsCondition = Terms::first();
+       Return view('admin.terms-condition',[
+        'termsCondition' => $termsCondition,
+       ]);
     }
+
     public function updateTermsCondition(Request $request)
     {
         $request->validate([
             'title' => 'required',
             'content' => 'required',
-
         ]);
 
+        $Terms_content = Terms::first();
 
-        $privacy_content = Terms::first();
+        if (!$Terms_content) {
+            $Terms_content = new Terms();
+        }
 
-        $privacy_content->title = $request->title;
-        $privacy_content->content = $request->content;
+        $Terms_content->title = $request->title;
+        $Terms_content->content = $request->content;
+        $Terms_content->save();
 
-
-
-        $privacy_content->save();
-
-        return redirect()->back()->with('success', 'Privacy Content updated successfully');
+        return redirect()->back()->with('success', 'Terms Content updated successfully');
     }
 }
