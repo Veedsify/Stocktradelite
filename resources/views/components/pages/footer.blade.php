@@ -32,7 +32,6 @@
                                 <li><a href="{{route('about')}}">About</a></li>
                                 <li><a href="{{route('markets')}}">Markets</a></li>
                                 <li><a href="{{route('index')}}">Live Updates</a></li>
-                                <li><a href="{{route('blogs')}}">Blogs</a></li>
                             </ul>
                         </div>
                         <div class="widget-link s2">
@@ -51,14 +50,14 @@
                     <div class="footer-contact">
                         <h5>Newletters</h5>
                         <p>
-                            Subscribe our newsletter to get more free design course and
-                            resource.
+                            Subscribe our newsletter to get more update & join to our
+                            community
                         </p>
                         <form action="#">
                             <input type="email" placeholder="Enter your email" required="">
                             <button type="submit" class="btn-action">Submit</button>
                         </form>
-                        <ul class="list-social">
+                        {{-- <ul class="list-social">
                             <li>
                                 <a href="#"><span class="icon-facebook-f"></span></a>
                             </li>
@@ -71,7 +70,7 @@
                             <li>
                                 <a href="#"><span class="icon-twitter"></span></a>
                             </li>
-                        </ul>
+                        </ul> --}}
                     </div>
                 </div>
             </div>
