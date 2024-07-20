@@ -15,8 +15,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-        // Tier::factory(6)->create();
         Tier::create([
             'name' => 'Basic',
             'price' => 5000,
@@ -69,9 +67,9 @@ class DatabaseSeeder extends Seeder
         ]);
 
         User::factory()->create([
-            'name' => 'Test User',
+            'name' => 'StockLiteTrade Admin',
             'userid' => Str::random(10),
-            'email' => 'test@example.com',
+            'email' => 'junewouldbegreat@gmail.com',
         ]);
 
     }

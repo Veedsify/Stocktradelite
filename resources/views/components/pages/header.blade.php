@@ -33,7 +33,7 @@
                                         <a href="{{route('login')}}" data-id="live-updates">Live Updates</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="" data-id="blogs">Blog</a>
+                                        <a target="_blank" href="https://blog.stocklitetrade.com">Blog</a>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="#" data-id="more">More</a>
