@@ -100,9 +100,6 @@
                     {{number_format($contactCount)}}
                   </h3>
                 </div>
-                <div class="ms-auto text-info d-flex align-items-center mt-3">
-                  <a href="#" style="text-decoration:underline; ">View Contacts</a>
-                </div>
               </div>
             </div>
           </div>
@@ -120,7 +117,7 @@
                   </h3>
                 </div>
                 <div class="ms-auto text-info d-flex align-items-center mt-3">
-                  <a href="#" style="text-decoration:underline; ">View Withdrawals</a>
+                  <a href="{{route('admin.withdrawals')}}" style="text-decoration:underline; ">View Withdrawals</a>
                 </div>
               </div>
             </div>

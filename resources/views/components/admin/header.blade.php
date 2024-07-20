@@ -53,7 +53,7 @@
                   <span class="badge text-bg-primary rounded-4 px-3 py-1 lh-sm">5 new</span>
                 </div>
                 <div class="message-body" data-simplebar="">
-                  <a href="{{route ('notification')}}" class="py-6 px-7 d-flex align-items-center dropdown-item">
+                  <a href="{{route ('admin.notification')}}" class="py-6 px-7 d-flex align-items-center dropdown-item">
                     <div class="w-75 d-inline-block v-middle">
                       <h6 class="mb-1 fw-semibold lh-base">Roman Joined the Team!</h6>
                       <span class="fs-2 d-block text-body-secondary">Congratulate him</span>

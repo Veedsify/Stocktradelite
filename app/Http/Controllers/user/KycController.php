@@ -7,6 +7,7 @@ use App\Mail\ApproveKycEmail;
 use App\Mail\NotifyKycEmail;
 use App\Mail\RejectKycEmail;
 use App\Models\Kyc;
+use App\Models\Notification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
@@ -53,6 +54,12 @@ class KycController extends Controller
             ]);
 
             Mail::to(config('mail.from.address'))->send(new NotifyKycEmail($kyc, auth()->user()));
+            Notification::create([
+                "user_id" => auth()->user()->id,
+                "title" => "KYC Submitted",
+                "message" => "Your KYC has been submitted successfully. Please wait for approval",
+                "is_read" => false,
+            ]);
 
             return redirect()->back()->with('success', 'KYC Submitted Successfully');
 
@@ -85,6 +92,12 @@ class KycController extends Controller
 
             if ($request->verification_status == 'approved') {
                 Mail::to($verification->user->email)->send(new ApproveKycEmail($verification->user));
+                Notification::create([
+                    "user_id" => $verification->user->id,
+                    "title" => "KYC Approved",
+                    "message" => "Your KYC has been approved successfully",
+                    "is_read" => false,
+                ]);
                 return redirect()->back()->with('success', 'KYC Updated Successfully for User: ' . $verification->user->name);
 
             } else if ($request->verification_status == 'rejected') {
@@ -100,6 +113,13 @@ class KycController extends Controller
                 ];
 
                 Mail::to($verification->user->email)->send(new RejectKycEmail($verification->user, $data));
+                Notification::create([
+                    "user_id" => $verification->user->id,
+                    "title" => "KYC Rejected",
+                    "message" => "Your KYC has been rejected. Reason: " . $request->rejection_reason,
+                    "is_read" => false,
+                ]);
+
                 return redirect()->back()->with('success', 'KYC Rejected Successfully for User: ' . $verification->user->name);
             }
 

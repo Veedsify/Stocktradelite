@@ -3,15 +3,28 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
 class NotificationController extends Controller
 {
     //
-    public function notification(){
-        return view('user.notification');
+    public function notification()
+    {
+        $mynotifications = auth()->user()->notifications;
+
+        foreach ($mynotifications as $notification) {
+            $notification->is_read = 1;
+            $notification->save();
+        }
+
+        return view('user.notification', [
+            'mynotifications' => $mynotifications,
+        ]);
     }
-    public function notificationAdmin(){
-        return view('admin.notification');
+    public function notificationAdmin()
+    {
+        $mynotifications = auth()->user()->notifications;
+        return view('admin.notification', [
+            'mynotifications' => $mynotifications,
+        ]);
     }
 }

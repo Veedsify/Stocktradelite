@@ -2,18 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\WithdrawalRequest;
 use App\Models\User;
 use App\Models\Withdrawal;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
+use App\Models\Notification;
+use Illuminate\Http\Request;
+use App\Mail\WithdrawalRequest;
+use Illuminate\Support\Facades\Mail;
 
 class WithdrawController extends Controller
 {
 
     public function sendMailToAdmin($withdrawal)
     {
+        Notification::create([
+            "user_id" => $withdrawal->user->id,
+            "title" => "Withdrawal Request",
+            "message" => "Your withdrawal request has been submitted successfully",
+            "is_read" => false,
+        ]);
+
         Mail::to(env('MAIL_ADMIN_EMAIL'))->send(new WithdrawalRequest($withdrawal));
     }
 
@@ -144,7 +152,7 @@ class WithdrawController extends Controller
         if ($user->balance < $request->amount) {
             return redirect()->back()->with("error", "Insufficient funds to complete this transaction");
         }
-        
+
         $trasaction_id = Str::random(10);
 
         $withdrawal = new Withdrawal();

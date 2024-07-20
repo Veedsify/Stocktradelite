@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Mail\IntroMail;
+use App\Models\Notification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -43,6 +44,12 @@ class VerifyController extends Controller
         ]);
 
         Mail::to($user->email)->send(new IntroMail($user));
+        Notification::create([
+            "user_id" => $user->id,
+            "title" => "Email Verified",
+            "message" => "Your email has been verified successfully",
+            "is_read" => false,
+        ]);
 
         return redirect(route('login'))->with('success', 'Account verified successfully');
     }
