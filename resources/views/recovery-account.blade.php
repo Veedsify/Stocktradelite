@@ -121,38 +121,4 @@
 </section>
 
 
-<script>
-  function Convert() {
-        let dollarInput = document.getElementByClass("dollar").value;
-        let bitcoinInput = document.getElementByClass("bitcoin").value;
-
-        if ((dollarInput != "") & (bitcoinInput == "")) {
-          let parsedDollar = parseFloat(dollarInput);
-          let fromDollarToBitcoin = parsedDollar * 0.000022;
-
-          let output = document.getElementByClass("bitcoin");
-          output.value = fromDollarToBitcoin;
-          console.log("Bitcoin", fromDollarToBitcoin);
-
-          clearMessage();
-          clearAlert();
-        }
-
-        if ((bitcoinInput != "") & (dollarInput == "")) {
-          let parsedBitcoin = parseFloat(bitcoinInput);
-          let fromBitcoinToDollar = parsedBitcoin * 46403.5;
-
-          let output = document.getElementByClass("dollar");
-          output.value = fromBitcoinToDollar;
-          console.log("US$", fromBitcoinToDollar);
-
-          clearMessage();
-          clearAlert();
-        }
-
-        if ((bitcoinInput == "") & (dollarInput == "")) {
-          showMessage();
-        }
-      }
-</script>
 @endsection

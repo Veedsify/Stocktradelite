@@ -155,7 +155,6 @@
 }
 GetCountries();
 
-  function Convert() {
         let dollarInput = document.getElementByClass("dollar").value;
         let bitcoinInput = document.getElementByClass("bitcoin").value;
 
