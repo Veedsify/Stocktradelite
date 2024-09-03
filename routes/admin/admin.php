@@ -15,10 +15,11 @@ use App\Http\Controllers\user\ChangePasswordController;
 use App\Http\Controllers\user\KycController;
 use App\Http\Controllers\user\NotificationController;
 use App\Http\Controllers\WithdrawController;
+use App\Http\Middleware\CheckUserIsAdmin;
 use Illuminate\Support\Facades\Route;
 
 // Index Pages
-Route::prefix("admin")->middleware(["admin"])->group(function () {
+Route::prefix("admin")->middleware(["auth", CheckUserIsAdmin::class])->group(function () {
     Route::get("/", [AdminController::class, "admin"])->name("admin");
     // Mail
     Route::get("/mail", [MailController::class, "mail"])->name("mail");
@@ -27,8 +28,6 @@ Route::prefix("admin")->middleware(["admin"])->group(function () {
     // users
     Route::get("/users", [UsersController::class, "users"])->name("users");
     Route::put('/admin/users/{userId}/upgrade', [UsersController::class, 'upgradeUser'])->name('admin.users.upgrade');
-
-
 
     Route::get("/users/balance/{id}", [BalanceController::class, "editBalance"])->name("admin.balance.editbalance");
     Route::get("/security", [SecurityController::class, "security"])->name("admin.security");
@@ -40,13 +39,9 @@ Route::prefix("admin")->middleware(["admin"])->group(function () {
     Route::get("/privacy", [PrivacyController::class, "privacy"])->name("admin.privacy");
     Route::post("/privacy-policy-content", [PrivacyController::class, 'updatePolicyContent'])->name("admin.settings.update.privacy.policy");
 
-
-
     // Terms Condition
     Route::get("/terms-condition", [TermsController::class, "termsCondition"])->name("admin.terms");
-    Route::post("/Update-terms-condition", [TermsController::class, "updateTermsCondition"])->name("admin.settings.update.terms.condition");
-
-
+    Route::post("/update-terms-condition", [TermsController::class, "updateTermsCondition"])->name("admin.settings.update.terms.condition");
 
     Route::get("/notification", [NotificationController::class, "notificationAdmin"])->name("admin.notification");
 
@@ -71,10 +66,6 @@ Route::prefix("admin")->middleware(["admin"])->group(function () {
     Route::post('/balance/{id}', [BalanceController::class, 'updateBalance'])->name('admin.balance.edit');
 
     // Withdrawal
-    Route::get( '/withdrawals', [WithdrawController::class, 'allWithDrawals'])->name('admin.withdrawals');
-
-
-
-
+    Route::get('/withdrawals', [WithdrawController::class, 'allWithDrawals'])->name('admin.withdrawals');
 
 });

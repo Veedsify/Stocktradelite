@@ -11,12 +11,14 @@ use App\Http\Controllers\user\UpgradeAccountController;
 use App\Http\Controllers\user\UserController;
 use App\Http\Controllers\user\WithdrawalController;
 use App\Http\Controllers\WithdrawController as ProcessWithdrawalController;
+use App\Http\Middleware\CheckUserKyc;
+use App\Http\Middleware\CheckUsersVerified;
 use Illuminate\Support\Facades\Route;
 
 // Index Pages
 
 Route::prefix("user")->middleware(["auth"])->group(function () {
-    Route::middleware(["users"])->group(function () {
+    Route::middleware(["auth", CheckUsersVerified::class, CheckUserKyc::class])->group(function () {
         Route::get('/', [UserController::class, "user"])->name("user");
         Route::get('/deposit', [DepositController::class, "deposit"])->name("deposit");
         Route::get('/withdrawal', [WithdrawalController::class, "withdrawal"])->name("withdrawal");

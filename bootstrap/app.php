@@ -14,16 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->appendToGroup('admin', [
-            'auth',
-            CheckUserIsAdmin::class,
-        ]);
 
-        $middleware->appendToGroup('users', [
-            'auth',
-            CheckUsersVerified::class,
-            CheckUserKyc::class,
-        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

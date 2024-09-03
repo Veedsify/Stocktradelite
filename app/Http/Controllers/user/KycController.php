@@ -53,7 +53,7 @@ class KycController extends Controller
                 'file_path2' => $backPath,
             ]);
 
-            Mail::to(config('mail.from.address'))->send(new NotifyKycEmail($kyc, auth()->user()));
+            Mail::to(env('MAIL_ADMIN_EMAIL'))->send(new NotifyKycEmail($kyc, auth()->user()));
             Notification::create([
                 "user_id" => auth()->user()->id,
                 "title" => "KYC Submitted",
